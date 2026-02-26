@@ -1,0 +1,104 @@
+index,type,section_id,true_label,pred_P1,pred_P2
+1,Single,Eligibility,Entailment,Contradiction,Contradiction
+6,Comparison,Eligibility,Contradiction,Entailment,Entailment
+7,Comparison,Eligibility,Contradiction,Entailment,Entailment
+21,Single,Adverse Events,Contradiction,Entailment,Entailment
+30,Comparison,Eligibility,Entailment,Contradiction,Contradiction
+43,Comparison,Results,Contradiction,Entailment,Entailment
+44,Comparison,Intervention,Entailment,Contradiction,Contradiction
+48,Comparison,Adverse Events,Contradiction,Entailment,Entailment
+54,Comparison,Intervention,Contradiction,Entailment,Entailment
+56,Single,Intervention,Entailment,Contradiction,Contradiction
+60,Comparison,Eligibility,Entailment,UNKNOWN,UNKNOWN
+68,Comparison,Eligibility,Entailment,Contradiction,Contradiction
+76,Comparison,Eligibility,Contradiction,Entailment,Entailment
+79,Comparison,Results,Contradiction,Entailment,Entailment
+86,Single,Eligibility,Contradiction,Entailment,Entailment
+94,Comparison,Intervention,Entailment,Contradiction,Contradiction
+97,Comparison,Eligibility,Contradiction,Entailment,Entailment
+112,Single,Eligibility,Entailment,UNKNOWN,UNKNOWN
+115,Comparison,Intervention,Contradiction,Entailment,Entailment
+118,Single,Intervention,Contradiction,Entailment,Entailment
+123,Comparison,Adverse Events,Entailment,Contradiction,Contradiction
+124,Single,Intervention,Entailment,Contradiction,Contradiction
+127,Comparison,Eligibility,Contradiction,Entailment,Entailment
+128,Single,Results,Contradiction,Entailment,Entailment
+132,Comparison,Eligibility,Contradiction,Entailment,Entailment
+133,Comparison,Eligibility,Entailment,Contradiction,Contradiction
+134,Comparison,Eligibility,Contradiction,UNKNOWN,UNKNOWN
+140,Comparison,Intervention,Entailment,Contradiction,Contradiction
+150,Comparison,Eligibility,Entailment,Contradiction,Contradiction
+154,Comparison,Results,Contradiction,Entailment,Entailment
+155,Single,Results,Contradiction,Entailment,Entailment
+157,Single,Results,Entailment,Contradiction,Contradiction
+160,Single,Adverse Events,Contradiction,Entailment,Entailment
+163,Comparison,Adverse Events,Contradiction,Entailment,Entailment
+170,Single,Intervention,Contradiction,Entailment,Entailment
+172,Single,Results,Contradiction,Entailment,Entailment
+173,Comparison,Intervention,Contradiction,Entailment,Entailment
+174,Comparison,Eligibility,Entailment,Contradiction,Contradiction
+179,Comparison,Eligibility,Contradiction,UNKNOWN,UNKNOWN
+188,Comparison,Eligibility,Entailment,Contradiction,Contradiction
+189,Single,Adverse Events,Contradiction,Entailment,Entailment
+193,Comparison,Adverse Events,Entailment,Contradiction,Contradiction
+194,Comparison,Intervention,Entailment,Contradiction,Contradiction
+196,Comparison,Eligibility,Entailment,Contradiction,Contradiction
+197,Comparison,Adverse Events,Contradiction,Entailment,Entailment
+200,Single,Eligibility,Entailment,Contradiction,Contradiction
+205,Comparison,Eligibility,Entailment,UNKNOWN,UNKNOWN
+209,Comparison,Eligibility,Entailment,Contradiction,Contradiction
+226,Comparison,Intervention,Entailment,Contradiction,Contradiction
+230,Single,Intervention,Contradiction,Entailment,Entailment
+231,Comparison,Adverse Events,Contradiction,Entailment,Entailment
+239,Comparison,Eligibility,Entailment,Contradiction,Contradiction
+244,Single,Results,Contradiction,Entailment,Entailment
+247,Single,Results,Entailment,Contradiction,Contradiction
+259,Comparison,Intervention,Entailment,Contradiction,Contradiction
+260,Comparison,Results,Entailment,Contradiction,Contradiction
+266,Single,Intervention,Contradiction,Entailment,Entailment
+268,Comparison,Intervention,Entailment,Contradiction,Contradiction
+276,Single,Eligibility,Entailment,Contradiction,Contradiction
+277,Single,Eligibility,Entailment,Contradiction,Contradiction
+278,Single,Adverse Events,Contradiction,Entailment,Entailment
+284,Comparison,Results,Contradiction,Entailment,Entailment
+290,Single,Adverse Events,Contradiction,Entailment,Entailment
+293,Comparison,Adverse Events,Contradiction,Entailment,Entailment
+298,Comparison,Results,Contradiction,Entailment,Entailment
+299,Single,Eligibility,Contradiction,UNKNOWN,UNKNOWN
+303,Comparison,Adverse Events,Entailment,Contradiction,Contradiction
+305,Comparison,Intervention,Entailment,Contradiction,Contradiction
+309,Single,Adverse Events,Entailment,Contradiction,Contradiction
+310,Single,Results,Entailment,Contradiction,Contradiction
+314,Single,Intervention,Contradiction,Entailment,Entailment
+323,Comparison,Eligibility,Entailment,Contradiction,Contradiction
+325,Single,Results,Entailment,Contradiction,Contradiction
+330,Single,Adverse Events,Entailment,Contradiction,Contradiction
+333,Comparison,Eligibility,Contradiction,Entailment,Entailment
+337,Comparison,Eligibility,Entailment,UNKNOWN,UNKNOWN
+340,Single,Intervention,Entailment,Contradiction,Contradiction
+348,Single,Eligibility,Entailment,Contradiction,Contradiction
+363,Comparison,Results,Contradiction,Entailment,Entailment
+371,Comparison,Eligibility,Entailment,Contradiction,Contradiction
+374,Comparison,Adverse Events,Contradiction,Entailment,Entailment
+379,Single,Results,Contradiction,Entailment,Entailment
+383,Single,Intervention,Entailment,Contradiction,Contradiction
+384,Comparison,Eligibility,Entailment,Contradiction,Contradiction
+385,Comparison,Adverse Events,Contradiction,Entailment,Entailment
+399,Single,Adverse Events,Contradiction,Entailment,Entailment
+401,Single,Results,Contradiction,Entailment,Entailment
+421,Comparison,Eligibility,Entailment,Contradiction,Contradiction
+423,Single,Results,Entailment,Contradiction,Contradiction
+432,Single,Results,Contradiction,Entailment,Entailment
+437,Comparison,Intervention,Entailment,Contradiction,Contradiction
+439,Single,Intervention,Contradiction,Entailment,Entailment
+443,Comparison,Intervention,Entailment,Contradiction,Contradiction
+459,Comparison,Intervention,Contradiction,Entailment,Entailment
+464,Single,Intervention,Entailment,Contradiction,Contradiction
+473,Comparison,Results,Entailment,Contradiction,Contradiction
+475,Comparison,Intervention,Entailment,Contradiction,Contradiction
+479,Single,Intervention,Entailment,Contradiction,Contradiction
+485,Single,Intervention,Entailment,Contradiction,Contradiction
+491,Single,Eligibility,Entailment,Contradiction,Contradiction
+493,Single,Eligibility,Entailment,Contradiction,Contradiction
+495,Comparison,Eligibility,Contradiction,Entailment,Entailment
+498,Single,Results,Contradiction,Entailment,Entailment

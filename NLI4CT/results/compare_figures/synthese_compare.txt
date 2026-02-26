@@ -1,0 +1,10 @@
+# Synthèse comparaison des deux finetunings (Prompt 1 vs Prompt 2)
+
+## Accuracy globale
+P1 Baseline: 65.80% | P1 Finetuné: 74.20%
+P2 Baseline: 65.20% | P2 Finetuné: 71.80%
+
+## Régressions / Améliorations
+P1 Régressions: 60 | P1 Améliorations: 102
+P2 Régressions: 60 | P2 Améliorations: 93
+Les 2 finetunings en erreur: 103 | Les 2 corrects: 333

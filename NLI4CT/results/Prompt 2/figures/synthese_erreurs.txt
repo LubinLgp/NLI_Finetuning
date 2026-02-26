@@ -1,0 +1,17 @@
+# Synthèse analyse d'erreurs — Prompt 2
+
+## Dans quels cas le modèle (finetuné) se trompe le plus
+- Sections les plus difficiles : {'Eligibility': 45, 'Intervention': 42, 'Results': 28}
+- Types les plus difficiles : {'Comparison': 87, 'Single': 54}
+- Longueur moyenne du prompt (car.) pour les erreurs : 1420
+- Longueur moyenne pour les corrects : 932
+
+## Dans quels cas le modèle est très bon
+- Sections avec la meilleure accuracy (finetuné) : {'Adverse Events': 0.7833333333333333, 'Results': 0.7358490566037735, 'Intervention': 0.704225352112676}
+- Types avec la meilleure accuracy : {'Comparison': 0.6789667896678967, 'Single': 0.7641921397379913}
+- Bins de longueur (finetuné) : {'Court': 0.7784431137724551, 'Moyen': 0.7168674698795181, 'Long': 0.6586826347305389}
+- Nombre d'exemples où baseline et finetuné sont tous deux corrects : 266
+
+## Régressions et améliorations
+- Régressions (baseline correct, finetuné faux) : 60
+- Améliorations (baseline faux, finetuné correct) : 93

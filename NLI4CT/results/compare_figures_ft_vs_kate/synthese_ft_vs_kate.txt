@@ -1,0 +1,9 @@
+# Synthèse Finetuning (P1) vs Few-shot KATE
+
+## Accuracy
+P1 Finetuné: 74.20%
+KATE Few-shot: 71.40%
+
+## Accord / complémentarité
+Les 2 corrects: 299 | Les 2 en erreur: 71
+P1✓ KATE✗: 72 | P1✗ KATE✓: 58

@@ -1,0 +1,501 @@
+index,type,section_id,P1_bl_correct,P1_ft_correct,P2_bl_correct,P2_ft_correct,prompt_len_p1,prompt_len_p2
+0,Comparison,Eligibility,True,True,True,True,250,310
+1,Single,Eligibility,True,False,True,False,512,573
+2,Comparison,Eligibility,False,True,False,True,655,715
+3,Comparison,Eligibility,True,True,True,True,678,739
+4,Comparison,Intervention,True,True,True,True,1247,1308
+5,Comparison,Adverse Events,True,True,True,True,250,310
+6,Comparison,Eligibility,True,False,True,False,2334,2395
+7,Comparison,Eligibility,True,False,False,False,580,640
+8,Single,Intervention,True,True,True,True,315,375
+9,Comparison,Eligibility,True,True,True,True,1305,1366
+10,Comparison,Eligibility,False,True,True,True,1645,1705
+11,Comparison,Results,False,True,False,True,2063,2124
+12,Single,Intervention,False,True,True,True,721,782
+13,Single,Intervention,True,True,True,True,528,589
+14,Comparison,Results,False,True,False,True,190,250
+15,Comparison,Results,True,True,True,True,1961,2021
+16,Single,Results,True,True,False,True,800,861
+17,Comparison,Results,False,True,True,True,2738,2798
+18,Single,Adverse Events,True,True,True,True,232,293
+19,Comparison,Adverse Events,True,True,True,True,819,879
+20,Comparison,Intervention,True,True,True,True,1106,1166
+21,Single,Adverse Events,True,False,True,False,217,278
+22,Comparison,Eligibility,True,True,True,True,266,327
+23,Single,Adverse Events,True,True,True,True,160,221
+24,Comparison,Eligibility,True,False,True,True,1329,1389
+25,Comparison,Eligibility,True,True,True,True,609,670
+26,Single,Adverse Events,True,True,True,True,473,534
+27,Comparison,Intervention,False,True,False,True,495,555
+28,Single,Eligibility,True,True,True,True,200,261
+29,Single,Results,True,True,True,True,168,229
+30,Comparison,Eligibility,True,False,False,False,251,311
+31,Comparison,Adverse Events,True,True,True,True,1076,1137
+32,Single,Intervention,True,True,True,True,1095,1155
+33,Comparison,Intervention,True,True,True,True,533,593
+34,Comparison,Eligibility,False,True,False,True,593,653
+35,Single,Eligibility,False,True,False,True,122,183
+36,Comparison,Eligibility,True,True,True,True,273,333
+37,Single,Intervention,True,True,True,True,664,724
+38,Comparison,Eligibility,True,True,True,True,2362,2422
+39,Comparison,Adverse Events,True,True,False,True,866,926
+40,Single,Intervention,True,True,True,True,1149,1210
+41,Comparison,Eligibility,True,True,True,True,1309,1370
+42,Single,Results,True,True,False,True,1957,2018
+43,Comparison,Results,True,False,False,False,2718,2778
+44,Comparison,Intervention,True,False,True,False,1232,1293
+45,Single,Adverse Events,True,True,True,True,918,979
+46,Single,Adverse Events,True,True,True,True,312,373
+47,Single,Results,True,True,True,True,1730,1790
+48,Comparison,Adverse Events,True,False,True,False,1033,1094
+49,Single,Intervention,True,True,True,False,268,329
+50,Single,Intervention,True,True,True,True,1378,1438
+51,Comparison,Adverse Events,True,True,True,True,891,952
+52,Comparison,Results,False,False,False,True,624,684
+53,Single,Intervention,True,True,True,True,711,772
+54,Comparison,Intervention,True,False,False,False,1259,1319
+55,Single,Eligibility,True,True,True,True,571,631
+56,Single,Intervention,False,False,False,False,418,478
+57,Single,Intervention,True,True,True,True,1169,1230
+58,Comparison,Adverse Events,True,True,True,True,356,416
+59,Single,Adverse Events,True,True,False,True,87,148
+60,Comparison,Eligibility,False,False,False,False,9948,10008
+61,Comparison,Intervention,False,True,False,True,883,943
+62,Comparison,Adverse Events,True,True,True,True,152,212
+63,Comparison,Adverse Events,True,True,True,True,223,284
+64,Comparison,Eligibility,True,True,True,True,692,752
+65,Comparison,Adverse Events,True,True,True,True,590,650
+66,Single,Results,True,True,True,True,2657,2717
+67,Comparison,Eligibility,True,True,True,True,640,700
+68,Comparison,Eligibility,False,False,False,False,553,613
+69,Single,Results,True,False,True,True,832,893
+70,Comparison,Eligibility,True,True,True,True,265,325
+71,Single,Intervention,True,True,True,True,700,761
+72,Single,Intervention,False,False,True,True,565,625
+73,Comparison,Intervention,False,True,True,True,1258,1318
+74,Single,Intervention,True,True,True,True,792,853
+75,Comparison,Adverse Events,True,True,True,True,343,403
+76,Comparison,Eligibility,True,False,False,False,757,817
+77,Comparison,Results,True,False,True,True,3547,3607
+78,Single,Results,True,True,True,True,1934,1994
+79,Comparison,Results,True,False,True,False,1287,1347
+80,Comparison,Adverse Events,True,True,True,True,218,278
+81,Single,Intervention,True,True,True,True,372,432
+82,Comparison,Eligibility,False,True,False,False,754,814
+83,Single,Intervention,True,True,True,True,1136,1197
+84,Comparison,Eligibility,False,True,False,False,1338,1398
+85,Single,Adverse Events,True,True,True,False,359,420
+86,Single,Eligibility,True,False,True,False,826,887
+87,Comparison,Eligibility,False,False,False,True,162,223
+88,Single,Results,True,True,True,True,1845,1905
+89,Single,Results,False,True,True,True,2637,2697
+90,Comparison,Adverse Events,False,True,False,True,845,905
+91,Single,Adverse Events,True,True,True,True,131,191
+92,Single,Results,True,True,True,True,1085,1145
+93,Single,Results,True,False,True,True,1155,1216
+94,Comparison,Intervention,False,False,False,False,824,884
+95,Single,Results,True,True,True,True,817,877
+96,Single,Intervention,True,False,True,True,682,743
+97,Comparison,Eligibility,True,False,True,False,3095,3156
+98,Comparison,Adverse Events,True,False,True,True,589,649
+99,Single,Adverse Events,True,True,True,False,862,923
+100,Comparison,Intervention,True,True,True,False,508,568
+101,Single,Adverse Events,False,True,False,True,851,912
+102,Comparison,Adverse Events,False,True,False,True,843,903
+103,Comparison,Intervention,True,True,True,True,828,888
+104,Comparison,Adverse Events,True,True,True,True,216,280
+105,Comparison,Results,True,True,True,True,2559,2620
+106,Comparison,Adverse Events,False,True,False,True,573,633
+107,Comparison,Results,False,True,False,True,348,408
+108,Single,Results,True,True,True,True,1162,1223
+109,Comparison,Results,True,True,True,True,658,718
+110,Comparison,Eligibility,True,True,True,False,948,1008
+111,Comparison,Intervention,False,True,False,True,915,976
+112,Single,Eligibility,False,False,False,False,6816,6876
+113,Single,Eligibility,True,True,True,True,115,176
+114,Single,Results,True,True,True,True,1175,1235
+115,Comparison,Intervention,False,False,False,False,775,835
+116,Comparison,Results,True,True,True,True,1125,1186
+117,Single,Intervention,False,True,False,True,641,701
+118,Single,Intervention,True,False,True,False,516,577
+119,Comparison,Adverse Events,True,True,True,True,394,454
+120,Single,Intervention,True,True,True,True,329,390
+121,Comparison,Adverse Events,True,True,True,True,1053,1113
+122,Single,Intervention,True,True,True,True,617,677
+123,Comparison,Adverse Events,False,False,False,False,571,631
+124,Single,Intervention,False,False,True,False,1087,1148
+125,Single,Intervention,True,True,False,True,622,682
+126,Single,Eligibility,True,True,True,True,853,913
+127,Comparison,Eligibility,True,False,True,False,3509,3570
+128,Single,Results,False,False,False,False,3193,3253
+129,Single,Results,False,True,False,True,1834,1895
+130,Comparison,Eligibility,True,True,True,True,1089,1149
+131,Single,Results,True,True,True,True,1104,1165
+132,Comparison,Eligibility,False,False,True,False,279,339
+133,Comparison,Eligibility,False,False,False,False,1306,1367
+134,Comparison,Eligibility,False,False,False,False,6121,6181
+135,Comparison,Results,True,True,True,True,676,736
+136,Comparison,Results,True,True,False,False,3077,3137
+137,Comparison,Intervention,True,True,True,True,1377,1437
+138,Single,Results,True,True,True,True,1341,1401
+139,Comparison,Adverse Events,False,True,False,True,222,282
+140,Comparison,Intervention,False,False,False,False,1124,1184
+141,Comparison,Eligibility,False,True,False,False,2311,2372
+142,Single,Intervention,False,True,False,True,678,738
+143,Single,Results,True,True,True,True,1844,1904
+144,Comparison,Eligibility,False,True,False,True,207,268
+145,Single,Results,False,True,False,True,1146,1207
+146,Comparison,Intervention,False,True,False,True,729,789
+147,Single,Intervention,True,True,True,True,923,984
+148,Single,Eligibility,True,True,True,True,199,260
+149,Comparison,Results,True,True,True,True,3066,3126
+150,Comparison,Eligibility,False,False,False,False,1759,1819
+151,Comparison,Intervention,True,True,True,True,1701,1761
+152,Comparison,Adverse Events,True,True,True,True,1293,1354
+153,Comparison,Adverse Events,True,True,True,True,556,616
+154,Comparison,Results,True,False,True,False,2329,2389
+155,Single,Results,True,False,True,False,2443,2504
+156,Single,Results,False,True,True,True,535,595
+157,Single,Results,False,False,False,False,1198,1258
+158,Comparison,Eligibility,False,True,False,True,1478,1538
+159,Comparison,Results,False,True,False,False,1097,1157
+160,Single,Adverse Events,True,False,False,False,187,247
+161,Comparison,Adverse Events,True,True,False,True,197,258
+162,Comparison,Adverse Events,True,True,True,True,304,365
+163,Comparison,Adverse Events,True,False,True,False,918,978
+164,Single,Intervention,True,True,True,True,656,716
+165,Single,Eligibility,True,True,True,True,873,933
+166,Single,Results,True,True,True,True,932,993
+167,Comparison,Eligibility,False,False,False,True,1087,1147
+168,Comparison,Intervention,False,True,False,True,801,861
+169,Single,Adverse Events,False,True,False,True,208,268
+170,Single,Intervention,True,False,True,False,1171,1231
+171,Single,Eligibility,False,True,False,True,168,229
+172,Single,Results,True,False,False,False,2009,2070
+173,Comparison,Intervention,True,False,False,False,881,941
+174,Comparison,Eligibility,False,False,False,False,2179,2239
+175,Single,Results,True,True,True,True,1832,1895
+176,Single,Adverse Events,True,True,True,True,356,417
+177,Comparison,Adverse Events,True,False,True,True,554,614
+178,Comparison,Adverse Events,True,True,True,True,387,447
+179,Comparison,Eligibility,False,False,False,False,9875,9935
+180,Single,Eligibility,True,True,True,True,109,169
+181,Single,Adverse Events,True,True,True,True,125,185
+182,Comparison,Adverse Events,False,True,False,True,917,977
+183,Single,Eligibility,True,True,False,True,202,263
+184,Comparison,Eligibility,True,True,True,True,647,707
+185,Comparison,Eligibility,True,True,False,True,227,287
+186,Comparison,Intervention,False,True,False,True,1050,1111
+187,Single,Intervention,True,True,True,True,163,224
+188,Comparison,Eligibility,False,False,False,False,1313,1374
+189,Single,Adverse Events,False,False,False,False,188,249
+190,Comparison,Eligibility,True,True,True,True,1348,1408
+191,Single,Intervention,False,True,False,True,681,742
+192,Comparison,Intervention,True,True,True,True,3472,3532
+193,Comparison,Adverse Events,True,False,False,False,556,616
+194,Comparison,Intervention,False,False,False,False,577,637
+195,Single,Intervention,False,True,False,True,647,708
+196,Comparison,Eligibility,True,False,True,False,3074,3135
+197,Comparison,Adverse Events,True,False,True,False,954,1014
+198,Comparison,Eligibility,True,True,True,True,393,453
+199,Comparison,Results,False,True,False,True,862,923
+200,Single,Eligibility,False,False,False,False,115,175
+201,Comparison,Intervention,True,True,True,True,1233,1294
+202,Comparison,Intervention,True,True,False,False,751,811
+203,Comparison,Eligibility,True,True,True,False,825,886
+204,Single,Intervention,True,True,True,True,567,627
+205,Comparison,Eligibility,False,False,False,False,6093,6153
+206,Single,Adverse Events,True,True,True,True,206,267
+207,Single,Eligibility,False,True,False,False,216,277
+208,Single,Intervention,True,True,True,True,779,840
+209,Comparison,Eligibility,False,False,False,False,3594,3655
+210,Single,Intervention,True,True,True,True,682,742
+211,Comparison,Adverse Events,True,True,True,True,1023,1083
+212,Single,Intervention,True,True,True,True,909,970
+213,Single,Eligibility,False,True,False,True,539,600
+214,Comparison,Intervention,False,False,False,True,727,787
+215,Comparison,Eligibility,True,True,True,True,669,729
+216,Single,Eligibility,True,True,True,True,925,985
+217,Comparison,Eligibility,True,True,False,True,259,319
+218,Single,Adverse Events,True,True,True,True,216,277
+219,Single,Eligibility,True,True,True,True,2722,2783
+220,Single,Intervention,True,True,True,True,398,458
+221,Single,Eligibility,True,True,True,True,617,678
+222,Comparison,Intervention,True,False,True,True,770,830
+223,Comparison,Adverse Events,False,True,True,False,551,611
+224,Single,Eligibility,True,True,True,True,494,555
+225,Comparison,Adverse Events,True,True,True,False,248,309
+226,Comparison,Intervention,False,False,False,False,528,588
+227,Single,Intervention,True,False,True,True,1284,1344
+228,Single,Eligibility,True,True,True,True,426,487
+229,Comparison,Adverse Events,False,True,False,True,259,319
+230,Single,Intervention,True,False,True,False,222,283
+231,Comparison,Adverse Events,False,False,True,False,371,431
+232,Single,Intervention,True,True,True,True,450,510
+233,Comparison,Eligibility,False,True,False,True,902,963
+234,Single,Intervention,True,True,True,True,486,547
+235,Single,Intervention,False,True,False,False,481,542
+236,Single,Intervention,True,True,True,True,369,429
+237,Comparison,Eligibility,False,True,False,True,2834,2894
+238,Comparison,Adverse Events,True,True,True,True,511,571
+239,Comparison,Eligibility,False,False,False,False,2309,2370
+240,Comparison,Adverse Events,True,True,True,True,581,641
+241,Single,Results,True,True,True,True,1961,2022
+242,Comparison,Eligibility,True,True,True,False,1871,1931
+243,Comparison,Adverse Events,True,True,False,True,322,383
+244,Single,Results,True,False,True,False,1562,1623
+245,Single,Intervention,True,True,True,True,575,635
+246,Single,Results,False,True,False,True,2436,2497
+247,Single,Results,False,False,False,False,1171,1232
+248,Comparison,Intervention,False,True,True,False,578,638
+249,Comparison,Adverse Events,True,False,False,True,275,336
+250,Single,Eligibility,False,False,False,True,327,388
+251,Single,Results,False,True,True,True,1144,1205
+252,Single,Adverse Events,True,True,True,True,366,427
+253,Comparison,Eligibility,True,True,True,True,1765,1825
+254,Comparison,Eligibility,True,True,True,True,287,348
+255,Single,Eligibility,True,True,True,True,179,239
+256,Comparison,Adverse Events,True,True,True,True,932,992
+257,Comparison,Results,False,True,False,True,948,1008
+258,Comparison,Adverse Events,True,False,False,True,966,1026
+259,Comparison,Intervention,False,False,False,False,438,498
+260,Comparison,Results,True,False,True,False,1412,1473
+261,Comparison,Adverse Events,True,True,True,True,559,620
+262,Comparison,Intervention,True,False,True,True,1787,1847
+263,Single,Adverse Events,True,True,True,True,294,355
+264,Single,Intervention,True,True,True,True,371,431
+265,Comparison,Eligibility,True,True,True,True,709,769
+266,Single,Intervention,True,False,True,False,231,292
+267,Single,Intervention,True,True,True,True,360,420
+268,Comparison,Intervention,False,False,False,False,680,741
+269,Comparison,Adverse Events,True,True,True,True,303,364
+270,Single,Intervention,False,True,False,True,149,209
+271,Single,Results,True,True,True,True,863,923
+272,Comparison,Eligibility,True,True,True,True,631,691
+273,Comparison,Adverse Events,False,True,False,False,145,206
+274,Single,Eligibility,True,True,True,True,216,277
+275,Comparison,Adverse Events,True,True,True,True,252,312
+276,Single,Eligibility,False,False,False,False,603,663
+277,Single,Eligibility,False,False,True,False,443,504
+278,Single,Adverse Events,False,False,True,False,468,528
+279,Comparison,Adverse Events,False,True,False,True,997,1058
+280,Comparison,Eligibility,True,True,True,True,2823,2883
+281,Single,Results,True,True,True,True,1835,1896
+282,Comparison,Intervention,True,True,True,True,1711,1771
+283,Single,Adverse Events,True,True,True,True,185,246
+284,Comparison,Results,True,False,True,False,1511,1572
+285,Comparison,Eligibility,True,True,True,True,886,947
+286,Comparison,Adverse Events,True,True,True,True,232,296
+287,Single,Adverse Events,True,True,True,True,360,421
+288,Single,Intervention,True,True,True,True,426,487
+289,Comparison,Results,True,True,True,True,1414,1475
+290,Single,Adverse Events,True,False,True,False,502,562
+291,Single,Intervention,True,True,True,True,1070,1131
+292,Comparison,Intervention,True,True,True,True,726,787
+293,Comparison,Adverse Events,True,False,True,False,1222,1283
+294,Comparison,Intervention,True,False,True,True,562,622
+295,Single,Eligibility,True,True,True,True,810,870
+296,Single,Intervention,True,True,True,True,692,752
+297,Single,Results,True,True,True,True,531,592
+298,Comparison,Results,True,False,True,False,915,975
+299,Single,Eligibility,False,False,False,False,6890,6950
+300,Comparison,Results,True,True,False,True,3599,3659
+301,Comparison,Adverse Events,True,True,True,True,1221,1281
+302,Comparison,Results,False,True,False,True,2317,2377
+303,Comparison,Adverse Events,False,False,False,False,349,409
+304,Comparison,Results,False,True,True,True,1645,1706
+305,Comparison,Intervention,False,False,True,False,987,1047
+306,Single,Adverse Events,True,True,False,True,216,277
+307,Single,Eligibility,True,True,True,True,638,698
+308,Single,Intervention,False,True,False,True,1408,1468
+309,Single,Adverse Events,False,False,False,False,455,515
+310,Single,Results,False,False,False,False,3224,3284
+311,Comparison,Adverse Events,True,True,True,True,243,304
+312,Comparison,Adverse Events,False,True,False,True,1055,1115
+313,Single,Results,True,True,True,False,1173,1234
+314,Single,Intervention,False,False,False,False,576,636
+315,Single,Intervention,True,True,True,True,785,846
+316,Comparison,Eligibility,False,True,False,False,547,608
+317,Single,Results,True,True,True,True,1798,1860
+318,Comparison,Intervention,True,True,True,True,578,638
+319,Single,Intervention,True,True,True,True,1214,1274
+320,Comparison,Eligibility,True,True,True,True,3655,3716
+321,Comparison,Adverse Events,True,True,True,True,583,644
+322,Comparison,Eligibility,False,True,False,True,809,870
+323,Comparison,Eligibility,False,False,False,False,876,936
+324,Comparison,Results,True,True,True,True,250,310
+325,Single,Results,False,False,False,False,170,231
+326,Single,Eligibility,True,True,True,True,837,896
+327,Comparison,Adverse Events,True,True,True,True,212,272
+328,Single,Adverse Events,False,False,False,True,459,520
+329,Comparison,Adverse Events,False,True,True,True,173,234
+330,Single,Adverse Events,False,False,False,False,877,938
+331,Comparison,Eligibility,False,True,False,True,926,987
+332,Single,Results,False,True,True,True,1845,1905
+333,Comparison,Eligibility,True,False,True,False,2131,2191
+334,Single,Results,True,True,True,True,1977,2038
+335,Single,Results,False,True,True,False,1713,1773
+336,Comparison,Adverse Events,True,True,True,True,494,555
+337,Comparison,Eligibility,False,False,False,False,8906,8967
+338,Comparison,Intervention,False,True,False,False,1379,1439
+339,Comparison,Results,False,True,False,False,1372,1432
+340,Single,Intervention,False,False,False,False,270,330
+341,Single,Results,False,True,False,True,899,960
+342,Single,Results,True,True,True,True,663,724
+343,Comparison,Eligibility,True,True,True,True,2810,2871
+344,Single,Intervention,True,True,True,True,350,410
+345,Comparison,Results,True,True,True,True,1105,1165
+346,Comparison,Intervention,False,True,True,True,1195,1256
+347,Single,Intervention,True,True,True,True,126,186
+348,Single,Eligibility,False,False,False,False,366,426
+349,Comparison,Results,False,False,False,True,1280,1340
+350,Single,Eligibility,True,True,True,True,213,274
+351,Comparison,Eligibility,True,False,True,True,644,704
+352,Single,Intervention,False,True,False,True,1272,1333
+353,Single,Adverse Events,False,True,False,True,509,569
+354,Comparison,Results,False,True,False,True,238,298
+355,Single,Results,True,False,True,True,1847,1907
+356,Single,Adverse Events,True,True,True,True,202,262
+357,Single,Intervention,False,True,True,True,1327,1387
+358,Single,Adverse Events,True,True,True,True,90,151
+359,Comparison,Intervention,True,True,True,True,792,853
+360,Single,Intervention,True,True,True,True,402,463
+361,Comparison,Eligibility,True,True,True,True,882,942
+362,Comparison,Eligibility,True,True,True,True,396,456
+363,Comparison,Results,True,False,True,False,496,556
+364,Comparison,Results,True,True,True,True,225,285
+365,Comparison,Eligibility,True,True,True,True,531,592
+366,Comparison,Intervention,True,True,True,True,918,979
+367,Single,Intervention,True,True,True,True,1288,1349
+368,Single,Results,True,True,False,True,917,977
+369,Comparison,Eligibility,True,True,True,True,2253,2314
+370,Single,Adverse Events,True,True,True,True,150,210
+371,Comparison,Eligibility,False,False,False,False,1952,2012
+372,Comparison,Intervention,True,True,True,True,1019,1080
+373,Comparison,Adverse Events,False,True,False,True,213,274
+374,Comparison,Adverse Events,True,False,True,False,560,621
+375,Comparison,Intervention,True,True,True,True,334,394
+376,Single,Intervention,False,True,False,False,1178,1238
+377,Comparison,Intervention,True,True,True,True,1073,1134
+378,Single,Intervention,False,True,False,True,225,285
+379,Single,Results,False,False,False,False,910,971
+380,Single,Results,True,True,True,True,1144,1205
+381,Comparison,Eligibility,True,True,True,True,909,969
+382,Single,Adverse Events,False,True,False,True,870,931
+383,Single,Intervention,False,False,False,False,234,295
+384,Comparison,Eligibility,False,False,False,False,268,328
+385,Comparison,Adverse Events,False,False,False,False,1213,1273
+386,Comparison,Adverse Events,False,True,False,True,980,1040
+387,Single,Adverse Events,True,True,True,True,127,188
+388,Single,Adverse Events,True,True,True,True,142,203
+389,Comparison,Eligibility,True,True,True,True,415,476
+390,Comparison,Eligibility,True,True,True,True,593,654
+391,Single,Adverse Events,True,True,True,True,205,266
+392,Comparison,Results,True,True,True,True,1601,1662
+393,Comparison,Results,True,True,True,False,414,475
+394,Comparison,Results,False,True,False,True,697,757
+395,Single,Results,True,True,True,True,1171,1232
+396,Comparison,Intervention,True,True,True,False,1112,1172
+397,Single,Intervention,True,True,True,True,279,339
+398,Comparison,Results,True,True,True,True,1399,1460
+399,Single,Adverse Events,True,False,True,False,864,925
+400,Comparison,Adverse Events,True,True,True,True,917,977
+401,Single,Results,True,False,False,False,235,295
+402,Comparison,Intervention,False,True,False,True,1810,1871
+403,Single,Eligibility,True,True,True,True,621,682
+404,Single,Eligibility,True,True,False,True,273,333
+405,Comparison,Results,True,True,True,True,1669,1730
+406,Single,Results,True,True,True,True,1074,1134
+407,Single,Eligibility,True,True,True,True,271,332
+408,Single,Eligibility,True,True,True,True,293,353
+409,Comparison,Intervention,False,True,True,False,1273,1334
+410,Comparison,Eligibility,True,True,True,True,707,767
+411,Comparison,Intervention,True,True,True,False,1016,1077
+412,Single,Adverse Events,False,True,False,True,465,526
+413,Comparison,Intervention,False,True,False,False,727,788
+414,Single,Intervention,True,True,True,True,447,507
+415,Single,Adverse Events,False,True,False,True,829,890
+416,Single,Eligibility,True,True,True,True,383,443
+417,Comparison,Intervention,True,True,False,True,996,1056
+418,Single,Intervention,False,True,True,True,239,300
+419,Single,Adverse Events,True,True,True,True,92,153
+420,Comparison,Eligibility,True,True,True,True,2367,2427
+421,Comparison,Eligibility,True,False,False,False,1644,1704
+422,Single,Adverse Events,True,True,True,False,900,961
+423,Single,Results,False,False,False,False,1539,1600
+424,Single,Adverse Events,True,True,True,True,379,440
+425,Comparison,Results,True,True,True,True,620,680
+426,Single,Adverse Events,True,True,True,True,171,231
+427,Comparison,Eligibility,True,True,True,True,1965,2025
+428,Single,Results,True,True,True,True,1296,1356
+429,Single,Intervention,True,True,True,True,179,240
+430,Comparison,Eligibility,False,True,False,True,499,560
+431,Comparison,Intervention,True,True,True,True,1830,1891
+432,Single,Results,True,False,True,False,1297,1356
+433,Comparison,Adverse Events,True,True,True,True,298,359
+434,Comparison,Intervention,True,True,True,True,963,1023
+435,Comparison,Eligibility,True,True,True,True,3775,3835
+436,Comparison,Intervention,True,True,False,True,3457,3517
+437,Comparison,Intervention,False,False,False,False,1244,1305
+438,Single,Eligibility,False,True,True,True,390,450
+439,Single,Intervention,True,False,True,False,734,794
+440,Single,Results,True,True,True,True,1157,1217
+441,Comparison,Adverse Events,True,True,True,True,169,230
+442,Single,Results,False,True,False,True,1590,1651
+443,Comparison,Intervention,False,False,True,False,1129,1189
+444,Comparison,Eligibility,False,True,False,True,1257,1317
+445,Comparison,Intervention,False,False,False,True,1784,1844
+446,Comparison,Intervention,True,True,True,True,723,784
+447,Comparison,Eligibility,False,True,False,False,527,587
+448,Comparison,Adverse Events,True,True,True,True,238,299
+449,Single,Adverse Events,False,True,False,True,255,314
+450,Comparison,Intervention,True,True,True,True,353,413
+451,Comparison,Intervention,True,True,True,True,454,515
+452,Single,Adverse Events,False,True,True,False,460,520
+453,Single,Intervention,True,True,True,True,1299,1359
+454,Comparison,Results,False,True,False,False,1574,1634
+455,Single,Adverse Events,True,False,True,True,851,912
+456,Comparison,Intervention,False,True,False,False,909,969
+457,Comparison,Intervention,False,True,False,True,547,607
+458,Comparison,Intervention,True,True,True,False,761,821
+459,Comparison,Intervention,True,False,True,False,963,1023
+460,Single,Results,False,True,False,True,1341,1401
+461,Single,Results,True,True,True,True,1362,1423
+462,Comparison,Adverse Events,False,True,False,False,218,278
+463,Single,Eligibility,True,True,True,True,436,496
+464,Single,Intervention,False,False,False,False,386,446
+465,Comparison,Adverse Events,True,True,False,True,510,570
+466,Single,Eligibility,True,True,True,True,152,213
+467,Single,Results,True,True,True,True,1563,1624
+468,Comparison,Eligibility,False,True,False,True,1257,1317
+469,Comparison,Adverse Events,True,True,True,True,156,217
+470,Comparison,Intervention,False,True,True,True,1096,1157
+471,Single,Results,True,True,True,True,1605,1666
+472,Single,Intervention,False,True,False,True,572,633
+473,Comparison,Results,False,False,False,False,591,651
+474,Single,Results,True,True,True,True,814,874
+475,Comparison,Intervention,False,False,False,False,566,626
+476,Comparison,Adverse Events,False,True,False,True,173,233
+477,Comparison,Adverse Events,False,True,True,True,346,406
+478,Single,Adverse Events,False,True,False,True,881,942
+479,Single,Intervention,False,False,False,False,327,387
+480,Comparison,Intervention,True,True,True,True,762,823
+481,Comparison,Results,False,True,False,True,1983,2043
+482,Single,Intervention,True,True,True,True,349,409
+483,Comparison,Eligibility,True,True,True,True,201,262
+484,Comparison,Adverse Events,True,False,True,True,220,281
+485,Single,Intervention,True,False,True,False,546,606
+486,Comparison,Adverse Events,True,True,True,True,173,234
+487,Comparison,Intervention,True,True,False,True,1114,1175
+488,Comparison,Results,True,True,True,True,2414,2474
+489,Comparison,Intervention,True,True,True,False,774,834
+490,Single,Results,True,True,True,True,1340,1400
+491,Single,Eligibility,False,False,False,False,606,667
+492,Single,Adverse Events,True,True,True,True,124,185
+493,Single,Eligibility,False,False,False,False,636,696
+494,Single,Results,True,True,True,True,1788,1848
+495,Comparison,Eligibility,False,False,True,False,1489,1549
+496,Single,Eligibility,True,True,True,True,208,269
+497,Comparison,Intervention,True,True,True,True,948,1008
+498,Single,Results,False,False,False,False,802,863
+499,Single,Eligibility,True,True,True,True,228,288

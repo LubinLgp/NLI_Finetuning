@@ -1,0 +1,780 @@
+index,true_label,type,section_id,premise,hypothesis,model,raw
+60,Entailment,Comparison,Eligibility,"Inclusion Criteria:
+  Prior written consent in participating in the study by the subject or his/her private attorney.
+  Japanese female >=18 years of age.
+
+Inclusion Criteria:
+  A subject was eligible for inclusion in this study only if all of the following criteria apply:
+  Subjects must have histologically confirmed invasive breast cancer with Stage IV disease at primary diagnosis or at relapse after curative-intent surgery. Where the disease was restricted to a solitary lesion, the neoplastic nature of the lesion should have been confirmed by cytology or histology.
+  Documented amplification of ErbB2 3+ by immunohistochemistry or a positive score (>2.2) by FISH using a local laboratory result (which was considered sufficient in this study with no further verification by a central laboratory).
+  Subjects must have received no more than one prior chemotherapeutic regimen in the metastatic setting.
+  If a taxane had been administered in the neoadjuvant, adjuvant or metastatic setting, progression must have occurred 12 months after completion of this treatment.
+  Prior therapy with radiation for this breast cancer population was permitted if it was administered in the neoadjuvant or adjuvant non metastatic setting. Radiotherapy given in the metastatic setting, prior to initiation of study medication, was allowed to a limited area (e.g., palliative therapy and involving less than 25% of bone marrow), if it was not the sole site of disease. Subjects must have completed radiation treatment and recovered from all acute radiation treatment related toxicities (e.g., bone marrow suppression) prior to commencement of combination treatment.
+  The subject must have received all prior chemotherapy treatment at least 4 weeks prior to enrollment in this study and must have recovered from all related toxicities. Subjects who have received weekly dose of prior chemotherapy e.g. gemcitabine or capecitabine may enroll 2 to 3 weeks after cessation of treatment provided that they have recovered from all related toxicities.
+  Prior therapy with trastuzumab in the neoadjuvant, adjuvant or metastatic setting was permitted. The subject must have received all prior trastuzumab treatment at least 4 weeks prior to enrollment in this study and must have recovered from all related toxicities.
+  Prior endocrine therapy was permitted in the neoadjuvant or adjuvant or metastatic setting. The subject must have received all prior endocrine treatment at least 1 week prior to enrollment in this study and must have recovered from all related toxicities.
+  Prior diagnosis of cancer was allowed as long as the subject was free of disease for 5 years. Subjects with completely resected basal or squamous cell skin cancer, thyroid cancer or successfully treated cervical carcinoma in-situ were allowed if it had been 1 year or greater since definitive surgery.
+  Subjects must have had measurable disease, according to Response Evaluation Criteria in Solid Tumors (RECIST) guidelines; defined as at least 1 lesion that can be accurately measured in at least 1 dimension (longest diameter [LD] to be recorded) by mammogram, ultrasound or physical exam [Therasse, 2000].
+  Subjects with liver metastases or stable chronic liver disease were permitted into the study.
+  Women 18 years of age:
+  Non-child-bearing potential (i.e., women with functioning ovaries who had a current documented tubal ligation or hysterectomy, or women who were postmenopausal); or
+  Child-bearing potential (i.e., women with functioning ovaries and no documented impairment of oviductal or uterine function that would cause sterility). This category included women with oligomenorrhoea (severe), women who were perimenopausal and young women who had begun to menstruate. These subjects must provided a negative serum pregnancy test at Screening and agree to 1 of the following:
+  Complete abstinence from intercourse from 2 weeks prior to administration of the first dose of study medication until 5 days after the final dose of study medication; or
+  Consistent and correct use of one of the following acceptable methods of birth control:
+  Male partner who was sterile prior to the female subject's entry into the study and was the sole sexual partner for that female subject.
+  Implants of levonorgestrel.
+  Injectable progestogen.
+  Any intrauterine device with a documented failure rate of less than 1% per year.
+  Oral contraceptives (either combined or progestogen only).
+  Barrier methods, including diaphragm or condom with a spermicide.
+  Considered by the Investigator to have a life expectancy of 6 months.
+  ECOG Performance Status (PS) of 0 or 1 (Karnofsky 80%) [Oken, 1982].
+  Subjects must have had normal organ and marrow function as below:
+  Hematologic
+  Absolute neutrophil count 1.5 × 10^9/L
+  Hemoglobin 9 g/dL
+  Platelets 100 × 10^9/L
+  Hepatic
+  Serum bilirubin  upper limit of normal (ULN)
+  Aspartate aminotransferase 3 × ULN without liver metastases and alanine aminotransferase 5 × ULN if documented liver metastases
+  Renal
+  Serum creatinine 1.5 mg/dL
+  OR -
+  Calculated creatinine clearance 40 mL/min
+  Subjects must have had a cardiac ejection fraction of >50% as measured by echocardiogram (ECHO) or multigated acquisition scan (MUGA) and within the institutional range of normal.
+  Subjects with stable central nervous system metastases (stable for at least 3 months) as confirmed by computerized tomography (CT)/magnetic resonance imaging (MRI) or evidence of leptomeningeal involvement were eligible only if they were not taking steroids or enzyme-inducing anticonvulsants.
+  Subject must have been free of gastrointestinal diseases that impede swallowing and retaining of oral medications.
+  Signed, informed consent prior to registration.
+  Bisphosphonate therapy for bone metastases was allowed; however, treatment must be initiated prior to the first dose of study medication. Prophylactic use of bisphosphonates in subjects without bone disease, except for the treatment of osteoporosis, was not permitted.
+  Subjects whose disease was estrogen receptor + and/or progesterone receptor + or unknown status were included in the study if they met the following criteria:
+  They had symptomatic visceral disease that required chemotherapy.
+  Significant visceral organ tumor burden
+  The disease was considered by the Investigator to be progressing rapidly or life threatening.
+  Subjects who have received prior endocrine therapy and who were no longer benefiting from this therapy.
+Exclusion Criteria:
+  A subject was not be eligible for inclusion in this study if any of the following criteria apply:
+  Subjects who received more than one prior chemotherapeutic regimen in the metastatic setting
+  Subjects taking treatment with medications provided in the list of restricted medications and substances in the drug information section for lapatinib were not eligible for the study. This included human immunodeficiency virus-positive subjects receiving combination anti-retroviral therapy because of possible pharmacokinetic interactions with lapatinib.
+  Prior treatment with lapatinib.
+  Concurrent anticancer or concomitant radiotherapy treatment;
+  Concurrent treatment with prohibited medications;
+  Use of an investigational drug within 30 days or 5 half-lives, whichever was longer, preceding the first dose of investigational treatment, or, concurrent treatment with an investigational agent or participation in another clinical trial involving investigational agents.
+  Known history of allergic reactions attributed to compounds of similar chemical or biologic composition to lapatinib or nab-paclitaxel or excipients;
+  Known history of uncontrolled inter-current illness including, but not limited to, ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, clinically significant cardiac arrhythmia, or psychiatric illness/social situations that would have limited compliance with study requirements.
+  Had active hepatic or biliary disease (with exception of patients with Gilbert's syndrome, asymptomatic gallstones, liver metastases or stable chronic liver disease per investigator assessment)
+  Concurrent disease or condition that would make the subject inappropriate for study participation or any serious medical disorder that would interfere with the subject's safety.
+  Pregnant or lactating females at any time during the study (due to the potential teratogenic or abortifacient effects of lapatinib and breastfeeding).
+  Subjects with diseases affecting gastrointestinal function resulting in an inability to take oral medication, including; malabsorption syndrome, a requirement for iv alimentation, prior surgical procedures affecting absorption e.g. gastric resection and uncontrolled inflammatory bowel disease (e.g., Crohn's, ulcerative colitis).
+  Peripheral neuropathy of Grade 2 or greater.
+  Unresolved or unstable, serious toxicity from prior administration of another investigational drug and/or of prior cancer treatment.
+  History of prior malignancy. However, subjects who had been disease-free for 5 years, or subjects with completely resected basal or squamous cell skin cancer, thyroid cancer or successfully treated cervical carcinoma in situ were eligible if it had been at least 1 year since definitive surgery.
+  or rendering of informed consent.
+  Other Eligibility Criteria Considerations:
+  To assess any potential impact on subject eligibility with regard to safety, the Investigator must refer to the following document(s) for detailed information regarding warnings, precautions, contraindications, AEs, and other significant data pertaining to the investigational product(s) being used in this study: Clinical Investigator's Brochure (IB), SPM, and the nab-paclitaxel Product Label.","Only female patients of a specific nationality can take part in the primary trial, no such condition is required for participation in the secondary trial.",Baseline,"90-100% or 70-90%).
+  Adequate hematologic, hepatic, and renal function.
+  Subjects must have signed an Institutional Review Board (IRB) approved informed consent form (ICF)"
+112,Entailment,Single,Eligibility,"Inclusion Criteria for dose escalation and expansion phase:
+  Signed written informed consent
+  Male or female participants aged greater than or equal to 18 years
+  Participants must have histologically or cytologically proven metastatic or locally advanced solid tumors, for which no standard therapy exists or standard therapy has failed. Availability of tumor archival material or fresh biopsies is optional for participants in dose escalation
+  Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1 at trial entry and an estimated life expectancy of at least 3 months
+  Disease must be measurable with at least 1 uni-dimensional measurable lesion by RECIST 1.1, except for participants with metastatic castrate-resistant prostate cancer (mCRPC) or metastatic breast cancer (MBC) who may be enrolled with objective evidence of disease without a measureable lesion
+  Adequate hematological, hepatic and renal function as defined in the protocol
+  Effective contraception for both male and female participants if the risk of conception exists
+  Other protocol defined inclusion criteria could apply
+  Inclusion Criteria for expansion phase:
+  Participants must have relapsed, refractory, or progressive disease following last line of treatment (with the exception of the gastric and gastroesophageal junction (GEJ) cancer cohort, which does not require progression). Availability of tumor archival material or fresh biopsies (excluding bone biopsies) is mandatory for eligibility in the expansion cohorts. For participants in the MBC cohort, the biopsy or surgical specimen must have been collected within 90 days prior to the first investigational medicinal product (IMP) administration. Specifically, the following will be required:
+  NSCLC post platinum doublet: Histologically or cytologically confirmed stage IIIB or stage IV NSCLC that has progressed after 1 line of platinum-containing doublet chemotherapy. Participants should have received only 1 line of platinum-containing treatment for metastatic disease (i.e., adjuvant treatment with a platinum-containing regimen is not sufficient for eligibility because not received in the context of a metastatic disease). Participants in the NSCLC cohort will only be enrolled in USA
+  NSCLC first line: Stage IV (per 7th International Association for the Study of Lung Cancer [IASLC] classification) or recurrent NSCLC that is histologically proven. Participants must not have received treatment for their metastatic or recurrent disease. No activating epidermal growth factor receptor (EGFR) mutation nor ALK translocation/re-arrangement
+  Gastric and GEJ cancer: Histologically confirmed, unresectable locally advanced or metastatic adenocarcinoma of the gastric and gastro-esophageal junction, treated with first-line chemotherapy combination with or without disease progression. Participants should have received no more than 1 line of treatment for metastatic disease. Participants should not have been treated with trastuzumab (but can be Human Epidermal growth factor Receptor 2 [HER2] positive). Participants who received any platinum containing doublet or triplet as a neoadjuvant chemotherapy strategy, but are not ultimately candidates for surgery will also be eligible, as long as they did not have progressive disease after completion of the neoadjuvant chemotherapy. In addition, participants with gastric cancer can enter in the study if their white blood cell (WBC) and lymphocyte count is as defined in the protocol
+  MBC: Participants must have histologically confirmed locally advanced or MBC and have tumor that is refractory to or progressive after standard of care therapy. Participants must have received no more than 3 prior lines of cytotoxic therapy for metastatic disease. Participants must have received a taxane and an anthracycline, unless contra-indicated
+  Secondary expansion cohorts: Metastatic colorectal cancer (mCRC), Metastatic castrate-resistant prostate cancer (mCRPC), melanoma, ovarian cancer, ACC, mesothelioma, urothelial carcinoma and renal cell carcinoma as defined in the protocol
+  Efficacy expansion cohorts: Gastric and GEJ cancer (third line), ovarian cancer (platinum Refractory + liposomal doxorubicin), urothelial carcinoma, and HNSCC as defined in the protocol
+  Other protocol defined inclusion criteria for expansion phase could apply
+  Exclusion Criteria for dose escalation and expansion phase:
+  Concurrent treatment with a non-permitted drug
+  Prior therapy with specific antibody/drug targeting T cell co-regulatory proteins (immune checkpoints)
+  Concurrent anticancer treatment, major surgery, or use of any investigational drug within 28 days before the start of trial treatment; or concurrent systemic therapy with immunosuppressive agents, use of hormonal agents within 7 days before the start of trial treatment as defined in the protocol. Note: Participants receiving bisphosphonate or denosumab are eligible provided treatment was initiated at least 14 days before the first dose of avelumab.
+  Previous malignant disease other than the target malignancy to be investigated in this trial within the last 5 years with the exception of basal or squamous cell carcinoma of the skin or cervical carcinoma in situ
+  Rapidly progressive disease (for example, tumor lysis syndrome)
+  Active or history of central nervous system metastases
+  Receipt of any organ transplantation including allogeneic stem-cell transplantation
+  Significant acute or chronic infections as defined in the protocol
+  Active or history of any autoimmune disease (Participants with diabetes Type 1, vitiligo, psoriasis, hypo- or hyperthyroid disease not requiring immunosuppressive treatment are eligible) or immunodeficiencies
+  Known severe hypersensitivity reactions to monoclonal antibodies, any history of anaphylaxis, or uncontrolled asthma
+  Persisting toxicity related to prior therapy greater than Grade 1 NCI-CTCAE v4.0, however sensory neuropathy less than or equal to Grade 2 is acceptable
+  Pregnancy or lactation period
+  Known alcohol or drug abuse
+  Clinically significant (that is, active) cardiovascular disease
+  All other significant diseases (for example, inflammatory bowel disease), which, in the opinion of the investigator, might impair the Participant's tolerance of trial treatment
+  Any psychiatric condition that would prohibit the understanding or rendering of informed consent
+  Legal incapacity or limited legal capacity
+  Non-oncology vaccine therapies for prevention of infection disease (for example, seasonal flu vaccine, human papilloma virus vaccine) within 4 weeks of study drug administration. Vaccination while on study is also prohibited except for administration of the inactivated influenza vaccine",African-american patients can participate in the primary trial.,Baseline,"osphonates or denosumab for bone metastases are eligible
+  Uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, serious uncontrolled"
+134,Contradiction,Comparison,Eligibility,"Inclusion Criteria:
+  Written informed consent must have been obtained prior to any screening procedures
+  Phase I part: Patients with advanced/metastatic solid tumors, with measurable or non-measurable disease as determined by RECIST version 1.1 (refer to Appendix 1), who have progressed despite standard therapy or are intolerant of standard therapy, or for whom no standard therapy exists.
+  Phase II part: Patients with advanced/metastatic solid tumors, with at least one measurable lesion as determined by RECIST version 1.1, who have progressed following their last prior therapy, and fit into one of the following groups:
+  Group 1a and 1b: NSCLC:
+  Patients with NSCLC must have had disease recurrence or progression during or after no more than one prior systemic chemotherapy regimen (platinum doublet-based) for advanced or metastatic disease. Prior maintenance therapy is allowed (e.g. pemetrexed, erlotinib, bevacizumab).
+  Only patients with EGFR mutation-negative tumor are eligible (defined as negative for exon 19 deletions and for the L858R mutation in EGFR at a minimum; however, if more extensive EGFR mutation testing has been performed, the tumor must not harbor any known activating EGFR mutations in Exons 18-21 in order to be considered EGFR mutation-negative). All patients must be tested for EGFR mutational status and, for ALK translocation status if no mutation is detected in EGFR. Patients with ALK translocation-positive NSCLC must have had disease progression following treatment with a corresponding inhibitor and no more than one systemic chemotherapy regimen (platinum doublet-based), in any sequence.
+  Group 2: Melanoma:
+  All patients must have been tested for BRAF mutations. Patients with V600 mutation positive melanoma must have clinical or radiological evidence of disease progression during or after treatment with a BRAF inhibitor alone or in combination with other agents.
+  Group 3: Triple negatice breast cancer.
+  Group 4: Anaplastic thyroid cancer
+  Patients are not required to have received or progressed on a prior therapy.
+  Patients must not be at short term risk for life threatening complications (such as airway compromise or bleeding from locoregional or metastatic disease).
+  Chemoradiation and/or surgery should be considered prior to study entry for those patients with locally advanced disease if those therapies are considered to be in the best interest of the patient.
+  ECOG Performance Status  1.
+  Patients must have a site of disease amenable to biopsy, and be a candidate for tumor biopsy. Patient must be willing to undergo a new tumor biopsy at baseline or at molecular pre-screening if applicable, and during therapy on this study. For patients in the phase II part of the study, exceptions may be granted after documented discussion with Novartis. After a sufficient number of paired biopsies are collected, the decision may be taken to stop the collection of biopsies.
+Exclusion Criteria:
+  History of severe hypersensitivity reactions to other mAbs
+  Subjects with active, known or suspected autoimmune disease. Subjects with vitiligo, type I diabetes mellitus, residual hypothyroidism due to autoimmune condition only requiring hormone replacement, psoriasis not requiring systemic treatment, or conditions not expected to recur in the absence of an external trigger are permitted to enroll.
+  Active infection requiring systemic antibiotic therapy.
+  HIV infection.
+  Active HBV or HCV infection.
+  Patients with ocular melanoma.
+  Systemic anti-cancer therapy within 2 weeks of the first dose of study treatment. For cytotoxic agents that have major delayed toxicity, e.g. mitomycin C and nitrosoureas, 4 weeks washout period. For patients receiving anticancer immunotherapies such as CTLA-4 antagonists, 6 weeks is indicated as the washout period.
+  Prior PD-1- or PD-L1-directed therapy.
+  Patients requiring chronic treatment with systemic steroid therapy, other than replacement-dose steroids in the setting of adrenal insufficiency. Topical, inhaled, nasal and ophthalmic steroids are not prohibited.
+  Patients receiving systemic treatment with any immunosuppressive medication (other than steroids as described above).
+  Use of any vaccines against infectious diseases (e.g. influenza, varicella, pneumococcus) within 4 weeks of initiation of study treatment.
+  Presence of  CTCAE grade 2 toxicity (except alopecia, peripheral neuropathy and ototoxicity, which are excluded if  CTCAE grade 3) due to prior cancer therapy
+
+DISEASE CHARACTERISTICS:
+  Meets 1 of the following criteria:
+  History of breast cancer (currently without malignant disease)
+  No history of breast cancer but wishes to avoid estrogen due to a perceived increased risk of breast cancer
+  Must have bothersome hot flashes (defined by their occurrence of  14 times per week and of sufficient severity to make the patient desire therapeutic intervention) for  1 month before study entry
+  Has undergone treatment for cancer (patients other than breast cancer survivors are eligible)
+  PATIENT CHARACTERISTICS:
+  Eastern Cooperative Oncology Group (ECOG) performance status 0-2
+  Not pregnant or nursing
+  Negative pregnancy test
+  Fertile patients must use effective contraception
+  Creatinine clearance  30 mL/min
+  No hypersensitivity to magnesium oxide
+  No medical or other condition(s) that, in the opinion of the investigator/sub-investigator, may compromise the objectives of the study
+  PRIOR CONCURRENT THERAPY:
+  See Disease Characteristics
+  More than 4 weeks since prior and no concurrent antineoplastic chemotherapy, androgens, estrogens, progestational agents, or gabapentin
+  More than 28 days since prior and no other concurrent investigational drugs
+  Concurrent tamoxifen, raloxifene, or aromatase inhibitors allowed provided patient has been on a constant dose for > 4 weeks AND is not expected to stop the medication during the study period","the secondary trial has the same inclusion/exclusion criteria for all participants, whereas the primary trial has 2 sets of inclusion criteria, one for the 18-50 age group and one for the 50+ age group.",Baseline,") with a known germline BRCA1/2 mutation
+  History of breast cancer (currently without malignant disease) with a known germline BRCA1/2 mutation and a history of ovarian cancer
+  History of ovarian cancer ("
+179,Contradiction,Comparison,Eligibility,"Inclusion Criteria:
+  Prior written consent in participating in the study by the subject or his/her private attorney.
+  Japanese female >=18 years of age.
+
+Inclusion Criteria:
+  A subject was eligible for inclusion in this study only if all of the following criteria apply:
+  Subjects must have histologically confirmed invasive breast cancer with Stage IV disease at primary diagnosis or at relapse after curative-intent surgery. Where the disease was restricted to a solitary lesion, the neoplastic nature of the lesion should have been confirmed by cytology or histology.
+  Documented amplification of ErbB2 3+ by immunohistochemistry or a positive score (>2.2) by FISH using a local laboratory result (which was considered sufficient in this study with no further verification by a central laboratory).
+  Subjects must have received no more than one prior chemotherapeutic regimen in the metastatic setting.
+  If a taxane had been administered in the neoadjuvant, adjuvant or metastatic setting, progression must have occurred 12 months after completion of this treatment.
+  Prior therapy with radiation for this breast cancer population was permitted if it was administered in the neoadjuvant or adjuvant non metastatic setting. Radiotherapy given in the metastatic setting, prior to initiation of study medication, was allowed to a limited area (e.g., palliative therapy and involving less than 25% of bone marrow), if it was not the sole site of disease. Subjects must have completed radiation treatment and recovered from all acute radiation treatment related toxicities (e.g., bone marrow suppression) prior to commencement of combination treatment.
+  The subject must have received all prior chemotherapy treatment at least 4 weeks prior to enrollment in this study and must have recovered from all related toxicities. Subjects who have received weekly dose of prior chemotherapy e.g. gemcitabine or capecitabine may enroll 2 to 3 weeks after cessation of treatment provided that they have recovered from all related toxicities.
+  Prior therapy with trastuzumab in the neoadjuvant, adjuvant or metastatic setting was permitted. The subject must have received all prior trastuzumab treatment at least 4 weeks prior to enrollment in this study and must have recovered from all related toxicities.
+  Prior endocrine therapy was permitted in the neoadjuvant or adjuvant or metastatic setting. The subject must have received all prior endocrine treatment at least 1 week prior to enrollment in this study and must have recovered from all related toxicities.
+  Prior diagnosis of cancer was allowed as long as the subject was free of disease for 5 years. Subjects with completely resected basal or squamous cell skin cancer, thyroid cancer or successfully treated cervical carcinoma in-situ were allowed if it had been 1 year or greater since definitive surgery.
+  Subjects must have had measurable disease, according to Response Evaluation Criteria in Solid Tumors (RECIST) guidelines; defined as at least 1 lesion that can be accurately measured in at least 1 dimension (longest diameter [LD] to be recorded) by mammogram, ultrasound or physical exam [Therasse, 2000].
+  Subjects with liver metastases or stable chronic liver disease were permitted into the study.
+  Women 18 years of age:
+  Non-child-bearing potential (i.e., women with functioning ovaries who had a current documented tubal ligation or hysterectomy, or women who were postmenopausal); or
+  Child-bearing potential (i.e., women with functioning ovaries and no documented impairment of oviductal or uterine function that would cause sterility). This category included women with oligomenorrhoea (severe), women who were perimenopausal and young women who had begun to menstruate. These subjects must provided a negative serum pregnancy test at Screening and agree to 1 of the following:
+  Complete abstinence from intercourse from 2 weeks prior to administration of the first dose of study medication until 5 days after the final dose of study medication; or
+  Consistent and correct use of one of the following acceptable methods of birth control:
+  Male partner who was sterile prior to the female subject's entry into the study and was the sole sexual partner for that female subject.
+  Implants of levonorgestrel.
+  Injectable progestogen.
+  Any intrauterine device with a documented failure rate of less than 1% per year.
+  Oral contraceptives (either combined or progestogen only).
+  Barrier methods, including diaphragm or condom with a spermicide.
+  Considered by the Investigator to have a life expectancy of 6 months.
+  ECOG Performance Status (PS) of 0 or 1 (Karnofsky 80%) [Oken, 1982].
+  Subjects must have had normal organ and marrow function as below:
+  Hematologic
+  Absolute neutrophil count 1.5 × 10^9/L
+  Hemoglobin 9 g/dL
+  Platelets 100 × 10^9/L
+  Hepatic
+  Serum bilirubin  upper limit of normal (ULN)
+  Aspartate aminotransferase 3 × ULN without liver metastases and alanine aminotransferase 5 × ULN if documented liver metastases
+  Renal
+  Serum creatinine 1.5 mg/dL
+  OR -
+  Calculated creatinine clearance 40 mL/min
+  Subjects must have had a cardiac ejection fraction of >50% as measured by echocardiogram (ECHO) or multigated acquisition scan (MUGA) and within the institutional range of normal.
+  Subjects with stable central nervous system metastases (stable for at least 3 months) as confirmed by computerized tomography (CT)/magnetic resonance imaging (MRI) or evidence of leptomeningeal involvement were eligible only if they were not taking steroids or enzyme-inducing anticonvulsants.
+  Subject must have been free of gastrointestinal diseases that impede swallowing and retaining of oral medications.
+  Signed, informed consent prior to registration.
+  Bisphosphonate therapy for bone metastases was allowed; however, treatment must be initiated prior to the first dose of study medication. Prophylactic use of bisphosphonates in subjects without bone disease, except for the treatment of osteoporosis, was not permitted.
+  Subjects whose disease was estrogen receptor + and/or progesterone receptor + or unknown status were included in the study if they met the following criteria:
+  They had symptomatic visceral disease that required chemotherapy.
+  Significant visceral organ tumor burden
+  The disease was considered by the Investigator to be progressing rapidly or life threatening.
+  Subjects who have received prior endocrine therapy and who were no longer benefiting from this therapy.
+Exclusion Criteria:
+  A subject was not be eligible for inclusion in this study if any of the following criteria apply:
+  Subjects who received more than one prior chemotherapeutic regimen in the metastatic setting
+  Subjects taking treatment with medications provided in the list of restricted medications and substances in the drug information section for lapatinib were not eligible for the study. This included human immunodeficiency virus-positive subjects receiving combination anti-retroviral therapy because of possible pharmacokinetic interactions with lapatinib.
+  Prior treatment with lapatinib.
+  Concurrent anticancer or concomitant radiotherapy treatment;
+  Concurrent treatment with prohibited medications;
+  Use of an investigational drug within 30 days or 5 half-lives, whichever was longer, preceding the first dose of investigational treatment, or, concurrent treatment with an investigational agent or participation in another clinical trial involving investigational agents.
+  Known history of allergic reactions attributed to compounds of similar chemical or biologic composition to lapatinib or nab-paclitaxel or excipients;
+  Known history of uncontrolled inter-current illness including, but not limited to, ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, clinically significant cardiac arrhythmia, or psychiatric illness/social situations that would have limited compliance with study requirements.
+  Had active hepatic or biliary disease (with exception of patients with Gilbert's syndrome, asymptomatic gallstones, liver metastases or stable chronic liver disease per investigator assessment)
+  Concurrent disease or condition that would make the subject inappropriate for study participation or any serious medical disorder that would interfere with the subject's safety.
+  Pregnant or lactating females at any time during the study (due to the potential teratogenic or abortifacient effects of lapatinib and breastfeeding).
+  Subjects with diseases affecting gastrointestinal function resulting in an inability to take oral medication, including; malabsorption syndrome, a requirement for iv alimentation, prior surgical procedures affecting absorption e.g. gastric resection and uncontrolled inflammatory bowel disease (e.g., Crohn's, ulcerative colitis).
+  Peripheral neuropathy of Grade 2 or greater.
+  Unresolved or unstable, serious toxicity from prior administration of another investigational drug and/or of prior cancer treatment.
+  History of prior malignancy. However, subjects who had been disease-free for 5 years, or subjects with completely resected basal or squamous cell skin cancer, thyroid cancer or successfully treated cervical carcinoma in situ were eligible if it had been at least 1 year since definitive surgery.
+  or rendering of informed consent.
+  Other Eligibility Criteria Considerations:
+  To assess any potential impact on subject eligibility with regard to safety, the Investigator must refer to the following document(s) for detailed information regarding warnings, precautions, contraindications, AEs, and other significant data pertaining to the investigational product(s) being used in this study: Clinical Investigator's Brochure (IB), SPM, and the nab-paclitaxel Product Label.","Any japanese national can take part in the primary trial, or the secondary trial.",Baseline,"90-100% or 70-90%).
+  Adequate hematologic, hepatic, and renal function.
+  Subjects must have signed an Institutional Review Board (IRB) approved informed consent form (ICF)"
+205,Entailment,Comparison,Eligibility,"Inclusion Criteria:
+  Written informed consent must have been obtained prior to any screening procedures
+  Phase I part: Patients with advanced/metastatic solid tumors, with measurable or non-measurable disease as determined by RECIST version 1.1 (refer to Appendix 1), who have progressed despite standard therapy or are intolerant of standard therapy, or for whom no standard therapy exists.
+  Phase II part: Patients with advanced/metastatic solid tumors, with at least one measurable lesion as determined by RECIST version 1.1, who have progressed following their last prior therapy, and fit into one of the following groups:
+  Group 1a and 1b: NSCLC:
+  Patients with NSCLC must have had disease recurrence or progression during or after no more than one prior systemic chemotherapy regimen (platinum doublet-based) for advanced or metastatic disease. Prior maintenance therapy is allowed (e.g. pemetrexed, erlotinib, bevacizumab).
+  Only patients with EGFR mutation-negative tumor are eligible (defined as negative for exon 19 deletions and for the L858R mutation in EGFR at a minimum; however, if more extensive EGFR mutation testing has been performed, the tumor must not harbor any known activating EGFR mutations in Exons 18-21 in order to be considered EGFR mutation-negative). All patients must be tested for EGFR mutational status and, for ALK translocation status if no mutation is detected in EGFR. Patients with ALK translocation-positive NSCLC must have had disease progression following treatment with a corresponding inhibitor and no more than one systemic chemotherapy regimen (platinum doublet-based), in any sequence.
+  Group 2: Melanoma:
+  All patients must have been tested for BRAF mutations. Patients with V600 mutation positive melanoma must have clinical or radiological evidence of disease progression during or after treatment with a BRAF inhibitor alone or in combination with other agents.
+  Group 3: Triple negatice breast cancer.
+  Group 4: Anaplastic thyroid cancer
+  Patients are not required to have received or progressed on a prior therapy.
+  Patients must not be at short term risk for life threatening complications (such as airway compromise or bleeding from locoregional or metastatic disease).
+  Chemoradiation and/or surgery should be considered prior to study entry for those patients with locally advanced disease if those therapies are considered to be in the best interest of the patient.
+  ECOG Performance Status  1.
+  Patients must have a site of disease amenable to biopsy, and be a candidate for tumor biopsy. Patient must be willing to undergo a new tumor biopsy at baseline or at molecular pre-screening if applicable, and during therapy on this study. For patients in the phase II part of the study, exceptions may be granted after documented discussion with Novartis. After a sufficient number of paired biopsies are collected, the decision may be taken to stop the collection of biopsies.
+Exclusion Criteria:
+  History of severe hypersensitivity reactions to other mAbs
+  Subjects with active, known or suspected autoimmune disease. Subjects with vitiligo, type I diabetes mellitus, residual hypothyroidism due to autoimmune condition only requiring hormone replacement, psoriasis not requiring systemic treatment, or conditions not expected to recur in the absence of an external trigger are permitted to enroll.
+  Active infection requiring systemic antibiotic therapy.
+  HIV infection.
+  Active HBV or HCV infection.
+  Patients with ocular melanoma.
+  Systemic anti-cancer therapy within 2 weeks of the first dose of study treatment. For cytotoxic agents that have major delayed toxicity, e.g. mitomycin C and nitrosoureas, 4 weeks washout period. For patients receiving anticancer immunotherapies such as CTLA-4 antagonists, 6 weeks is indicated as the washout period.
+  Prior PD-1- or PD-L1-directed therapy.
+  Patients requiring chronic treatment with systemic steroid therapy, other than replacement-dose steroids in the setting of adrenal insufficiency. Topical, inhaled, nasal and ophthalmic steroids are not prohibited.
+  Patients receiving systemic treatment with any immunosuppressive medication (other than steroids as described above).
+  Use of any vaccines against infectious diseases (e.g. influenza, varicella, pneumococcus) within 4 weeks of initiation of study treatment.
+  Presence of  CTCAE grade 2 toxicity (except alopecia, peripheral neuropathy and ototoxicity, which are excluded if  CTCAE grade 3) due to prior cancer therapy
+
+DISEASE CHARACTERISTICS:
+  Meets 1 of the following criteria:
+  History of breast cancer (currently without malignant disease)
+  No history of breast cancer but wishes to avoid estrogen due to a perceived increased risk of breast cancer
+  Must have bothersome hot flashes (defined by their occurrence of  14 times per week and of sufficient severity to make the patient desire therapeutic intervention) for  1 month before study entry
+  Has undergone treatment for cancer (patients other than breast cancer survivors are eligible)
+  PATIENT CHARACTERISTICS:
+  Eastern Cooperative Oncology Group (ECOG) performance status 0-2
+  Not pregnant or nursing
+  Negative pregnancy test
+  Fertile patients must use effective contraception
+  Creatinine clearance  30 mL/min
+  No hypersensitivity to magnesium oxide
+  No medical or other condition(s) that, in the opinion of the investigator/sub-investigator, may compromise the objectives of the study
+  PRIOR CONCURRENT THERAPY:
+  See Disease Characteristics
+  More than 4 weeks since prior and no concurrent antineoplastic chemotherapy, androgens, estrogens, progestational agents, or gabapentin
+  More than 28 days since prior and no other concurrent investigational drugs
+  Concurrent tamoxifen, raloxifene, or aromatase inhibitors allowed provided patient has been on a constant dose for > 4 weeks AND is not expected to stop the medication during the study period","the secondary trial has the same inclusion/exclusion criteria for all participants, whereas the primary trial has 2 sets of inclusion criteria for the different study groups.",Baseline,") with a known germline BRCA1/2 mutation
+  History of breast cancer (currently without malignant disease) with a known germline BRCA1/2 mutation and a history of ovarian cancer
+  History of ovarian cancer ("
+299,Contradiction,Single,Eligibility,"Inclusion Criteria for dose escalation and expansion phase:
+  Signed written informed consent
+  Male or female participants aged greater than or equal to 18 years
+  Participants must have histologically or cytologically proven metastatic or locally advanced solid tumors, for which no standard therapy exists or standard therapy has failed. Availability of tumor archival material or fresh biopsies is optional for participants in dose escalation
+  Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1 at trial entry and an estimated life expectancy of at least 3 months
+  Disease must be measurable with at least 1 uni-dimensional measurable lesion by RECIST 1.1, except for participants with metastatic castrate-resistant prostate cancer (mCRPC) or metastatic breast cancer (MBC) who may be enrolled with objective evidence of disease without a measureable lesion
+  Adequate hematological, hepatic and renal function as defined in the protocol
+  Effective contraception for both male and female participants if the risk of conception exists
+  Other protocol defined inclusion criteria could apply
+  Inclusion Criteria for expansion phase:
+  Participants must have relapsed, refractory, or progressive disease following last line of treatment (with the exception of the gastric and gastroesophageal junction (GEJ) cancer cohort, which does not require progression). Availability of tumor archival material or fresh biopsies (excluding bone biopsies) is mandatory for eligibility in the expansion cohorts. For participants in the MBC cohort, the biopsy or surgical specimen must have been collected within 90 days prior to the first investigational medicinal product (IMP) administration. Specifically, the following will be required:
+  NSCLC post platinum doublet: Histologically or cytologically confirmed stage IIIB or stage IV NSCLC that has progressed after 1 line of platinum-containing doublet chemotherapy. Participants should have received only 1 line of platinum-containing treatment for metastatic disease (i.e., adjuvant treatment with a platinum-containing regimen is not sufficient for eligibility because not received in the context of a metastatic disease). Participants in the NSCLC cohort will only be enrolled in USA
+  NSCLC first line: Stage IV (per 7th International Association for the Study of Lung Cancer [IASLC] classification) or recurrent NSCLC that is histologically proven. Participants must not have received treatment for their metastatic or recurrent disease. No activating epidermal growth factor receptor (EGFR) mutation nor ALK translocation/re-arrangement
+  Gastric and GEJ cancer: Histologically confirmed, unresectable locally advanced or metastatic adenocarcinoma of the gastric and gastro-esophageal junction, treated with first-line chemotherapy combination with or without disease progression. Participants should have received no more than 1 line of treatment for metastatic disease. Participants should not have been treated with trastuzumab (but can be Human Epidermal growth factor Receptor 2 [HER2] positive). Participants who received any platinum containing doublet or triplet as a neoadjuvant chemotherapy strategy, but are not ultimately candidates for surgery will also be eligible, as long as they did not have progressive disease after completion of the neoadjuvant chemotherapy. In addition, participants with gastric cancer can enter in the study if their white blood cell (WBC) and lymphocyte count is as defined in the protocol
+  MBC: Participants must have histologically confirmed locally advanced or MBC and have tumor that is refractory to or progressive after standard of care therapy. Participants must have received no more than 3 prior lines of cytotoxic therapy for metastatic disease. Participants must have received a taxane and an anthracycline, unless contra-indicated
+  Secondary expansion cohorts: Metastatic colorectal cancer (mCRC), Metastatic castrate-resistant prostate cancer (mCRPC), melanoma, ovarian cancer, ACC, mesothelioma, urothelial carcinoma and renal cell carcinoma as defined in the protocol
+  Efficacy expansion cohorts: Gastric and GEJ cancer (third line), ovarian cancer (platinum Refractory + liposomal doxorubicin), urothelial carcinoma, and HNSCC as defined in the protocol
+  Other protocol defined inclusion criteria for expansion phase could apply
+  Exclusion Criteria for dose escalation and expansion phase:
+  Concurrent treatment with a non-permitted drug
+  Prior therapy with specific antibody/drug targeting T cell co-regulatory proteins (immune checkpoints)
+  Concurrent anticancer treatment, major surgery, or use of any investigational drug within 28 days before the start of trial treatment; or concurrent systemic therapy with immunosuppressive agents, use of hormonal agents within 7 days before the start of trial treatment as defined in the protocol. Note: Participants receiving bisphosphonate or denosumab are eligible provided treatment was initiated at least 14 days before the first dose of avelumab.
+  Previous malignant disease other than the target malignancy to be investigated in this trial within the last 5 years with the exception of basal or squamous cell carcinoma of the skin or cervical carcinoma in situ
+  Rapidly progressive disease (for example, tumor lysis syndrome)
+  Active or history of central nervous system metastases
+  Receipt of any organ transplantation including allogeneic stem-cell transplantation
+  Significant acute or chronic infections as defined in the protocol
+  Active or history of any autoimmune disease (Participants with diabetes Type 1, vitiligo, psoriasis, hypo- or hyperthyroid disease not requiring immunosuppressive treatment are eligible) or immunodeficiencies
+  Known severe hypersensitivity reactions to monoclonal antibodies, any history of anaphylaxis, or uncontrolled asthma
+  Persisting toxicity related to prior therapy greater than Grade 1 NCI-CTCAE v4.0, however sensory neuropathy less than or equal to Grade 2 is acceptable
+  Pregnancy or lactation period
+  Known alcohol or drug abuse
+  Clinically significant (that is, active) cardiovascular disease
+  All other significant diseases (for example, inflammatory bowel disease), which, in the opinion of the investigator, might impair the Participant's tolerance of trial treatment
+  Any psychiatric condition that would prohibit the understanding or rendering of informed consent
+  Legal incapacity or limited legal capacity
+  Non-oncology vaccine therapies for prevention of infection disease (for example, seasonal flu vaccine, human papilloma virus vaccine) within 4 weeks of study drug administration. Vaccination while on study is also prohibited except for administration of the inactivated influenza vaccine","African-american patients can participate in the primary trial, but they must reside in the state of texas for the duration of the study.",Baseline,"osphonates or denosumab for bone metastases are eligible
+  Uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, serious uncontrolled"
+337,Entailment,Comparison,Eligibility,"Inclusion Criteria:
+  Signed written informed consent to participate in clinical study of tivantinib
+  Male or female participants of the age defined in the original protocol they were enrolled.
+  Eastern Cooperative Oncology Group (ECOG) performance status (PS) 3 (or 2 for tivantinib-naive participants)
+  Adequate bone marrow function:
+  Absolute neutrophil count (ANC) 1.5 x 10^9/L
+  Hemoglobin 8.0 g/dL (or  9.0 g/dL for tivantinib-naïve participants)
+  Enrollment within 14 days of the completion of End of Treatment Visit of the original study
+  Participants, who participated in previous ARQ 197 studies that have reached their designated end-dates, who did not meet discontinuation criteria in their original study, and who may, in the opinion of the Investigator and the Sponsor, benefit from treatment
+  Women of childbearing potential must have a negative pregnancy test performed within 14 days of the start of study drug. Both men and women enrolled in this study must agree to use adequate birth control measures while on study
+Exclusion Criteria:
+  Known or suspected allergy to ARQ 197
+  Substance abuse, medical, psychological or social conditions that may interfere with the participant's participation in the study or evaluation of the study results
+  Any condition that is unstable or which could jeopardize the safety of the participant and his/her compliance in the study
+  A serious uncontrolled medical disorder/condition that in the opinion of the Investigator would impair the ability of the participant to receive protocol therapy
+  Requirement to receive other concurrent chemotherapy (excluding combination therapy defined in original protocol), immunotherapy, radiotherapy, or any other investigational drug while on study. Palliative radiotherapy is allowed provided that:
+  in the opinion of the Investigator, the participant does not have progressive disease
+  the radiation field does not encompass a target lesion
+  no more than 10% of the participant's bone marrow is irradiated
+
+Inclusion Criteria for dose escalation and expansion phase:
+  Signed written informed consent
+  Male or female participants aged greater than or equal to 18 years
+  Participants must have histologically or cytologically proven metastatic or locally advanced solid tumors, for which no standard therapy exists or standard therapy has failed. Availability of tumor archival material or fresh biopsies is optional for participants in dose escalation
+  Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1 at trial entry and an estimated life expectancy of at least 3 months
+  Disease must be measurable with at least 1 uni-dimensional measurable lesion by RECIST 1.1, except for participants with metastatic castrate-resistant prostate cancer (mCRPC) or metastatic breast cancer (MBC) who may be enrolled with objective evidence of disease without a measureable lesion
+  Adequate hematological, hepatic and renal function as defined in the protocol
+  Effective contraception for both male and female participants if the risk of conception exists
+  Other protocol defined inclusion criteria could apply
+  Inclusion Criteria for expansion phase:
+  Participants must have relapsed, refractory, or progressive disease following last line of treatment (with the exception of the gastric and gastroesophageal junction (GEJ) cancer cohort, which does not require progression). Availability of tumor archival material or fresh biopsies (excluding bone biopsies) is mandatory for eligibility in the expansion cohorts. For participants in the MBC cohort, the biopsy or surgical specimen must have been collected within 90 days prior to the first investigational medicinal product (IMP) administration. Specifically, the following will be required:
+  NSCLC post platinum doublet: Histologically or cytologically confirmed stage IIIB or stage IV NSCLC that has progressed after 1 line of platinum-containing doublet chemotherapy. Participants should have received only 1 line of platinum-containing treatment for metastatic disease (i.e., adjuvant treatment with a platinum-containing regimen is not sufficient for eligibility because not received in the context of a metastatic disease). Participants in the NSCLC cohort will only be enrolled in USA
+  NSCLC first line: Stage IV (per 7th International Association for the Study of Lung Cancer [IASLC] classification) or recurrent NSCLC that is histologically proven. Participants must not have received treatment for their metastatic or recurrent disease. No activating epidermal growth factor receptor (EGFR) mutation nor ALK translocation/re-arrangement
+  Gastric and GEJ cancer: Histologically confirmed, unresectable locally advanced or metastatic adenocarcinoma of the gastric and gastro-esophageal junction, treated with first-line chemotherapy combination with or without disease progression. Participants should have received no more than 1 line of treatment for metastatic disease. Participants should not have been treated with trastuzumab (but can be Human Epidermal growth factor Receptor 2 [HER2] positive). Participants who received any platinum containing doublet or triplet as a neoadjuvant chemotherapy strategy, but are not ultimately candidates for surgery will also be eligible, as long as they did not have progressive disease after completion of the neoadjuvant chemotherapy. In addition, participants with gastric cancer can enter in the study if their white blood cell (WBC) and lymphocyte count is as defined in the protocol
+  MBC: Participants must have histologically confirmed locally advanced or MBC and have tumor that is refractory to or progressive after standard of care therapy. Participants must have received no more than 3 prior lines of cytotoxic therapy for metastatic disease. Participants must have received a taxane and an anthracycline, unless contra-indicated
+  Secondary expansion cohorts: Metastatic colorectal cancer (mCRC), Metastatic castrate-resistant prostate cancer (mCRPC), melanoma, ovarian cancer, ACC, mesothelioma, urothelial carcinoma and renal cell carcinoma as defined in the protocol
+  Efficacy expansion cohorts: Gastric and GEJ cancer (third line), ovarian cancer (platinum Refractory + liposomal doxorubicin), urothelial carcinoma, and HNSCC as defined in the protocol
+  Other protocol defined inclusion criteria for expansion phase could apply
+  Exclusion Criteria for dose escalation and expansion phase:
+  Concurrent treatment with a non-permitted drug
+  Prior therapy with specific antibody/drug targeting T cell co-regulatory proteins (immune checkpoints)
+  Concurrent anticancer treatment, major surgery, or use of any investigational drug within 28 days before the start of trial treatment; or concurrent systemic therapy with immunosuppressive agents, use of hormonal agents within 7 days before the start of trial treatment as defined in the protocol. Note: Participants receiving bisphosphonate or denosumab are eligible provided treatment was initiated at least 14 days before the first dose of avelumab.
+  Previous malignant disease other than the target malignancy to be investigated in this trial within the last 5 years with the exception of basal or squamous cell carcinoma of the skin or cervical carcinoma in situ
+  Rapidly progressive disease (for example, tumor lysis syndrome)
+  Active or history of central nervous system metastases
+  Receipt of any organ transplantation including allogeneic stem-cell transplantation
+  Significant acute or chronic infections as defined in the protocol
+  Active or history of any autoimmune disease (Participants with diabetes Type 1, vitiligo, psoriasis, hypo- or hyperthyroid disease not requiring immunosuppressive treatment are eligible) or immunodeficiencies
+  Known severe hypersensitivity reactions to monoclonal antibodies, any history of anaphylaxis, or uncontrolled asthma
+  Persisting toxicity related to prior therapy greater than Grade 1 NCI-CTCAE v4.0, however sensory neuropathy less than or equal to Grade 2 is acceptable
+  Pregnancy or lactation period
+  Known alcohol or drug abuse
+  Clinically significant (that is, active) cardiovascular disease
+  All other significant diseases (for example, inflammatory bowel disease), which, in the opinion of the investigator, might impair the Participant's tolerance of trial treatment
+  Any psychiatric condition that would prohibit the understanding or rendering of informed consent
+  Legal incapacity or limited legal capacity
+  Non-oncology vaccine therapies for prevention of infection disease (for example, seasonal flu vaccine, human papilloma virus vaccine) within 4 weeks of study drug administration. Vaccination while on study is also prohibited except for administration of the inactivated influenza vaccine","the nationality, ethnicity, weight or gender of a patient will not affect their eligibility for the primary trial or the secondary trial",Baseline,"fluoropyrimidine and platinum. Participants must have progressed on or within 6 months of completing first-line chemotherapy. Participants in the gastric and GEJ cancer cohort will only be enrolled in USA
+  MBC: Histologically confirmed, locally advanced or"
+60,Entailment,Comparison,Eligibility,"Inclusion Criteria:
+  Prior written consent in participating in the study by the subject or his/her private attorney.
+  Japanese female >=18 years of age.
+
+Inclusion Criteria:
+  A subject was eligible for inclusion in this study only if all of the following criteria apply:
+  Subjects must have histologically confirmed invasive breast cancer with Stage IV disease at primary diagnosis or at relapse after curative-intent surgery. Where the disease was restricted to a solitary lesion, the neoplastic nature of the lesion should have been confirmed by cytology or histology.
+  Documented amplification of ErbB2 3+ by immunohistochemistry or a positive score (>2.2) by FISH using a local laboratory result (which was considered sufficient in this study with no further verification by a central laboratory).
+  Subjects must have received no more than one prior chemotherapeutic regimen in the metastatic setting.
+  If a taxane had been administered in the neoadjuvant, adjuvant or metastatic setting, progression must have occurred 12 months after completion of this treatment.
+  Prior therapy with radiation for this breast cancer population was permitted if it was administered in the neoadjuvant or adjuvant non metastatic setting. Radiotherapy given in the metastatic setting, prior to initiation of study medication, was allowed to a limited area (e.g., palliative therapy and involving less than 25% of bone marrow), if it was not the sole site of disease. Subjects must have completed radiation treatment and recovered from all acute radiation treatment related toxicities (e.g., bone marrow suppression) prior to commencement of combination treatment.
+  The subject must have received all prior chemotherapy treatment at least 4 weeks prior to enrollment in this study and must have recovered from all related toxicities. Subjects who have received weekly dose of prior chemotherapy e.g. gemcitabine or capecitabine may enroll 2 to 3 weeks after cessation of treatment provided that they have recovered from all related toxicities.
+  Prior therapy with trastuzumab in the neoadjuvant, adjuvant or metastatic setting was permitted. The subject must have received all prior trastuzumab treatment at least 4 weeks prior to enrollment in this study and must have recovered from all related toxicities.
+  Prior endocrine therapy was permitted in the neoadjuvant or adjuvant or metastatic setting. The subject must have received all prior endocrine treatment at least 1 week prior to enrollment in this study and must have recovered from all related toxicities.
+  Prior diagnosis of cancer was allowed as long as the subject was free of disease for 5 years. Subjects with completely resected basal or squamous cell skin cancer, thyroid cancer or successfully treated cervical carcinoma in-situ were allowed if it had been 1 year or greater since definitive surgery.
+  Subjects must have had measurable disease, according to Response Evaluation Criteria in Solid Tumors (RECIST) guidelines; defined as at least 1 lesion that can be accurately measured in at least 1 dimension (longest diameter [LD] to be recorded) by mammogram, ultrasound or physical exam [Therasse, 2000].
+  Subjects with liver metastases or stable chronic liver disease were permitted into the study.
+  Women 18 years of age:
+  Non-child-bearing potential (i.e., women with functioning ovaries who had a current documented tubal ligation or hysterectomy, or women who were postmenopausal); or
+  Child-bearing potential (i.e., women with functioning ovaries and no documented impairment of oviductal or uterine function that would cause sterility). This category included women with oligomenorrhoea (severe), women who were perimenopausal and young women who had begun to menstruate. These subjects must provided a negative serum pregnancy test at Screening and agree to 1 of the following:
+  Complete abstinence from intercourse from 2 weeks prior to administration of the first dose of study medication until 5 days after the final dose of study medication; or
+  Consistent and correct use of one of the following acceptable methods of birth control:
+  Male partner who was sterile prior to the female subject's entry into the study and was the sole sexual partner for that female subject.
+  Implants of levonorgestrel.
+  Injectable progestogen.
+  Any intrauterine device with a documented failure rate of less than 1% per year.
+  Oral contraceptives (either combined or progestogen only).
+  Barrier methods, including diaphragm or condom with a spermicide.
+  Considered by the Investigator to have a life expectancy of 6 months.
+  ECOG Performance Status (PS) of 0 or 1 (Karnofsky 80%) [Oken, 1982].
+  Subjects must have had normal organ and marrow function as below:
+  Hematologic
+  Absolute neutrophil count 1.5 × 10^9/L
+  Hemoglobin 9 g/dL
+  Platelets 100 × 10^9/L
+  Hepatic
+  Serum bilirubin  upper limit of normal (ULN)
+  Aspartate aminotransferase 3 × ULN without liver metastases and alanine aminotransferase 5 × ULN if documented liver metastases
+  Renal
+  Serum creatinine 1.5 mg/dL
+  OR -
+  Calculated creatinine clearance 40 mL/min
+  Subjects must have had a cardiac ejection fraction of >50% as measured by echocardiogram (ECHO) or multigated acquisition scan (MUGA) and within the institutional range of normal.
+  Subjects with stable central nervous system metastases (stable for at least 3 months) as confirmed by computerized tomography (CT)/magnetic resonance imaging (MRI) or evidence of leptomeningeal involvement were eligible only if they were not taking steroids or enzyme-inducing anticonvulsants.
+  Subject must have been free of gastrointestinal diseases that impede swallowing and retaining of oral medications.
+  Signed, informed consent prior to registration.
+  Bisphosphonate therapy for bone metastases was allowed; however, treatment must be initiated prior to the first dose of study medication. Prophylactic use of bisphosphonates in subjects without bone disease, except for the treatment of osteoporosis, was not permitted.
+  Subjects whose disease was estrogen receptor + and/or progesterone receptor + or unknown status were included in the study if they met the following criteria:
+  They had symptomatic visceral disease that required chemotherapy.
+  Significant visceral organ tumor burden
+  The disease was considered by the Investigator to be progressing rapidly or life threatening.
+  Subjects who have received prior endocrine therapy and who were no longer benefiting from this therapy.
+Exclusion Criteria:
+  A subject was not be eligible for inclusion in this study if any of the following criteria apply:
+  Subjects who received more than one prior chemotherapeutic regimen in the metastatic setting
+  Subjects taking treatment with medications provided in the list of restricted medications and substances in the drug information section for lapatinib were not eligible for the study. This included human immunodeficiency virus-positive subjects receiving combination anti-retroviral therapy because of possible pharmacokinetic interactions with lapatinib.
+  Prior treatment with lapatinib.
+  Concurrent anticancer or concomitant radiotherapy treatment;
+  Concurrent treatment with prohibited medications;
+  Use of an investigational drug within 30 days or 5 half-lives, whichever was longer, preceding the first dose of investigational treatment, or, concurrent treatment with an investigational agent or participation in another clinical trial involving investigational agents.
+  Known history of allergic reactions attributed to compounds of similar chemical or biologic composition to lapatinib or nab-paclitaxel or excipients;
+  Known history of uncontrolled inter-current illness including, but not limited to, ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, clinically significant cardiac arrhythmia, or psychiatric illness/social situations that would have limited compliance with study requirements.
+  Had active hepatic or biliary disease (with exception of patients with Gilbert's syndrome, asymptomatic gallstones, liver metastases or stable chronic liver disease per investigator assessment)
+  Concurrent disease or condition that would make the subject inappropriate for study participation or any serious medical disorder that would interfere with the subject's safety.
+  Pregnant or lactating females at any time during the study (due to the potential teratogenic or abortifacient effects of lapatinib and breastfeeding).
+  Subjects with diseases affecting gastrointestinal function resulting in an inability to take oral medication, including; malabsorption syndrome, a requirement for iv alimentation, prior surgical procedures affecting absorption e.g. gastric resection and uncontrolled inflammatory bowel disease (e.g., Crohn's, ulcerative colitis).
+  Peripheral neuropathy of Grade 2 or greater.
+  Unresolved or unstable, serious toxicity from prior administration of another investigational drug and/or of prior cancer treatment.
+  History of prior malignancy. However, subjects who had been disease-free for 5 years, or subjects with completely resected basal or squamous cell skin cancer, thyroid cancer or successfully treated cervical carcinoma in situ were eligible if it had been at least 1 year since definitive surgery.
+  or rendering of informed consent.
+  Other Eligibility Criteria Considerations:
+  To assess any potential impact on subject eligibility with regard to safety, the Investigator must refer to the following document(s) for detailed information regarding warnings, precautions, contraindications, AEs, and other significant data pertaining to the investigational product(s) being used in this study: Clinical Investigator's Brochure (IB), SPM, and the nab-paclitaxel Product Label.","Only female patients of a specific nationality can take part in the primary trial, no such condition is required for participation in the secondary trial.",Finetuné,"60%).
+  Adequate bone marrow function as evidenced by:
+  Absolute neutrophil count (ANC) 1,500/mm3;
+  Platelet count 100,000/mm3;
+  Hem"
+112,Entailment,Single,Eligibility,"Inclusion Criteria for dose escalation and expansion phase:
+  Signed written informed consent
+  Male or female participants aged greater than or equal to 18 years
+  Participants must have histologically or cytologically proven metastatic or locally advanced solid tumors, for which no standard therapy exists or standard therapy has failed. Availability of tumor archival material or fresh biopsies is optional for participants in dose escalation
+  Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1 at trial entry and an estimated life expectancy of at least 3 months
+  Disease must be measurable with at least 1 uni-dimensional measurable lesion by RECIST 1.1, except for participants with metastatic castrate-resistant prostate cancer (mCRPC) or metastatic breast cancer (MBC) who may be enrolled with objective evidence of disease without a measureable lesion
+  Adequate hematological, hepatic and renal function as defined in the protocol
+  Effective contraception for both male and female participants if the risk of conception exists
+  Other protocol defined inclusion criteria could apply
+  Inclusion Criteria for expansion phase:
+  Participants must have relapsed, refractory, or progressive disease following last line of treatment (with the exception of the gastric and gastroesophageal junction (GEJ) cancer cohort, which does not require progression). Availability of tumor archival material or fresh biopsies (excluding bone biopsies) is mandatory for eligibility in the expansion cohorts. For participants in the MBC cohort, the biopsy or surgical specimen must have been collected within 90 days prior to the first investigational medicinal product (IMP) administration. Specifically, the following will be required:
+  NSCLC post platinum doublet: Histologically or cytologically confirmed stage IIIB or stage IV NSCLC that has progressed after 1 line of platinum-containing doublet chemotherapy. Participants should have received only 1 line of platinum-containing treatment for metastatic disease (i.e., adjuvant treatment with a platinum-containing regimen is not sufficient for eligibility because not received in the context of a metastatic disease). Participants in the NSCLC cohort will only be enrolled in USA
+  NSCLC first line: Stage IV (per 7th International Association for the Study of Lung Cancer [IASLC] classification) or recurrent NSCLC that is histologically proven. Participants must not have received treatment for their metastatic or recurrent disease. No activating epidermal growth factor receptor (EGFR) mutation nor ALK translocation/re-arrangement
+  Gastric and GEJ cancer: Histologically confirmed, unresectable locally advanced or metastatic adenocarcinoma of the gastric and gastro-esophageal junction, treated with first-line chemotherapy combination with or without disease progression. Participants should have received no more than 1 line of treatment for metastatic disease. Participants should not have been treated with trastuzumab (but can be Human Epidermal growth factor Receptor 2 [HER2] positive). Participants who received any platinum containing doublet or triplet as a neoadjuvant chemotherapy strategy, but are not ultimately candidates for surgery will also be eligible, as long as they did not have progressive disease after completion of the neoadjuvant chemotherapy. In addition, participants with gastric cancer can enter in the study if their white blood cell (WBC) and lymphocyte count is as defined in the protocol
+  MBC: Participants must have histologically confirmed locally advanced or MBC and have tumor that is refractory to or progressive after standard of care therapy. Participants must have received no more than 3 prior lines of cytotoxic therapy for metastatic disease. Participants must have received a taxane and an anthracycline, unless contra-indicated
+  Secondary expansion cohorts: Metastatic colorectal cancer (mCRC), Metastatic castrate-resistant prostate cancer (mCRPC), melanoma, ovarian cancer, ACC, mesothelioma, urothelial carcinoma and renal cell carcinoma as defined in the protocol
+  Efficacy expansion cohorts: Gastric and GEJ cancer (third line), ovarian cancer (platinum Refractory + liposomal doxorubicin), urothelial carcinoma, and HNSCC as defined in the protocol
+  Other protocol defined inclusion criteria for expansion phase could apply
+  Exclusion Criteria for dose escalation and expansion phase:
+  Concurrent treatment with a non-permitted drug
+  Prior therapy with specific antibody/drug targeting T cell co-regulatory proteins (immune checkpoints)
+  Concurrent anticancer treatment, major surgery, or use of any investigational drug within 28 days before the start of trial treatment; or concurrent systemic therapy with immunosuppressive agents, use of hormonal agents within 7 days before the start of trial treatment as defined in the protocol. Note: Participants receiving bisphosphonate or denosumab are eligible provided treatment was initiated at least 14 days before the first dose of avelumab.
+  Previous malignant disease other than the target malignancy to be investigated in this trial within the last 5 years with the exception of basal or squamous cell carcinoma of the skin or cervical carcinoma in situ
+  Rapidly progressive disease (for example, tumor lysis syndrome)
+  Active or history of central nervous system metastases
+  Receipt of any organ transplantation including allogeneic stem-cell transplantation
+  Significant acute or chronic infections as defined in the protocol
+  Active or history of any autoimmune disease (Participants with diabetes Type 1, vitiligo, psoriasis, hypo- or hyperthyroid disease not requiring immunosuppressive treatment are eligible) or immunodeficiencies
+  Known severe hypersensitivity reactions to monoclonal antibodies, any history of anaphylaxis, or uncontrolled asthma
+  Persisting toxicity related to prior therapy greater than Grade 1 NCI-CTCAE v4.0, however sensory neuropathy less than or equal to Grade 2 is acceptable
+  Pregnancy or lactation period
+  Known alcohol or drug abuse
+  Clinically significant (that is, active) cardiovascular disease
+  All other significant diseases (for example, inflammatory bowel disease), which, in the opinion of the investigator, might impair the Participant's tolerance of trial treatment
+  Any psychiatric condition that would prohibit the understanding or rendering of informed consent
+  Legal incapacity or limited legal capacity
+  Non-oncology vaccine therapies for prevention of infection disease (for example, seasonal flu vaccine, human papilloma virus vaccine) within 4 weeks of study drug administration. Vaccination while on study is also prohibited except for administration of the inactivated influenza vaccine",African-american patients can participate in the primary trial.,Finetuné,"osphonates or denosumab for the prevention of bone loss are eligible
+  Known or suspected allergy or hypersensitivity to any component of the vaccine
+  Active infection requiring intravenous (IV) or intrathecal (IT) therapy"
+134,Contradiction,Comparison,Eligibility,"Inclusion Criteria:
+  Written informed consent must have been obtained prior to any screening procedures
+  Phase I part: Patients with advanced/metastatic solid tumors, with measurable or non-measurable disease as determined by RECIST version 1.1 (refer to Appendix 1), who have progressed despite standard therapy or are intolerant of standard therapy, or for whom no standard therapy exists.
+  Phase II part: Patients with advanced/metastatic solid tumors, with at least one measurable lesion as determined by RECIST version 1.1, who have progressed following their last prior therapy, and fit into one of the following groups:
+  Group 1a and 1b: NSCLC:
+  Patients with NSCLC must have had disease recurrence or progression during or after no more than one prior systemic chemotherapy regimen (platinum doublet-based) for advanced or metastatic disease. Prior maintenance therapy is allowed (e.g. pemetrexed, erlotinib, bevacizumab).
+  Only patients with EGFR mutation-negative tumor are eligible (defined as negative for exon 19 deletions and for the L858R mutation in EGFR at a minimum; however, if more extensive EGFR mutation testing has been performed, the tumor must not harbor any known activating EGFR mutations in Exons 18-21 in order to be considered EGFR mutation-negative). All patients must be tested for EGFR mutational status and, for ALK translocation status if no mutation is detected in EGFR. Patients with ALK translocation-positive NSCLC must have had disease progression following treatment with a corresponding inhibitor and no more than one systemic chemotherapy regimen (platinum doublet-based), in any sequence.
+  Group 2: Melanoma:
+  All patients must have been tested for BRAF mutations. Patients with V600 mutation positive melanoma must have clinical or radiological evidence of disease progression during or after treatment with a BRAF inhibitor alone or in combination with other agents.
+  Group 3: Triple negatice breast cancer.
+  Group 4: Anaplastic thyroid cancer
+  Patients are not required to have received or progressed on a prior therapy.
+  Patients must not be at short term risk for life threatening complications (such as airway compromise or bleeding from locoregional or metastatic disease).
+  Chemoradiation and/or surgery should be considered prior to study entry for those patients with locally advanced disease if those therapies are considered to be in the best interest of the patient.
+  ECOG Performance Status  1.
+  Patients must have a site of disease amenable to biopsy, and be a candidate for tumor biopsy. Patient must be willing to undergo a new tumor biopsy at baseline or at molecular pre-screening if applicable, and during therapy on this study. For patients in the phase II part of the study, exceptions may be granted after documented discussion with Novartis. After a sufficient number of paired biopsies are collected, the decision may be taken to stop the collection of biopsies.
+Exclusion Criteria:
+  History of severe hypersensitivity reactions to other mAbs
+  Subjects with active, known or suspected autoimmune disease. Subjects with vitiligo, type I diabetes mellitus, residual hypothyroidism due to autoimmune condition only requiring hormone replacement, psoriasis not requiring systemic treatment, or conditions not expected to recur in the absence of an external trigger are permitted to enroll.
+  Active infection requiring systemic antibiotic therapy.
+  HIV infection.
+  Active HBV or HCV infection.
+  Patients with ocular melanoma.
+  Systemic anti-cancer therapy within 2 weeks of the first dose of study treatment. For cytotoxic agents that have major delayed toxicity, e.g. mitomycin C and nitrosoureas, 4 weeks washout period. For patients receiving anticancer immunotherapies such as CTLA-4 antagonists, 6 weeks is indicated as the washout period.
+  Prior PD-1- or PD-L1-directed therapy.
+  Patients requiring chronic treatment with systemic steroid therapy, other than replacement-dose steroids in the setting of adrenal insufficiency. Topical, inhaled, nasal and ophthalmic steroids are not prohibited.
+  Patients receiving systemic treatment with any immunosuppressive medication (other than steroids as described above).
+  Use of any vaccines against infectious diseases (e.g. influenza, varicella, pneumococcus) within 4 weeks of initiation of study treatment.
+  Presence of  CTCAE grade 2 toxicity (except alopecia, peripheral neuropathy and ototoxicity, which are excluded if  CTCAE grade 3) due to prior cancer therapy
+
+DISEASE CHARACTERISTICS:
+  Meets 1 of the following criteria:
+  History of breast cancer (currently without malignant disease)
+  No history of breast cancer but wishes to avoid estrogen due to a perceived increased risk of breast cancer
+  Must have bothersome hot flashes (defined by their occurrence of  14 times per week and of sufficient severity to make the patient desire therapeutic intervention) for  1 month before study entry
+  Has undergone treatment for cancer (patients other than breast cancer survivors are eligible)
+  PATIENT CHARACTERISTICS:
+  Eastern Cooperative Oncology Group (ECOG) performance status 0-2
+  Not pregnant or nursing
+  Negative pregnancy test
+  Fertile patients must use effective contraception
+  Creatinine clearance  30 mL/min
+  No hypersensitivity to magnesium oxide
+  No medical or other condition(s) that, in the opinion of the investigator/sub-investigator, may compromise the objectives of the study
+  PRIOR CONCURRENT THERAPY:
+  See Disease Characteristics
+  More than 4 weeks since prior and no concurrent antineoplastic chemotherapy, androgens, estrogens, progestational agents, or gabapentin
+  More than 28 days since prior and no other concurrent investigational drugs
+  Concurrent tamoxifen, raloxifene, or aromatase inhibitors allowed provided patient has been on a constant dose for > 4 weeks AND is not expected to stop the medication during the study period","the secondary trial has the same inclusion/exclusion criteria for all participants, whereas the primary trial has 2 sets of inclusion criteria, one for the 18-50 age group and one for the 50+ age group.",Finetuné,") and 1 of the following:
+  History of autoimmune disease
+  History of a skin disorder potentially related to immune system activation
+  History of cataract or other vision problem
+  History of thromboembolism
+  History of"
+179,Contradiction,Comparison,Eligibility,"Inclusion Criteria:
+  Prior written consent in participating in the study by the subject or his/her private attorney.
+  Japanese female >=18 years of age.
+
+Inclusion Criteria:
+  A subject was eligible for inclusion in this study only if all of the following criteria apply:
+  Subjects must have histologically confirmed invasive breast cancer with Stage IV disease at primary diagnosis or at relapse after curative-intent surgery. Where the disease was restricted to a solitary lesion, the neoplastic nature of the lesion should have been confirmed by cytology or histology.
+  Documented amplification of ErbB2 3+ by immunohistochemistry or a positive score (>2.2) by FISH using a local laboratory result (which was considered sufficient in this study with no further verification by a central laboratory).
+  Subjects must have received no more than one prior chemotherapeutic regimen in the metastatic setting.
+  If a taxane had been administered in the neoadjuvant, adjuvant or metastatic setting, progression must have occurred 12 months after completion of this treatment.
+  Prior therapy with radiation for this breast cancer population was permitted if it was administered in the neoadjuvant or adjuvant non metastatic setting. Radiotherapy given in the metastatic setting, prior to initiation of study medication, was allowed to a limited area (e.g., palliative therapy and involving less than 25% of bone marrow), if it was not the sole site of disease. Subjects must have completed radiation treatment and recovered from all acute radiation treatment related toxicities (e.g., bone marrow suppression) prior to commencement of combination treatment.
+  The subject must have received all prior chemotherapy treatment at least 4 weeks prior to enrollment in this study and must have recovered from all related toxicities. Subjects who have received weekly dose of prior chemotherapy e.g. gemcitabine or capecitabine may enroll 2 to 3 weeks after cessation of treatment provided that they have recovered from all related toxicities.
+  Prior therapy with trastuzumab in the neoadjuvant, adjuvant or metastatic setting was permitted. The subject must have received all prior trastuzumab treatment at least 4 weeks prior to enrollment in this study and must have recovered from all related toxicities.
+  Prior endocrine therapy was permitted in the neoadjuvant or adjuvant or metastatic setting. The subject must have received all prior endocrine treatment at least 1 week prior to enrollment in this study and must have recovered from all related toxicities.
+  Prior diagnosis of cancer was allowed as long as the subject was free of disease for 5 years. Subjects with completely resected basal or squamous cell skin cancer, thyroid cancer or successfully treated cervical carcinoma in-situ were allowed if it had been 1 year or greater since definitive surgery.
+  Subjects must have had measurable disease, according to Response Evaluation Criteria in Solid Tumors (RECIST) guidelines; defined as at least 1 lesion that can be accurately measured in at least 1 dimension (longest diameter [LD] to be recorded) by mammogram, ultrasound or physical exam [Therasse, 2000].
+  Subjects with liver metastases or stable chronic liver disease were permitted into the study.
+  Women 18 years of age:
+  Non-child-bearing potential (i.e., women with functioning ovaries who had a current documented tubal ligation or hysterectomy, or women who were postmenopausal); or
+  Child-bearing potential (i.e., women with functioning ovaries and no documented impairment of oviductal or uterine function that would cause sterility). This category included women with oligomenorrhoea (severe), women who were perimenopausal and young women who had begun to menstruate. These subjects must provided a negative serum pregnancy test at Screening and agree to 1 of the following:
+  Complete abstinence from intercourse from 2 weeks prior to administration of the first dose of study medication until 5 days after the final dose of study medication; or
+  Consistent and correct use of one of the following acceptable methods of birth control:
+  Male partner who was sterile prior to the female subject's entry into the study and was the sole sexual partner for that female subject.
+  Implants of levonorgestrel.
+  Injectable progestogen.
+  Any intrauterine device with a documented failure rate of less than 1% per year.
+  Oral contraceptives (either combined or progestogen only).
+  Barrier methods, including diaphragm or condom with a spermicide.
+  Considered by the Investigator to have a life expectancy of 6 months.
+  ECOG Performance Status (PS) of 0 or 1 (Karnofsky 80%) [Oken, 1982].
+  Subjects must have had normal organ and marrow function as below:
+  Hematologic
+  Absolute neutrophil count 1.5 × 10^9/L
+  Hemoglobin 9 g/dL
+  Platelets 100 × 10^9/L
+  Hepatic
+  Serum bilirubin  upper limit of normal (ULN)
+  Aspartate aminotransferase 3 × ULN without liver metastases and alanine aminotransferase 5 × ULN if documented liver metastases
+  Renal
+  Serum creatinine 1.5 mg/dL
+  OR -
+  Calculated creatinine clearance 40 mL/min
+  Subjects must have had a cardiac ejection fraction of >50% as measured by echocardiogram (ECHO) or multigated acquisition scan (MUGA) and within the institutional range of normal.
+  Subjects with stable central nervous system metastases (stable for at least 3 months) as confirmed by computerized tomography (CT)/magnetic resonance imaging (MRI) or evidence of leptomeningeal involvement were eligible only if they were not taking steroids or enzyme-inducing anticonvulsants.
+  Subject must have been free of gastrointestinal diseases that impede swallowing and retaining of oral medications.
+  Signed, informed consent prior to registration.
+  Bisphosphonate therapy for bone metastases was allowed; however, treatment must be initiated prior to the first dose of study medication. Prophylactic use of bisphosphonates in subjects without bone disease, except for the treatment of osteoporosis, was not permitted.
+  Subjects whose disease was estrogen receptor + and/or progesterone receptor + or unknown status were included in the study if they met the following criteria:
+  They had symptomatic visceral disease that required chemotherapy.
+  Significant visceral organ tumor burden
+  The disease was considered by the Investigator to be progressing rapidly or life threatening.
+  Subjects who have received prior endocrine therapy and who were no longer benefiting from this therapy.
+Exclusion Criteria:
+  A subject was not be eligible for inclusion in this study if any of the following criteria apply:
+  Subjects who received more than one prior chemotherapeutic regimen in the metastatic setting
+  Subjects taking treatment with medications provided in the list of restricted medications and substances in the drug information section for lapatinib were not eligible for the study. This included human immunodeficiency virus-positive subjects receiving combination anti-retroviral therapy because of possible pharmacokinetic interactions with lapatinib.
+  Prior treatment with lapatinib.
+  Concurrent anticancer or concomitant radiotherapy treatment;
+  Concurrent treatment with prohibited medications;
+  Use of an investigational drug within 30 days or 5 half-lives, whichever was longer, preceding the first dose of investigational treatment, or, concurrent treatment with an investigational agent or participation in another clinical trial involving investigational agents.
+  Known history of allergic reactions attributed to compounds of similar chemical or biologic composition to lapatinib or nab-paclitaxel or excipients;
+  Known history of uncontrolled inter-current illness including, but not limited to, ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, clinically significant cardiac arrhythmia, or psychiatric illness/social situations that would have limited compliance with study requirements.
+  Had active hepatic or biliary disease (with exception of patients with Gilbert's syndrome, asymptomatic gallstones, liver metastases or stable chronic liver disease per investigator assessment)
+  Concurrent disease or condition that would make the subject inappropriate for study participation or any serious medical disorder that would interfere with the subject's safety.
+  Pregnant or lactating females at any time during the study (due to the potential teratogenic or abortifacient effects of lapatinib and breastfeeding).
+  Subjects with diseases affecting gastrointestinal function resulting in an inability to take oral medication, including; malabsorption syndrome, a requirement for iv alimentation, prior surgical procedures affecting absorption e.g. gastric resection and uncontrolled inflammatory bowel disease (e.g., Crohn's, ulcerative colitis).
+  Peripheral neuropathy of Grade 2 or greater.
+  Unresolved or unstable, serious toxicity from prior administration of another investigational drug and/or of prior cancer treatment.
+  History of prior malignancy. However, subjects who had been disease-free for 5 years, or subjects with completely resected basal or squamous cell skin cancer, thyroid cancer or successfully treated cervical carcinoma in situ were eligible if it had been at least 1 year since definitive surgery.
+  or rendering of informed consent.
+  Other Eligibility Criteria Considerations:
+  To assess any potential impact on subject eligibility with regard to safety, the Investigator must refer to the following document(s) for detailed information regarding warnings, precautions, contraindications, AEs, and other significant data pertaining to the investigational product(s) being used in this study: Clinical Investigator's Brochure (IB), SPM, and the nab-paclitaxel Product Label.","Any japanese national can take part in the primary trial, or the secondary trial.",Finetuné,"60%).
+  Adequate bone marrow function as evidenced by:
+  Absolute neutrophil count (ANC) 1,500/mm3;
+  Platelet count 100,000/mm3;
+  Hem"
+205,Entailment,Comparison,Eligibility,"Inclusion Criteria:
+  Written informed consent must have been obtained prior to any screening procedures
+  Phase I part: Patients with advanced/metastatic solid tumors, with measurable or non-measurable disease as determined by RECIST version 1.1 (refer to Appendix 1), who have progressed despite standard therapy or are intolerant of standard therapy, or for whom no standard therapy exists.
+  Phase II part: Patients with advanced/metastatic solid tumors, with at least one measurable lesion as determined by RECIST version 1.1, who have progressed following their last prior therapy, and fit into one of the following groups:
+  Group 1a and 1b: NSCLC:
+  Patients with NSCLC must have had disease recurrence or progression during or after no more than one prior systemic chemotherapy regimen (platinum doublet-based) for advanced or metastatic disease. Prior maintenance therapy is allowed (e.g. pemetrexed, erlotinib, bevacizumab).
+  Only patients with EGFR mutation-negative tumor are eligible (defined as negative for exon 19 deletions and for the L858R mutation in EGFR at a minimum; however, if more extensive EGFR mutation testing has been performed, the tumor must not harbor any known activating EGFR mutations in Exons 18-21 in order to be considered EGFR mutation-negative). All patients must be tested for EGFR mutational status and, for ALK translocation status if no mutation is detected in EGFR. Patients with ALK translocation-positive NSCLC must have had disease progression following treatment with a corresponding inhibitor and no more than one systemic chemotherapy regimen (platinum doublet-based), in any sequence.
+  Group 2: Melanoma:
+  All patients must have been tested for BRAF mutations. Patients with V600 mutation positive melanoma must have clinical or radiological evidence of disease progression during or after treatment with a BRAF inhibitor alone or in combination with other agents.
+  Group 3: Triple negatice breast cancer.
+  Group 4: Anaplastic thyroid cancer
+  Patients are not required to have received or progressed on a prior therapy.
+  Patients must not be at short term risk for life threatening complications (such as airway compromise or bleeding from locoregional or metastatic disease).
+  Chemoradiation and/or surgery should be considered prior to study entry for those patients with locally advanced disease if those therapies are considered to be in the best interest of the patient.
+  ECOG Performance Status  1.
+  Patients must have a site of disease amenable to biopsy, and be a candidate for tumor biopsy. Patient must be willing to undergo a new tumor biopsy at baseline or at molecular pre-screening if applicable, and during therapy on this study. For patients in the phase II part of the study, exceptions may be granted after documented discussion with Novartis. After a sufficient number of paired biopsies are collected, the decision may be taken to stop the collection of biopsies.
+Exclusion Criteria:
+  History of severe hypersensitivity reactions to other mAbs
+  Subjects with active, known or suspected autoimmune disease. Subjects with vitiligo, type I diabetes mellitus, residual hypothyroidism due to autoimmune condition only requiring hormone replacement, psoriasis not requiring systemic treatment, or conditions not expected to recur in the absence of an external trigger are permitted to enroll.
+  Active infection requiring systemic antibiotic therapy.
+  HIV infection.
+  Active HBV or HCV infection.
+  Patients with ocular melanoma.
+  Systemic anti-cancer therapy within 2 weeks of the first dose of study treatment. For cytotoxic agents that have major delayed toxicity, e.g. mitomycin C and nitrosoureas, 4 weeks washout period. For patients receiving anticancer immunotherapies such as CTLA-4 antagonists, 6 weeks is indicated as the washout period.
+  Prior PD-1- or PD-L1-directed therapy.
+  Patients requiring chronic treatment with systemic steroid therapy, other than replacement-dose steroids in the setting of adrenal insufficiency. Topical, inhaled, nasal and ophthalmic steroids are not prohibited.
+  Patients receiving systemic treatment with any immunosuppressive medication (other than steroids as described above).
+  Use of any vaccines against infectious diseases (e.g. influenza, varicella, pneumococcus) within 4 weeks of initiation of study treatment.
+  Presence of  CTCAE grade 2 toxicity (except alopecia, peripheral neuropathy and ototoxicity, which are excluded if  CTCAE grade 3) due to prior cancer therapy
+
+DISEASE CHARACTERISTICS:
+  Meets 1 of the following criteria:
+  History of breast cancer (currently without malignant disease)
+  No history of breast cancer but wishes to avoid estrogen due to a perceived increased risk of breast cancer
+  Must have bothersome hot flashes (defined by their occurrence of  14 times per week and of sufficient severity to make the patient desire therapeutic intervention) for  1 month before study entry
+  Has undergone treatment for cancer (patients other than breast cancer survivors are eligible)
+  PATIENT CHARACTERISTICS:
+  Eastern Cooperative Oncology Group (ECOG) performance status 0-2
+  Not pregnant or nursing
+  Negative pregnancy test
+  Fertile patients must use effective contraception
+  Creatinine clearance  30 mL/min
+  No hypersensitivity to magnesium oxide
+  No medical or other condition(s) that, in the opinion of the investigator/sub-investigator, may compromise the objectives of the study
+  PRIOR CONCURRENT THERAPY:
+  See Disease Characteristics
+  More than 4 weeks since prior and no concurrent antineoplastic chemotherapy, androgens, estrogens, progestational agents, or gabapentin
+  More than 28 days since prior and no other concurrent investigational drugs
+  Concurrent tamoxifen, raloxifene, or aromatase inhibitors allowed provided patient has been on a constant dose for > 4 weeks AND is not expected to stop the medication during the study period","the secondary trial has the same inclusion/exclusion criteria for all participants, whereas the primary trial has 2 sets of inclusion criteria for the different study groups.",Finetuné,") and 1 of the following:
+  History of autoimmune disease
+  History of a skin disorder potentially related to immune system activation
+  History of cataract or other vision problem
+  History of thromboembolism
+  History of"
+299,Contradiction,Single,Eligibility,"Inclusion Criteria for dose escalation and expansion phase:
+  Signed written informed consent
+  Male or female participants aged greater than or equal to 18 years
+  Participants must have histologically or cytologically proven metastatic or locally advanced solid tumors, for which no standard therapy exists or standard therapy has failed. Availability of tumor archival material or fresh biopsies is optional for participants in dose escalation
+  Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1 at trial entry and an estimated life expectancy of at least 3 months
+  Disease must be measurable with at least 1 uni-dimensional measurable lesion by RECIST 1.1, except for participants with metastatic castrate-resistant prostate cancer (mCRPC) or metastatic breast cancer (MBC) who may be enrolled with objective evidence of disease without a measureable lesion
+  Adequate hematological, hepatic and renal function as defined in the protocol
+  Effective contraception for both male and female participants if the risk of conception exists
+  Other protocol defined inclusion criteria could apply
+  Inclusion Criteria for expansion phase:
+  Participants must have relapsed, refractory, or progressive disease following last line of treatment (with the exception of the gastric and gastroesophageal junction (GEJ) cancer cohort, which does not require progression). Availability of tumor archival material or fresh biopsies (excluding bone biopsies) is mandatory for eligibility in the expansion cohorts. For participants in the MBC cohort, the biopsy or surgical specimen must have been collected within 90 days prior to the first investigational medicinal product (IMP) administration. Specifically, the following will be required:
+  NSCLC post platinum doublet: Histologically or cytologically confirmed stage IIIB or stage IV NSCLC that has progressed after 1 line of platinum-containing doublet chemotherapy. Participants should have received only 1 line of platinum-containing treatment for metastatic disease (i.e., adjuvant treatment with a platinum-containing regimen is not sufficient for eligibility because not received in the context of a metastatic disease). Participants in the NSCLC cohort will only be enrolled in USA
+  NSCLC first line: Stage IV (per 7th International Association for the Study of Lung Cancer [IASLC] classification) or recurrent NSCLC that is histologically proven. Participants must not have received treatment for their metastatic or recurrent disease. No activating epidermal growth factor receptor (EGFR) mutation nor ALK translocation/re-arrangement
+  Gastric and GEJ cancer: Histologically confirmed, unresectable locally advanced or metastatic adenocarcinoma of the gastric and gastro-esophageal junction, treated with first-line chemotherapy combination with or without disease progression. Participants should have received no more than 1 line of treatment for metastatic disease. Participants should not have been treated with trastuzumab (but can be Human Epidermal growth factor Receptor 2 [HER2] positive). Participants who received any platinum containing doublet or triplet as a neoadjuvant chemotherapy strategy, but are not ultimately candidates for surgery will also be eligible, as long as they did not have progressive disease after completion of the neoadjuvant chemotherapy. In addition, participants with gastric cancer can enter in the study if their white blood cell (WBC) and lymphocyte count is as defined in the protocol
+  MBC: Participants must have histologically confirmed locally advanced or MBC and have tumor that is refractory to or progressive after standard of care therapy. Participants must have received no more than 3 prior lines of cytotoxic therapy for metastatic disease. Participants must have received a taxane and an anthracycline, unless contra-indicated
+  Secondary expansion cohorts: Metastatic colorectal cancer (mCRC), Metastatic castrate-resistant prostate cancer (mCRPC), melanoma, ovarian cancer, ACC, mesothelioma, urothelial carcinoma and renal cell carcinoma as defined in the protocol
+  Efficacy expansion cohorts: Gastric and GEJ cancer (third line), ovarian cancer (platinum Refractory + liposomal doxorubicin), urothelial carcinoma, and HNSCC as defined in the protocol
+  Other protocol defined inclusion criteria for expansion phase could apply
+  Exclusion Criteria for dose escalation and expansion phase:
+  Concurrent treatment with a non-permitted drug
+  Prior therapy with specific antibody/drug targeting T cell co-regulatory proteins (immune checkpoints)
+  Concurrent anticancer treatment, major surgery, or use of any investigational drug within 28 days before the start of trial treatment; or concurrent systemic therapy with immunosuppressive agents, use of hormonal agents within 7 days before the start of trial treatment as defined in the protocol. Note: Participants receiving bisphosphonate or denosumab are eligible provided treatment was initiated at least 14 days before the first dose of avelumab.
+  Previous malignant disease other than the target malignancy to be investigated in this trial within the last 5 years with the exception of basal or squamous cell carcinoma of the skin or cervical carcinoma in situ
+  Rapidly progressive disease (for example, tumor lysis syndrome)
+  Active or history of central nervous system metastases
+  Receipt of any organ transplantation including allogeneic stem-cell transplantation
+  Significant acute or chronic infections as defined in the protocol
+  Active or history of any autoimmune disease (Participants with diabetes Type 1, vitiligo, psoriasis, hypo- or hyperthyroid disease not requiring immunosuppressive treatment are eligible) or immunodeficiencies
+  Known severe hypersensitivity reactions to monoclonal antibodies, any history of anaphylaxis, or uncontrolled asthma
+  Persisting toxicity related to prior therapy greater than Grade 1 NCI-CTCAE v4.0, however sensory neuropathy less than or equal to Grade 2 is acceptable
+  Pregnancy or lactation period
+  Known alcohol or drug abuse
+  Clinically significant (that is, active) cardiovascular disease
+  All other significant diseases (for example, inflammatory bowel disease), which, in the opinion of the investigator, might impair the Participant's tolerance of trial treatment
+  Any psychiatric condition that would prohibit the understanding or rendering of informed consent
+  Legal incapacity or limited legal capacity
+  Non-oncology vaccine therapies for prevention of infection disease (for example, seasonal flu vaccine, human papilloma virus vaccine) within 4 weeks of study drug administration. Vaccination while on study is also prohibited except for administration of the inactivated influenza vaccine","African-american patients can participate in the primary trial, but they must reside in the state of texas for the duration of the study.",Finetuné,"osphonates or denosumab for the prevention of bone loss are eligible
+  Known or suspected allergy or hypersensitivity to any component of the vaccine
+  Active infection requiring intravenous (IV) or intrathecal (IT) therapy"
+337,Entailment,Comparison,Eligibility,"Inclusion Criteria:
+  Signed written informed consent to participate in clinical study of tivantinib
+  Male or female participants of the age defined in the original protocol they were enrolled.
+  Eastern Cooperative Oncology Group (ECOG) performance status (PS) 3 (or 2 for tivantinib-naive participants)
+  Adequate bone marrow function:
+  Absolute neutrophil count (ANC) 1.5 x 10^9/L
+  Hemoglobin 8.0 g/dL (or  9.0 g/dL for tivantinib-naïve participants)
+  Enrollment within 14 days of the completion of End of Treatment Visit of the original study
+  Participants, who participated in previous ARQ 197 studies that have reached their designated end-dates, who did not meet discontinuation criteria in their original study, and who may, in the opinion of the Investigator and the Sponsor, benefit from treatment
+  Women of childbearing potential must have a negative pregnancy test performed within 14 days of the start of study drug. Both men and women enrolled in this study must agree to use adequate birth control measures while on study
+Exclusion Criteria:
+  Known or suspected allergy to ARQ 197
+  Substance abuse, medical, psychological or social conditions that may interfere with the participant's participation in the study or evaluation of the study results
+  Any condition that is unstable or which could jeopardize the safety of the participant and his/her compliance in the study
+  A serious uncontrolled medical disorder/condition that in the opinion of the Investigator would impair the ability of the participant to receive protocol therapy
+  Requirement to receive other concurrent chemotherapy (excluding combination therapy defined in original protocol), immunotherapy, radiotherapy, or any other investigational drug while on study. Palliative radiotherapy is allowed provided that:
+  in the opinion of the Investigator, the participant does not have progressive disease
+  the radiation field does not encompass a target lesion
+  no more than 10% of the participant's bone marrow is irradiated
+
+Inclusion Criteria for dose escalation and expansion phase:
+  Signed written informed consent
+  Male or female participants aged greater than or equal to 18 years
+  Participants must have histologically or cytologically proven metastatic or locally advanced solid tumors, for which no standard therapy exists or standard therapy has failed. Availability of tumor archival material or fresh biopsies is optional for participants in dose escalation
+  Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1 at trial entry and an estimated life expectancy of at least 3 months
+  Disease must be measurable with at least 1 uni-dimensional measurable lesion by RECIST 1.1, except for participants with metastatic castrate-resistant prostate cancer (mCRPC) or metastatic breast cancer (MBC) who may be enrolled with objective evidence of disease without a measureable lesion
+  Adequate hematological, hepatic and renal function as defined in the protocol
+  Effective contraception for both male and female participants if the risk of conception exists
+  Other protocol defined inclusion criteria could apply
+  Inclusion Criteria for expansion phase:
+  Participants must have relapsed, refractory, or progressive disease following last line of treatment (with the exception of the gastric and gastroesophageal junction (GEJ) cancer cohort, which does not require progression). Availability of tumor archival material or fresh biopsies (excluding bone biopsies) is mandatory for eligibility in the expansion cohorts. For participants in the MBC cohort, the biopsy or surgical specimen must have been collected within 90 days prior to the first investigational medicinal product (IMP) administration. Specifically, the following will be required:
+  NSCLC post platinum doublet: Histologically or cytologically confirmed stage IIIB or stage IV NSCLC that has progressed after 1 line of platinum-containing doublet chemotherapy. Participants should have received only 1 line of platinum-containing treatment for metastatic disease (i.e., adjuvant treatment with a platinum-containing regimen is not sufficient for eligibility because not received in the context of a metastatic disease). Participants in the NSCLC cohort will only be enrolled in USA
+  NSCLC first line: Stage IV (per 7th International Association for the Study of Lung Cancer [IASLC] classification) or recurrent NSCLC that is histologically proven. Participants must not have received treatment for their metastatic or recurrent disease. No activating epidermal growth factor receptor (EGFR) mutation nor ALK translocation/re-arrangement
+  Gastric and GEJ cancer: Histologically confirmed, unresectable locally advanced or metastatic adenocarcinoma of the gastric and gastro-esophageal junction, treated with first-line chemotherapy combination with or without disease progression. Participants should have received no more than 1 line of treatment for metastatic disease. Participants should not have been treated with trastuzumab (but can be Human Epidermal growth factor Receptor 2 [HER2] positive). Participants who received any platinum containing doublet or triplet as a neoadjuvant chemotherapy strategy, but are not ultimately candidates for surgery will also be eligible, as long as they did not have progressive disease after completion of the neoadjuvant chemotherapy. In addition, participants with gastric cancer can enter in the study if their white blood cell (WBC) and lymphocyte count is as defined in the protocol
+  MBC: Participants must have histologically confirmed locally advanced or MBC and have tumor that is refractory to or progressive after standard of care therapy. Participants must have received no more than 3 prior lines of cytotoxic therapy for metastatic disease. Participants must have received a taxane and an anthracycline, unless contra-indicated
+  Secondary expansion cohorts: Metastatic colorectal cancer (mCRC), Metastatic castrate-resistant prostate cancer (mCRPC), melanoma, ovarian cancer, ACC, mesothelioma, urothelial carcinoma and renal cell carcinoma as defined in the protocol
+  Efficacy expansion cohorts: Gastric and GEJ cancer (third line), ovarian cancer (platinum Refractory + liposomal doxorubicin), urothelial carcinoma, and HNSCC as defined in the protocol
+  Other protocol defined inclusion criteria for expansion phase could apply
+  Exclusion Criteria for dose escalation and expansion phase:
+  Concurrent treatment with a non-permitted drug
+  Prior therapy with specific antibody/drug targeting T cell co-regulatory proteins (immune checkpoints)
+  Concurrent anticancer treatment, major surgery, or use of any investigational drug within 28 days before the start of trial treatment; or concurrent systemic therapy with immunosuppressive agents, use of hormonal agents within 7 days before the start of trial treatment as defined in the protocol. Note: Participants receiving bisphosphonate or denosumab are eligible provided treatment was initiated at least 14 days before the first dose of avelumab.
+  Previous malignant disease other than the target malignancy to be investigated in this trial within the last 5 years with the exception of basal or squamous cell carcinoma of the skin or cervical carcinoma in situ
+  Rapidly progressive disease (for example, tumor lysis syndrome)
+  Active or history of central nervous system metastases
+  Receipt of any organ transplantation including allogeneic stem-cell transplantation
+  Significant acute or chronic infections as defined in the protocol
+  Active or history of any autoimmune disease (Participants with diabetes Type 1, vitiligo, psoriasis, hypo- or hyperthyroid disease not requiring immunosuppressive treatment are eligible) or immunodeficiencies
+  Known severe hypersensitivity reactions to monoclonal antibodies, any history of anaphylaxis, or uncontrolled asthma
+  Persisting toxicity related to prior therapy greater than Grade 1 NCI-CTCAE v4.0, however sensory neuropathy less than or equal to Grade 2 is acceptable
+  Pregnancy or lactation period
+  Known alcohol or drug abuse
+  Clinically significant (that is, active) cardiovascular disease
+  All other significant diseases (for example, inflammatory bowel disease), which, in the opinion of the investigator, might impair the Participant's tolerance of trial treatment
+  Any psychiatric condition that would prohibit the understanding or rendering of informed consent
+  Legal incapacity or limited legal capacity
+  Non-oncology vaccine therapies for prevention of infection disease (for example, seasonal flu vaccine, human papilloma virus vaccine) within 4 weeks of study drug administration. Vaccination while on study is also prohibited except for administration of the inactivated influenza vaccine","the nationality, ethnicity, weight or gender of a patient will not affect their eligibility for the primary trial or the secondary trial",Finetuné,"5-fluorouracil (5-FU), epirubicin and cyclophosphamide (FEC) or its 5-FU, epirubicin and cyclophosphamide (FEC) - like"

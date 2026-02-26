@@ -15,10 +15,13 @@ def load_jsonl(path: Path):
             if line.strip(): samples.append(json.loads(line))
     return samples
 
-def predict(model, tokenizer, messages, max_new_tokens=50):
-    """Prédit le label et retourne (label_extrait, texte_brut_généré)"""
+def predict(model, tokenizer, messages, max_new_tokens=50, max_context_tokens=8192):
+    """Prédit le label et retourne (label_extrait, texte_brut_généré).
+    max_context_tokens: limite du prompt (augmenter pour few-shot, sinon la fin est coupée)."""
     text = tokenizer.apply_chat_template(messages[:-1], tokenize=False, add_generation_prompt=True)
-    inputs = tokenizer(text, return_tensors="pt", truncation=True, max_length=1024)
+    model_max = getattr(tokenizer, "model_max_length", 32768)
+    max_len = min(max_context_tokens, model_max)
+    inputs = tokenizer(text, return_tensors="pt", truncation=True, max_length=max_len)
     inputs = {k: v.to(model.device) for k, v in inputs.items()}
 
     with torch.no_grad():
@@ -65,6 +68,8 @@ def main():
     parser.add_argument("--test_file", type=str, required=True, help="Fichier de test")
     parser.add_argument("--output_csv", type=str, default=None, 
                         help="Chemin du fichier CSV de sortie pour les prédictions (par défaut: predictions_<model_name>.csv)")
+    parser.add_argument("--max_context_tokens", type=int, default=8192,
+                        help="Nombre max de tokens du prompt (défaut 8192 pour few-shot; réduire si pas de few-shot)")
     args = parser.parse_args()
 
     EVAL_PATH = Path(args.model_path)
@@ -108,13 +113,14 @@ def main():
         if (i + 1) % 50 == 0: 
             print(f"  Progrès : {i + 1}/{len(test_samples)}")
         
-        # Extraire les informations (format JSONL: messages[0]=user, messages[1]=assistant)
+        # Extraire les informations : dernier message = assistant (gold), dernier "user" = la question de test
         true_label = sample["messages"][-1]["content"]
-        user_content = sample["messages"][0]["content"]  # Le message "user"
+        user_messages = [m for m in sample["messages"] if m.get("role") == "user"]
+        user_content = user_messages[-1]["content"] if user_messages else sample["messages"][0].get("content", "")
         premise, hypothesis = extract_premise_hypothesis(user_content)
         
-        # Faire la prédiction
-        pred_label, raw_generated = predict(model, tokenizer, sample["messages"])
+        # Faire la prédiction (max_context_tokens pour que tout le prompt few-shot soit vu)
+        pred_label, raw_generated = predict(model, tokenizer, sample["messages"], max_context_tokens=args.max_context_tokens)
         
         # Stocker pour les métriques
         true_labels.append(true_label)
@@ -161,7 +167,14 @@ def main():
         writer.writerows(csv_rows)
     print(f"✓ {len(csv_rows)} prédictions sauvegardées")
 
-    # Métriques
+    # Compter les UNKNOWN (sorties non reconnues comme Entailment/Contradiction)
+    n_unknown = sum(1 for p in predictions if p == "UNKNOWN")
+    if n_unknown > 0:
+        print(f"\n⚠️  Prédictions non reconnues (UNKNOWN) : {n_unknown} / {len(predictions)}")
+        print("    -> Cause probable : prompt tronqué (--max_context_tokens trop petit pour le few-shot)")
+        print("    -> Essayer : --max_context_tokens 8192 ou 16384")
+
+    # Métriques (accuracy/F1 sur toutes les prédictions ; UNKNOWN compte comme faux)
     acc = accuracy_score(true_labels, predictions)
     precision, recall, f1, _ = precision_recall_fscore_support(true_labels, predictions, average="weighted", zero_division=0)
     
@@ -175,6 +188,8 @@ def main():
     print(f"                Prédit Entailment | Prédit Contradiction")
     print(f"Vrai Entail.  : {cm[0][0]:17d} | {cm[0][1]:18d}")
     print(f"Vrai Contrad. : {cm[1][0]:17d} | {cm[1][1]:18d}")
+    if n_unknown > 0:
+        print(f"(Les {n_unknown} réponses UNKNOWN ne figurent pas dans cette matrice)")
     print("="*60)
 if __name__ == "__main__":
     main()
