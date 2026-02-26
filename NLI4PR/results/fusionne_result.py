@@ -4,9 +4,9 @@ import sys
 # =====================================================================
 # CONFIGURATION DES CHEMINS (À MODIFIER SELON TES BESOINS)
 # =====================================================================
-POL_CSV_PATH = "Prompt_cot/eval_cot_pol_finetune.csv"
-MEDICAL_CSV_PATH = "Prompt_cot/eval_cot_medical_finetune.csv"
-OUTPUT_CSV_PATH = "Prompt_cot/eval_cot_combined_finetune.csv"
+POL_CSV_PATH = "Prompt_cot/eval_cot_pol_baseline.csv"
+MEDICAL_CSV_PATH = "Prompt_cot/eval_cot_medical_baseline.csv"
+OUTPUT_CSV_PATH = "Prompt_cot/eval_cot_combined_baseline.csv"
 # =====================================================================
 
 def main():
