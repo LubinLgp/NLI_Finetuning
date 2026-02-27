@@ -11,7 +11,10 @@ Projet de **fine-tuning** de modèles de langage pour la tâche NLI (Entailment 
   - `data/validation-00000-of-00001.parquet`
   - `data/test-00000-of-00001.parquet`
 - Chaque Parquet doit contenir au minimum : `premise`, `statement_pol`, `statement_medical`, `label` (Entailment / Contradiction).
-- Python 3 avec `pandas`, `matplotlib`, `seaborn`, `scikit-learn` (pour les notebooks d’analyse).
+- **Python 3** avec les bibliothèques suivantes :
+  - Pour les scripts de génération : `pandas`, `pathlib`
+  - Pour `save_fewshot.py` : `pandas`, `numpy`, `torch`, `transformers`, `scikit-learn`, `tqdm`
+  - Pour les notebooks d’analyse : `pandas`, `matplotlib`, `seaborn`, `scikit-learn`, `numpy`
 
 ---
 
@@ -21,9 +24,11 @@ Projet de **fine-tuning** de modèles de langage pour la tâche NLI (Entailment 
 NLI4PR/
 ├── README_NLI4PR.md          # Ce fichier
 ├── data/                     # Données Parquet (train / validation / test) — à fournir
+├── graphes/                  # Graphiques de l'analyse linguistique (créé à l'exécution)
 ├── save_nli.py               # Génère les JSONL d’entraînement NLI
 ├── save_clinical_matching.py # Génère les JSONL Clinical Matching
 ├── save_CoT.py               # Génère les JSONL Chain-of-Thought
+├── save_fewshot.py           # Génère les JSONL few-shot KATE (RoBERTa + similarité cosine)
 │
 └── results/                  # Tous les résultats, évals et analyses
     ├── graphes/              # Graphiques sauvegardés par les notebooks (créé à l’exécution)
@@ -33,10 +38,18 @@ NLI4PR/
     ├── indices_medical_all_baseline_wrong.csv
     ├── indices_pol_all_finetune_wrong.csv      # Indices POL où les 3 finetunes se trompent
     ├── indices_medical_all_finetune_wrong.csv
+    ├── comparison_linguistic_pol.csv          # Comparaison métriques linguistiques (candidats vs autres) - POL
+    ├── comparison_linguistic_medical.csv      # Comparaison métriques linguistiques (candidats vs autres) - MEDICAL
     │
     ├── compare_all_baseline.ipynb    # Comparaison des 3 prompts baseline (scores + indices “tous wrong”)
     ├── compare_all_finetuning.ipynb  # Comparaison des 3 prompts finetune (scores + indices “tous wrong”)
-    ├── analyse_manuelle.ipynb        # Analyse manuelle : choix d’un idx, affichage prompts + eval finetune/baseline
+    ├── analyse_linguistique_candidats.ipynb  # Analyse linguistique automatique : métriques (Jaccard, numeric, négations, etc.) pour comparer candidats vs autres indices
+    │
+    ├── Fewshot_kate/
+    │   ├── fewshot_test_pol.jsonl, fewshot_test_medical.jsonl  # JSONL few-shot KATE pour test
+    │   ├── eval_fewshot_combined.csv, eval_fewshot_pol.csv, eval_fewshot_medical.csv
+    │   ├── analyse_fewshot.ipynb
+    │   └── graphes/
     │
     ├── Prompt_NLI/
     │   ├── nli_train_pol.jsonl, nli_train_medical.jsonl
@@ -74,8 +87,9 @@ NLI4PR/
 | **save_nli.py** | Lit les Parquet dans `data/`, produit 6 JSONL au format OpenAI (train/val/test × pol/medical) avec un prompt **NLI** (Premise + Hypothesis, réponse en un mot). Les sorties sont du type `nli_*_pol.jsonl` / `nli_*_medical.jsonl` (à placer dans `results/Prompt_NLI/` si besoin). |
 | **save_clinical_matching.py** | Même principe pour le prompt **Clinical Matching** : question patient / critères, réponse en un mot. Produit `clinical_matching_*_pol.jsonl` et `clinical_matching_*_medical.jsonl`. |
 | **save_CoT.py** | Même principe pour le prompt **Chain-of-Thought** : même question + consigne de raisonnement étape par étape puis un mot. Produit `cot_*_pol.jsonl` et `cot_*_medical.jsonl`. |
+| **save_fewshot.py** | Génère des JSONL few-shot pour le test en utilisant la méthode **KATE** (kNN-Augmented in-context Example selection) : sélectionne les exemples d'entraînement les plus sémantiquement proches de chaque instance de test via embeddings RoBERTa + similarité cosine. Pour chaque test, sélectionne 1 exemple Entailment + 1 exemple Contradiction les plus proches. Produit `fewshot_test_pol.jsonl` et `fewshot_test_medical.jsonl` dans `results/Fewshot_kate/`. |
 
-À exécuter depuis la racine **NLI4PR** (avec le dossier `data/` présent). Les JSONL générés peuvent être déplacés dans `results/Prompt_NLI/`, `results/Prompt_clinical_matching/`, `results/Prompt_cot/` selon l’usage (entraînement / évaluation).
+À exécuter depuis la racine **NLI4PR** (avec le dossier `data/` présent). Les JSONL générés peuvent être déplacés dans `results/Prompt_NLI/`, `results/Prompt_clinical_matching/`, `results/Prompt_cot/`, `results/Fewshot_kate/` selon l’usage (entraînement / évaluation).
 
 ### Dans results/
 
@@ -89,7 +103,7 @@ NLI4PR/
 |----------|------|
 | **compare_all_baseline.ipynb** | Charge les CSV d’évaluation **baseline** des 3 prompts (NLI, Clinical Matching, CoT). Calcule les scores (accuracy) Global / POL / MEDICAL, affiche les proportions Contradiction vs Entailment quand tous se trompent, sauvegarde les graphiques dans `graphes/` et exporte les listes d’indices : `indices_pol_all_baseline_wrong.csv`, `indices_medical_all_baseline_wrong.csv`. |
 | **compare_all_finetuning.ipynb** | Même logique pour les modèles **finetunés** : scores, graphiques, et export des indices où les 3 finetunes se trompent (`indices_pol_all_finetune_wrong.csv`, `indices_medical_all_finetune_wrong.csv`). |
-| **analyse_manuelle.ipynb** | Définit les **candidats** = intersection des indices présents dans les deux listes “tous finetune wrong” (POL et MEDICAL). Permet de choisir manuellement un `idx` puis d’afficher pour cet index : les prompts POL et MEDICAL (depuis `Prompt_cot/cot_test_*`), ainsi que **reasoning** et **prediction** (et gold, is_correct) pour l’éval **finetune** puis pour l’éval **baseline**. Utile pour l’inspection cas par cas. |
+| **analyse_linguistique_candidats.ipynb** | Analyse linguistique automatique des indices problématiques. Définit les **candidats** = intersection des indices présents dans les deux listes “tous finetune wrong” (POL et MEDICAL). Calcule des métriques linguistiques (chevauchement lexical Jaccard/coverage, densité numérique, négations, longueur, mots-clés trial) pour tous les indices du test, puis compare les **moyennes des candidats** vs les **moyennes des autres indices** (séparément pour POL et MEDICAL). Génère des visualisations (barres, boxplots) sauvegardées dans `graphes/` à la racine et exporte les comparaisons en CSV (`comparison_linguistic_pol.csv`, `comparison_linguistic_medical.csv`). Permet aussi l’inspection manuelle cas par cas (choix d’un `idx`, affichage prompts + eval finetune/baseline). |
 
 ### Par type de prompt (Prompt_NLI, Prompt_clinical_matching, Prompt_cot)
 
@@ -106,15 +120,24 @@ Dans chaque dossier on trouve :
 
 Les noms des graphiques et des CSV suivent le schéma : préfixe du prompt (nli, clinical_matching, cot) + baseline/finetune + descriptif (ex. `cot_baseline_confusion_combined.png`).
 
+### Few-shot KATE (Fewshot_kate/)
+
+Le dossier `results/Fewshot_kate/` contient :
+
+- **JSONL few-shot** : `fewshot_test_pol.jsonl`, `fewshot_test_medical.jsonl` générés par `save_fewshot.py`. Chaque ligne contient un prompt few-shot avec 1 exemple Entailment + 1 exemple Contradiction sélectionnés via KATE (embeddings RoBERTa + similarité cosine).
+- **CSV d’évaluation** : `eval_fewshot_combined.csv`, `eval_fewshot_pol.csv`, `eval_fewshot_medical.csv` (format identique aux autres prompts).
+- **Notebooks d’analyse** : `analyse_fewshot.ipynb` pour analyser les performances du few-shot KATE.
+
 ---
 
 ## Workflow typique
 
 1. **Données** : placer les Parquet dans `data/`.
 2. **Génération des JSONL** : exécuter `save_nli.py`, `save_clinical_matching.py`, `save_CoT.py` depuis la racine ; déplacer les JSONL dans les dossiers `results/Prompt_*` si nécessaire.
-3. **Entraînement / évaluation** : effectuer le fine-tuning et l’évaluation en dehors de ce dépôt (ex. OpenAI, script custom), et écrire les CSV d’évaluation dans les bons dossiers `Prompt_*` (format : `index`, `statement_type` si combined, `gold`, `prediction`, `is_correct`, et éventuellement `reasoning` pour CoT).
-4. **Fusion combined** : pour chaque prompt et chaque condition (baseline/finetune), utiliser `fusionne_result.py` (en adaptant les chemins) pour produire les `*_combined_*.csv` à partir des CSV pol et medical.
-5. **Analyses** : exécuter les notebooks depuis le dossier `results/` (répertoire de travail = `results/`) pour comparer tous les prompts (compare_all_*.ipynb), analyser chaque prompt (analyse_*_baseline/finetune.ipynb, compare_*_baseline_finetune.ipynb) et faire l’analyse manuelle (analyse_manuelle.ipynb).
+3. **Génération des JSONL few-shot KATE** (optionnel) : exécuter `save_fewshot.py` depuis la racine pour générer les JSONL few-shot avec sélection KATE. Les fichiers sont créés directement dans `results/Fewshot_kate/`.
+4. **Entraînement / évaluation** : effectuer le fine-tuning et l’évaluation en dehors de ce dépôt (ex. OpenAI, script custom), et écrire les CSV d’évaluation dans les bons dossiers `Prompt_*` ou `Fewshot_kate/` (format : `index`, `statement_type` si combined, `gold`, `prediction`, `is_correct`, et éventuellement `reasoning` pour CoT).
+5. **Fusion combined** : pour chaque prompt et chaque condition (baseline/finetune), utiliser `fusionne_result.py` (en adaptant les chemins) pour produire les `*_combined_*.csv` à partir des CSV pol et medical.
+6. **Analyses** : exécuter les notebooks depuis le dossier `results/` (répertoire de travail = `results/`) pour comparer tous les prompts (compare_all_*.ipynb), analyser chaque prompt (analyse_*_baseline/finetune.ipynb, compare_*_baseline_finetune.ipynb), faire l’analyse linguistique automatique (analyse_linguistique_candidats.ipynb) et l’inspection manuelle cas par cas.
 
 ---
 
