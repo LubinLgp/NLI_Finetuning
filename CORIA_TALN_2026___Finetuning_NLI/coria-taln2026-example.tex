@@ -6,6 +6,8 @@
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
 \usepackage{booktabs}
+\usepackage{float} % option [H] pour figurer les figures à l'emplacement du code
+\usepackage{amssymb} % pour \checkmark dans les tableaux
 
 % Faire les \usepackage dont vous avez besoin de préférence AVANT le \usepackage{coria-taln2025}
 
@@ -154,14 +156,14 @@ Few-shot Cosine & 71,0 & \\
 \paragraph{Deux configurations de fine-tuning.}
 Le fine-tuning améliore nettement les baselines pour les deux formats de prompt. Le \textbf{Prompt 1} affiné atteint \textbf{74,2}\,\% (gain d'environ 8,4 points par rapport à sa baseline à 65,8\,\%), le \textbf{Prompt 2} affiné atteint \textbf{71,8}\,\% (gain d'environ 6,6 points par rapport à 65,2\,\%). Le Prompt 1 reste donc le plus performant après affinage. Les figures~\ref{fig:nli4ct-accuracy-type} et~\ref{fig:nli4ct-accuracy-section} donnent les performances des deux modèles fine-tunés en fonction du \textbf{type de tâche} (Single vs Comparison) et de la \textbf{section de protocole} (Eligibility, Intervention, Adverse Events, Results, etc.)~: les deux modèles affinés performent mieux que leurs baselines dans la plupart des sous-groupes, avec des écarts selon la section. On observe en particulier que la tâche est \textbf{nettement plus simple sur la section Adverse Events} (accuracy plus élevée) que sur la section Eligibility, qui reste la plus difficile. Ce contraste de difficulté entre sections (Eligibility vs Adverse Events, Intervention, Results) motive l'étude complémentaire du jeu de données \textbf{NLI4PR}, centré précisément sur des tâches d'Eligibility au niveau patient.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.9\linewidth]{02_accuracy_par_type.png}
 \caption{Accuracy par type de tâche (Single / Comparison) pour les baselines et modèles fine-tunés (Prompt 1 et Prompt 2).}
 \label{fig:nli4ct-accuracy-type}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.9\linewidth]{03_accuracy_par_section.png}
 \caption{Accuracy par section de protocole pour les baselines et modèles fine-tunés (Prompt 1 et Prompt 2).}
@@ -170,7 +172,7 @@ Le fine-tuning améliore nettement les baselines pour les deux formats de prompt
 
 Par ailleurs, le fine-tuning introduit des \textbf{régressions} (exemples corrects en baseline, erronés après affinage) et des \textbf{améliorations} (erronés en baseline, corrects après affinage)~: pour le Prompt 1 on observe 60 régressions et 102 améliorations~; pour le Prompt 2, 60 régressions et 93 améliorations. Le bilan net reste positif pour les deux prompts. Une explication probable des régressions est que les \textbf{baselines prédissent en majorité la classe Contradiction}~: lorsqu'une prédiction baseline correcte était «~contradiction~», l'affinage peut parfois faire basculer le modèle vers «~entailment~» et ainsi créer une régression. Les quatre matrices de confusion (P1 Baseline, P1 Fine-tuné, P2 Baseline, P2 Fine-tuné) reportées en figure~\ref{fig:nli4ct-confusion} illustrent ce déséquilibre des baselines vers la contradiction et le rééquilibrage apporté par le fine-tuning.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.7\linewidth]{fig_nli4ct_confusion.png}
 \caption{Matrices de confusion pour P1 Baseline, P1 Fine-tuné, P2 Baseline et P2 Fine-tuné (calculées à partir des fichiers \texttt{resultats\_*}\, des dossiers Prompt\,1 et Prompt\,2). Les baselines tendent à prédire majoritairement Contradiction~; le fine-tuning rééquilibre les prédictions, ce qui peut expliquer une partie des régressions (exemples où la baseline correcte en contradiction devient erronée après affinage).}
@@ -179,14 +181,14 @@ Par ailleurs, le fine-tuning introduit des \textbf{régressions} (exemples corre
 
 L'analyse par \textbf{longueur de prompt} est donnée en figures~\ref{fig:nli4ct-longueur} et~\ref{fig:nli4ct-longueur-courbe}. Les données ont été découpées en sous-ensembles (\emph{bins}) de la façon suivante~: pour la figure~\ref{fig:nli4ct-longueur}, la longueur du prompt (en tokens) est partagée en \textbf{terciles} (quantiles à 1/3 et 2/3), ce qui définit trois bins «~Court~», «~Moyen~» et «~Long~»~; pour la figure~\ref{fig:nli4ct-longueur-courbe}, les exemples sont répartis en \textbf{15 bins} selon le rang centile de leur longueur (\emph{rank percentile}), puis l'accuracy est calculée dans chaque bin et reportée en fonction de la longueur moyenne du bin. Les performances restent stables ou s'améliorent avec la longueur pour les modèles affinés, sans dégradation systématique sur les prompts les plus longs.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.9\linewidth]{04_accuracy_par_longueur.png}
 \caption{Accuracy par bin de longueur (terciles~: Court / Moyen / Long) pour les baselines et modèles fine-tunés.}
 \label{fig:nli4ct-longueur}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.9\linewidth]{04b_accuracy_vs_longueur_courbe.png}
 \caption{Évolution de l'accuracy en fonction de la longueur du prompt (15 bins par rang centile, courbe lissée) pour les deux fine-tunings.}
@@ -194,9 +196,9 @@ L'analyse par \textbf{longueur de prompt} est donnée en figures~\ref{fig:nli4ct
 \end{figure}
 
 \paragraph{Trois stratégies few-shot.}
-Les trois stratégies few-shot (sélection par type et section, KATE, similarité cosine) atteignent des précisions du même ordre~: \textbf{72,0}\,\% pour la sélection par type et section, \textbf{71,4}\,\% pour KATE, \textbf{71,0}\,\% pour Cosine}. Aucune ne dépasse le fine-tuning Prompt 1 (74,2\,\%), mais elles se situent au niveau du fine-tuning Prompt 2 ou légèrement en dessous, sans aucun ré-entraînement. La stratégie par type et section est légèrement en tête des trois. La figure~\ref{fig:nli4ct-fewshot-type-section} (partie 5b de l'analyse few-shot) présente la performance des trois stratégies par \textbf{type de tâche} et par \textbf{section de protocole} dans un même graphique~: les trois courbes ou barres sont très proches pour chaque sous-groupe, ce qui \textbf{justifie que les trois stratégies few-shot se comportent de manière très similaire} selon le type et la section, avec des variations limitées entre type+section, KATE et Cosine.
+Les trois stratégies few-shot (sélection par type et section, KATE, similarité cosine) atteignent des précisions du même ordre~: \textbf{72,0}\,\% pour la sélection par type et section, \textbf{71,4}\,\% pour KATE, \textbf{71,0}\,\% pour Cosine. Aucune ne dépasse le fine-tuning Prompt 1 (74,2\,\%), mais elles se situent au niveau du fine-tuning Prompt 2 ou légèrement en dessous, sans aucun ré-entraînement. La stratégie par type et section est légèrement en tête des trois. La figure~\ref{fig:nli4ct-fewshot-type-section} (partie 5b de l'analyse few-shot) présente la performance des trois stratégies par \textbf{type de tâche} et par \textbf{section de protocole} dans un même graphique~: les trois courbes ou barres sont très proches pour chaque sous-groupe, ce qui \textbf{justifie que les trois stratégies few-shot se comportent de manière très similaire} selon le type et la section, avec des variations limitées entre type+section, KATE et Cosine.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.9\linewidth]{02b_accuracy_type_et_section.png}
 \caption{Performance des trois stratégies few-shot (type+section, KATE, cosine) par type de tâche et par section de protocole. Les trois stratégies montrent des profils très proches, justifiant un comportement similaire.}
@@ -207,7 +209,92 @@ Les trois stratégies few-shot (sélection par type et section, KATE, similarit�
 Le fine-tuning Prompt 1 est le plus performant (74,2\,\%), suivi du fine-tuning Prompt 2 (71,8\,\%) et des trois stratégies few-shot (71,0--72,0\,\%). Les approches few-shot offrent un compromis intéressant~: précision proche du second fine-tuning, sans coût d'affinage. Pour la suite de l'analyse (section suivante), on se concentre sur la stratégie \textbf{KATE}~: les trois stratégies few-shot étant de performance très similaire, le choix de KATE se justifie par le fait que c'est une \textbf{méthode générale}, réutilisable sur d'autres tâches (y compris NLI4PR), et dont le principe — sélection d'exemples par similarité sémantique — a une interprétation claire. La section suivante (analyse d'erreurs) détaille où les modèles se trompent, où ils sont d'accord, et dans quelle mesure le fine-tuning Prompt 1 et KATE se complètent.
 
 \subsection{Résultats NLI4PR}
-% À compléter par l'équipe NLI4PR : présentation des résultats des 3 prompts (NLI, Clinical Matching, CoT) en baseline et finetuné, éventuellement par type de langage (POL / medical).
+L'évaluation NLI4PR porte sur 3156 exemples de test (1578 en langage patient POL et 1578 en langage médical), avec quatre familles de configurations~: les trois prompts (\textbf{NLI}, \textbf{Clinical Matching}, \textbf{CoT}) en \textbf{baseline} (sans affinage) et en \textbf{finetuné}, ainsi que la stratégie \textbf{few-shot KATE} (sans entraînement). Le tableau~\ref{tab:nli4pr-accuracy} synthétise l'accuracy (\,\%) en Global, POL et MEDICAL pour toutes ces configurations.
+
+\begin{table}[htbp]
+\centering
+\caption{Précision (accuracy, \,\%) sur NLI4PR — Global (3156 ex.), POL (1578 ex.) et MEDICAL (1578 ex.).}
+\label{tab:nli4pr-accuracy}
+\begin{tabular}{lccc}
+\toprule
+Configuration & Global & POL & MEDICAL \\
+\midrule
+NLI Baseline & 55,7 & 53,8 & 57,6 \\
+NLI Finetuné & \textbf{68,9} & 68,3 & 69,6 \\
+Clinical Matching Baseline & 66,2 & 65,0 & 67,4 \\
+Clinical Matching Finetuné & 72,8 & 73,3 & 72,4 \\
+CoT Baseline & 72,2 & 70,5 & 74,0 \\
+CoT Finetuné & \textbf{73,8} & 73,4 & \textbf{74,2} \\
+Few-shot KATE & 66,2 & 65,6 & 66,7 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Synthèse des performances.}
+Le \textbf{finetuning améliore nettement} les trois prompts par rapport à leurs baselines. Le gain est le plus marqué pour le prompt \textbf{NLI}~: +13,2 points en global (55,7\,\% $\rightarrow$ 68,9\,\%), avec des améliorations similaires en POL et MEDICAL. Les prompts Clinical Matching et CoT partent de baselines déjà plus élevées (66,2\,\% et 72,2\,\%) et gagnent encore respectivement +6,6 et +1,6 points en global après affinage. Au final, le \textbf{CoT finetuné} obtient la meilleure accuracy globale (73,8\,\%) et en MEDICAL (74,2\,\%)~; le Clinical Matching finetuné reste très proche (72,8\,\% global, 73,3\,\% en POL). La stratégie \textbf{few-shot KATE} a également été évaluée sur NLI4PR (66,2\,\% en global, 65,6\,\% en POL, 66,7\,\% en MEDICAL). Les résultats restent nettement inférieurs à toutes les configurations par prompt (finetuné) sur ce jeu de données~; nous ne nous sommes donc pas concentrés sur cette approche pour NLI4PR.
+
+\paragraph{Comparaison par type de langage (POL vs MEDICAL).}
+En baseline, les trois prompts performent légèrement mieux sur le sous-ensemble \textbf{MEDICAL} que sur \textbf{POL}, avec des écarts de l'ordre de 2 à 4 points. Après finetuning, les écarts entre POL et MEDICAL se réduisent~: le CoT finetuné atteint 73,4\,\% en POL et 74,2\,\% en MEDICAL. Les figures~\ref{fig:nli4pr-compare-baseline} et~\ref{fig:nli4pr-compare-finetune} illustrent la comparaison des trois prompts en baseline et en finetuné (Global, POL, MEDICAL). Les graphiques sont réduits pour conserver la lisibilité des libellés.
+
+\begin{figure}[H]
+\centering
+\IfFileExists{figures_nli4pr/compare_all_baseline_accuracy.png}{%
+  \includegraphics[width=0.72\linewidth]{figures_nli4pr/compare_all_baseline_accuracy.png}%
+}{\fbox{\parbox{0.72\linewidth}{\centering\small [Exécuter les notebooks NLI4PR puis \texttt{copy\_figures\_nli4pr.bat} pour générer la figure.]}}}
+\caption{Accuracy des trois prompts (NLI, Clinical Matching, CoT) en \textbf{baseline} — Global, POL et MEDICAL.}
+\label{fig:nli4pr-compare-baseline}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\IfFileExists{figures_nli4pr/compare_all_finetuning_accuracy.png}{%
+  \includegraphics[width=0.72\linewidth]{figures_nli4pr/compare_all_finetuning_accuracy.png}%
+}{\fbox{\parbox{0.72\linewidth}{\centering\small [Figure~: \texttt{compare\_all\_finetuning\_accuracy.png}]}}}
+\caption{Accuracy des trois prompts (NLI, Clinical Matching, CoT) \textbf{finetunés} — Global, POL et MEDICAL. Le CoT finetuné obtient les meilleurs scores.}
+\label{fig:nli4pr-compare-finetune}
+\end{figure}
+
+\paragraph{Baseline vs Finetuné par prompt.}
+Pour chaque prompt, le finetuning apporte plus d'améliorations que de régressions. Par exemple, pour le NLI~: 1108 exemples passent de faux (baseline) à corrects (finetuné) contre 691 régressions (correct en baseline, faux après affinage), soit un bilan net de +417 exemples corrects. Les figures~\ref{fig:nli4pr-nli-bf},~\ref{fig:nli4pr-cm-bf} et~\ref{fig:nli4pr-cot-bf} montrent les courbes baseline vs finetuné pour les trois prompts (accuracy Global, POL, MEDICAL). Une matrice de confusion typique (CoT finetuné, combined) est donnée en figure~\ref{fig:nli4pr-cot-confusion} pour illustrer la répartition des prédictions Entailment / Contradiction.
+
+\begin{figure}[H]
+\centering
+\IfFileExists{figures_nli4pr/nli_compare_baseline_finetune_accuracy.png}{%
+  \includegraphics[width=0.68\linewidth]{figures_nli4pr/nli_compare_baseline_finetune_accuracy.png}%
+}{\fbox{\parbox{0.68\linewidth}{\centering\small [\texttt{nli\_compare\_baseline\_finetune\_accuracy.png}]}}}
+\caption{Baseline vs Finetuné — prompt \textbf{NLI}. Gain important du finetuning en Global, POL et MEDICAL.}
+\label{fig:nli4pr-nli-bf}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\IfFileExists{figures_nli4pr/clinical_matching_compare_baseline_finetune_accuracy.png}{%
+  \includegraphics[width=0.68\linewidth]{figures_nli4pr/clinical_matching_compare_baseline_finetune_accuracy.png}%
+}{\fbox{\parbox{0.68\linewidth}{\centering\small [\texttt{clinical\_matching\_compare\_baseline\_finetune\_accuracy.png}]}}}
+\caption{Baseline vs Finetuné — prompt \textbf{Clinical Matching}.}
+\label{fig:nli4pr-cm-bf}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\IfFileExists{figures_nli4pr/cot_compare_baseline_finetune_accuracy.png}{%
+  \includegraphics[width=0.68\linewidth]{figures_nli4pr/cot_compare_baseline_finetune_accuracy.png}%
+}{\fbox{\parbox{0.68\linewidth}{\centering\small [\texttt{cot\_compare\_baseline\_finetune\_accuracy.png}]}}}
+\caption{Baseline vs Finetuné — prompt \textbf{CoT}. La baseline CoT est déjà élevée~; le finetuning apporte un gain modéré mais consistant.}
+\label{fig:nli4pr-cot-bf}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\IfFileExists{figures_nli4pr/cot_finetune_confusion_combined.png}{%
+  \includegraphics[width=0.58\linewidth]{figures_nli4pr/cot_finetune_confusion_combined.png}%
+}{\fbox{\parbox{0.58\linewidth}{\centering\small [\texttt{cot\_finetune\_confusion\_combined.png}]}}}
+\caption{Matrice de confusion — CoT finetuné, ensemble combined (POL + MEDICAL).}
+\label{fig:nli4pr-cot-confusion}
+\end{figure}
+
+\paragraph{Noyau dur d'erreurs.}
+Lorsque \emph{les trois} modèles \textbf{baseline} se trompent ensemble (237 exemples en POL, 174 en MEDICAL), ils prédisent à tort \textbf{Contradiction} dans la grande majorité des cas~: le vrai label est Entailment dans environ \textbf{92\,\%} des cas en POL et \textbf{88\,\%} en MEDICAL. Les baselines ont donc une tendance à sous-déclarer l'éligibilité. À l'inverse, lorsque les trois modèles \textbf{finetunés} se trompent ensemble (196 en POL, 174 en MEDICAL), le vrai label est majoritairement \textbf{Contradiction} (environ 75\,\% en POL et 80\,\% en MEDICAL)~: les modèles finetunés tendent alors à prédire à tort Entailment. Les \textbf{123 candidats} proviennent de l'intersection de ces indices en POL et en MEDICAL pour les modèles \textbf{finetunés} (même patient en erreur dans les deux formulations). Nous ciblons les erreurs du finetuning car c'est là que les meilleurs résultats sont obtenus~; l'analyse d'erreurs NLI4PR (section suivante) porte sur ce noyau dur.
 
 \section{Analyse d'erreurs}
 
@@ -217,7 +304,7 @@ L'analyse d'erreurs porte sur trois axes~: la convergence des erreurs entre les 
 \paragraph{Convergence des erreurs entre les deux fine-tunings.}
 On compare les prédictions du \textbf{Prompt 1 fine-tuné} et du \textbf{Prompt 2 fine-tuné} sur les 500 exemples. La répartition des quatre cas d'accord/désaccord est la suivante~: \textbf{333 exemples où les deux ont raison}, \textbf{103 où les deux se trompent}, \textbf{38 où seul le Prompt 1 a raison} (P2 en erreur) et \textbf{26 où seul le Prompt 2 a raison} (P1 en erreur). Les deux modèles sont donc d'accord sur une large majorité des cas (333 + 103 = 436, soit 87,2\,\%). Les désaccords (64 exemples au total) sont légèrement en faveur du Prompt 1 (38 contre 26), cohérent avec sa meilleure accuracy globale. Les \textbf{103 cas où les deux se trompent} constituent un noyau dur commun aux deux formulations de prompt~; leur répartition par \textbf{section de protocole} montre une surreprésentation dans certaines sections (par ex. Eligibility, Intervention, Adverse Events, Results), ce qui indique des zones où l'affinage reste insuffisant pour les deux configurations. La répartition par \textbf{type de tâche} (Single vs Comparison) dans ces 103 cas permet d'identifier si les erreurs communes concernent davantage les inférences sur un seul critère ou les comparaisons entre critères. Par ailleurs, comme indiqué en résultats, le fine-tuning introduit 60 régressions et 102 améliorations pour le Prompt 1, 60 régressions et 93 améliorations pour le Prompt 2~: les améliorations l'emportent nettement, mais les régressions ciblent des exemples que les baselines géraient correctement et méritent une analyse qualitative (par ex. confusion Entailment / Contradiction). La figure~\ref{fig:nli4ct-twoft-section} synthétise la répartition des cas «~les deux finetunings se trompent~» et «~les deux finetunings ont raison~» par section de protocole.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.9\linewidth]{fig_twoft_by_section.png}
 \caption{Répartition par section de protocole des cas où les deux modèles fine-tunés (Prompt 1 et Prompt 2) se trompent (en haut) et des cas où les deux ont raison (en bas). Les deux modèles sont nettement plus susceptibles de se tromper sur les sections \textit{Eligibility} et \textit{Intervention} que sur \textit{Results} ou \textit{Adverse Events}.}
@@ -254,7 +341,63 @@ P1\textsuperscript{$\times$} KATE\textsuperscript{$\checkmark$} & 0,1004 & 0,395
 Les tests de \textbf{Kruskal-Wallis} indiquent que les quatre groupes se distinguent significativement par la \textbf{densité numérique} (\texttt{numeric\_total}) et la \textbf{longueur de la prémisse} (\texttt{words\_premise}). Les cas où \textbf{les deux se trompent} (71) contiennent en moyenne \textbf{plus de négations} que les cas où les deux ont raison (test de Mann-Whitney, $p < 0{,}05$)~: les deux approches échouent plus souvent sur des contradictions à base de négations explicites. À l'inverse, dans le sous-ensemble \textbf{P1 en erreur et KATE correct} (58 exemples), les exemples ont une \textbf{densité numérique plus élevée} et des \textbf{prémisses plus longues} ($p < 0{,}05$)~: le few-shot KATE, avec des exemples sémantiquement proches, semble mieux exploiter le contexte numérique et les critères longs. Dans le sous-ensemble \textbf{P1 correct et KATE en erreur} (72 exemples), le profil (moins numérique, prémisses plus courtes en moyenne) correspond au domaine où le fine-tuning tire mieux parti de l'affinage. En pratique, ces résultats suggèrent qu'un \textbf{système hybride} ou un \textbf{choix ciblé} (par ex. préférer KATE sur les cas très numériques ou à longue prémisse, le fine-tuning Prompt 1 ailleurs) pourrait tirer parti de cette complémentarité et potentiellement dépasser la précision de chaque approche seule.
 
 \subsection{Analyse d'erreurs NLI4PR}
-% À compléter par l'équipe NLI4PR.
+Nous nous concentrons sur les erreurs du \textbf{finetuning}, qui donne les meilleurs résultats sur NLI4PR. L'analyse s'appuie sur les exemples où les trois modèles finetunés (NLI, Clinical Matching, CoT) se trompent~: 196 en POL et 174 en MEDICAL, avec une forte proportion de vrais labels \textbf{Contradiction} (environ 75--80\,\%). Les 123 \textbf{candidats} sont issus de l'intersection POL–MEDICAL de ces indices (même patient en erreur dans les deux formulations) et forment un noyau dur où la tâche reste difficile quelle que soit la formulation.
+
+Une \textbf{analyse linguistique} a été menée sur ces 123 candidats, en les comparant au reste des indices du jeu de test (comme pour NLI4CT). Les métriques utilisées sont~: chevauchement lexical (Jaccard), couverture lexicale, densité numérique (chiffres, pourcentages, unités), nombre de négations, longueur de la prémisse et du statement, et présence de mots-clés d'essai. Les tableaux~\ref{tab:nli4pr-linguistic-pol} et~\ref{tab:nli4pr-linguistic-med} résument les moyennes candidats vs autres pour les indicateurs les plus discriminants (POL et MEDICAL). Les candidats se distinguent par des \textbf{prémisses plus courtes} (environ 198 mots vs 252 pour les autres), une \textbf{densité numérique plus faible} (environ 31--33 vs 37--40), et une \textbf{couverture lexicale légèrement plus basse}. En MEDICAL, les candidats ont en moyenne \textbf{plus de négations dans le statement} (1,72 vs 1,42). Ces profils suggèrent que le noyau dur d'erreurs correspond à des cas où les critères sont moins longs et moins chargés en données numériques, avec des formulations potentiellement plus ambiguës (négations). Les figures~\ref{fig:nli4pr-comparison-pol} et~\ref{fig:nli4pr-comparison-medical} illustrent la comparaison détaillée des métriques entre candidats et autres indices.
+
+\begin{table}[H]
+\centering
+\caption{Moyennes des indicateurs linguistiques — candidats vs autres (POL).}
+\label{tab:nli4pr-linguistic-pol}
+\scriptsize
+\begin{tabular}{lrrr}
+\toprule
+Indicateur & Candidats & Autres & $\Delta$ \\
+\midrule
+Longueur prémisse (mots) & 198 & 252 & $-53$ \\
+Densité numérique totale & 30,9 & 37,3 & $-6{,}4$ \\
+Couverture lexicale & 0,183 & 0,196 & $-0{,}012$ \\
+Négations (statement) & 1,02 & 0,91 & $+0{,}10$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Moyennes des indicateurs linguistiques — candidats vs autres (MEDICAL).}
+\label{tab:nli4pr-linguistic-med}
+\scriptsize
+\begin{tabular}{lrrr}
+\toprule
+Indicateur & Candidats & Autres & $\Delta$ \\
+\midrule
+Longueur prémisse (mots) & 198 & 252 & $-54$ \\
+Densité numérique totale & 32,8 & 40,1 & $-7{,}3$ \\
+Couverture lexicale & 0,213 & 0,233 & $-0{,}020$ \\
+Négations (statement) & 1,72 & 1,42 & $+0{,}30$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\IfFileExists{figures_nli4pr/comparison_detailed_pol.png}{%
+  \includegraphics[width=0.72\linewidth]{figures_nli4pr/comparison_detailed_pol.png}%
+}{\fbox{\parbox{0.72\linewidth}{\centering\small [\texttt{comparison\_detailed\_pol.png}]}}}
+\caption{Comparaison des métriques linguistiques — candidats vs autres indices (POL).}
+\label{fig:nli4pr-comparison-pol}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\IfFileExists{figures_nli4pr/comparison_detailed_medical.png}{%
+  \includegraphics[width=0.72\linewidth]{figures_nli4pr/comparison_detailed_medical.png}%
+}{\fbox{\parbox{0.72\linewidth}{\centering\small [\texttt{comparison\_detailed\_medical.png}]}}}
+\caption{Comparaison des métriques linguistiques — candidats vs autres indices (MEDICAL).}
+\label{fig:nli4pr-comparison-medical}
+\end{figure}
+
+En résumé, le finetuning réduit le nombre de cas «~tous faux~» (237 $\rightarrow$ 196 en POL) et rééquilibre les prédictions~; le résidu d'erreurs communes (123 candidats) correspond à un profil linguistique distinct (prémisses plus courtes, moins de densité numérique, davantage de négations en MEDICAL), ce qui peut orienter des améliorations ciblées (ex.~données d'entraînement complémentaires ou prompts adaptés à ces cas).
 
 \section{Conclusion et perspectives}
 
@@ -325,7 +468,7 @@ ouvrants ou avant les guillements fermants : « test »
 \caption{Un tableau}
 \end{table}
 
-\begin{figure}[htbp] 
+\begin{figure}[H] 
 \begin{center} 
 \includegraphics{atala.png}
 \end{center} 
@@ -337,7 +480,7 @@ Un texte qui termine par une note de bas de page\footnote{Que voici !}.
 
 Le renvoi à une référence bibliographique : \cite{Bernhard07}, et le renvoi à plusieurs références : \cite{TALN2015,LanglaisPatry07}.  Référence à un article de conférence~\cite{tellier:2008}, à un article de revue~\cite{chomsky-schutzenberger:1963}, à un livre~\cite{hinzen-machery-wrning:2012}, à une thèse~\cite{pollard:1984}, à un chapitre dans un ouvrage collectif~\cite{joshi:19885}.
 
-\begin{figure}[htbp] 
+\begin{figure}[H] 
 \begin{center} 
 ~\\
 ~\\
