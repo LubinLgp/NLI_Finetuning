@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.28)  28 FEB 2026 13:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.28)  1 MAR 2026 15:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -637,44 +637,44 @@ Package pdftex.def Info: fig_twoft_by_section.png  used on input line 309.
 <figures_nli4pr/comparison_detailed_pol.png, id=234, 715.473pt x 568.524pt>
 File: figures_nli4pr/comparison_detailed_pol.png Graphic file (type png)
 <use figures_nli4pr/comparison_detailed_pol.png>
-Package pdftex.def Info: figures_nli4pr/comparison_detailed_pol.png  used on input line 386.
+Package pdftex.def Info: figures_nli4pr/comparison_detailed_pol.png  used on input line 385.
 (pdftex.def)             Requested size: 286.80428pt x 227.89137pt.
 
-Underfull \vbox (badness 3302) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [16]
 <figures_nli4pr/comparison_detailed_medical.png, id=244, 715.473pt x 568.524pt>
 File: figures_nli4pr/comparison_detailed_medical.png Graphic file (type png)
 <use figures_nli4pr/comparison_detailed_medical.png>
-Package pdftex.def Info: figures_nli4pr/comparison_detailed_medical.png  used on input line 395.
+Package pdftex.def Info: figures_nli4pr/comparison_detailed_medical.png  used on input line 394.
 (pdftex.def)             Requested size: 286.80428pt x 227.89137pt.
  [17 <./figures_nli4pr/comparison_detailed_pol.png> <./figures_nli4pr/comparison_detailed_medical.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 410--411
+Underfull \hbox (badness 10000) in paragraph at lines 409--410
 []\T1/ptm/m/n/10 (+20) Le \T1/ptm/m/it/10 (+20) pa-ckage [][]\T1/pcr/m/n/10 hyperref []\T1/ptm/m/n/10 (+20) est chargé au-to-ma-ti-que-ment par le fi-chier de style
  []
 
 
-Underfull \hbox (badness 2717) in paragraph at lines 419--425
+Underfull \hbox (badness 2717) in paragraph at lines 418--424
 []\T1/ptm/m/n/10 (+20) Lorsque vous ci-tez un ar-ticle dis-po-nible sur arXiv, pen-sez à vé-ri-fier si cet ar-
  []
 
 
-Underfull \hbox (badness 2529) in paragraph at lines 419--425
+Underfull \hbox (badness 2529) in paragraph at lines 418--424
 \T1/ptm/m/n/10 (+20) ticle est une pré-publication ([][]\T1/pcr/m/n/10 @misc[]\T1/ptm/m/n/10 (+20) ) ou a déjà été pu-blié ([][]\T1/pcr/m/n/10 @inproceedings
  []
 
 
-Underfull \hbox (badness 6859) in paragraph at lines 419--425
+Underfull \hbox (badness 6859) in paragraph at lines 418--424
 []\T1/ptm/m/n/10 (+20) ou [][]\T1/pcr/m/n/10 @article []\T1/ptm/m/n/10 (+20) ou autre). Dans tous les cas, il est pos-sible de mettre un
  []
 
 
-Underfull \hbox (badness 6157) in paragraph at lines 419--425
+Underfull \hbox (badness 6157) in paragraph at lines 418--424
 \T1/ptm/m/n/10 (+20) lien dans l'en-trée bi-blio-gra-phique, par exemple en uti-li-sant le champ note :
  []
 
 
-Overfull \hbox (3.66139pt too wide) in paragraph at lines 419--425
+Overfull \hbox (3.66139pt too wide) in paragraph at lines 418--424
 [][]\T1/pcr/m/n/10 note = "arXiv~: \href{https://arxiv.org/abs/NNN.MMM}{NNN.MMM}" 
  []
 
@@ -682,7 +682,7 @@ Overfull \hbox (3.66139pt too wide) in paragraph at lines 419--425
 <atala.png, id=284, 239.89626pt x 87.32625pt>
 File: atala.png Graphic file (type png)
 <use atala.png>
-Package pdftex.def Info: atala.png  used on input line 473.
+Package pdftex.def Info: atala.png  used on input line 472.
 (pdftex.def)             Requested size: 239.89566pt x 87.32603pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -696,15 +696,15 @@ Package rerunfilecheck Info: File `coria-taln2026-example.out' has not changed.
 (rerunfilecheck)             Checksum: BEAE634AD7547996F474EF510D686706;3762.
  ) 
 Here is how much of TeX's memory you used:
- 21609 strings out of 467867
- 423928 string characters out of 5414426
+ 21600 strings out of 467867
+ 423850 string characters out of 5414426
  841711 words of memory out of 5000000
  49762 multiletter control sequences out of 15000+600000
- 690496 words of font info for 343 fonts, out of 8000000 for 9000
+ 690115 words of font info for 337 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,17n,80p,1947b,1169s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/KEBDI LounÃ¨s/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/KEBDI LounÃ¨s/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/KEBDI LounÃ¨s/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/KEBDI LounÃ¨s/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/KEBDI LounÃ¨s/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/KEBDI LounÃ¨s/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/KEBDI LounÃ¨s/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/KEBDI LounÃ¨s/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam5.pfb><C:/Users/KEBDI LounÃ¨s/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/KEBDI LounÃ¨s/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/KEBDI LounÃ¨s/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/KEBDI LounÃ¨s/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on coria-taln2026-example.pdf (20 pages, 917487 bytes).
+Output written on coria-taln2026-example.pdf (20 pages, 916961 bytes).
 PDF statistics:
  397 PDF objects out of 1000 (max. 8388607)
  91 named destinations out of 1000 (max. 500000)

@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex coria-taln2026-example"] 1772281577.28271 "coria-taln2026-example.aux" "coria-taln2026-example.bbl" "coria-taln2026-example" 1772281584.29186 0
+["bibtex coria-taln2026-example"] 1772281577.28271 "coria-taln2026-example.aux" "coria-taln2026-example.bbl" "coria-taln2026-example" 1772375186.0462 0
   "./biblio.bib" 1772190470 8113 068047a361a49ebea4aeb6f673f67af6 ""
   "./coria-taln2026.bst" 1772190470 37299 afdf8fd91366cb76ac334e0ef0c9fb1f ""
-  "coria-taln2026-example.aux" 1772281583 16528 cf8dcc0d179da0abf97241682d8dd3e4 "pdflatex"
+  "coria-taln2026-example.aux" 1772375184 16528 cf8dcc0d179da0abf97241682d8dd3e4 "pdflatex"
   (generated)
   "coria-taln2026-example.bbl"
   "coria-taln2026-example.blg"
   (rewritten before read)
-["pdflatex"] 1772281577.64522 "c:/Users/KEBDI Lounès/Documents/Projets/NLI_Finetuning/CORIA_TALN_2026___Finetuning_NLI/coria-taln2026-example.tex" "coria-taln2026-example.pdf" "coria-taln2026-example" 1772281584.29276 0
+["pdflatex"] 1772375171.04422 "c:/Users/KEBDI Lounès/Documents/Projets/NLI_Finetuning/CORIA_TALN_2026___Finetuning_NLI/coria-taln2026-example.tex" "coria-taln2026-example.pdf" "coria-taln2026-example" 1772375186.04779 0
   "02_accuracy_par_type.png" 1772190470 32393 72e43b3bc092ffe2a83f9e89f07fa492 ""
   "02b_accuracy_type_et_section.png" 1772190470 51057 67f2a0b4703851c7ee48486eb600f036 ""
   "03_accuracy_par_section.png" 1772190470 44359 db747b189274281a91ea604ecb753d52 ""
@@ -131,11 +131,11 @@
   "C:/Users/KEBDI Lounès/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "C:/Users/KEBDI Lounès/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1693735632 123 a302f2c651a95033260db60e51527ae8 ""
   "atala.png" 1772190470 1344 91cea71cdbf3f4151a0b98dfcc7fc1ee ""
-  "c:/Users/KEBDI Lounès/Documents/Projets/NLI_Finetuning/CORIA_TALN_2026___Finetuning_NLI/coria-taln2026-example.tex" 1772281569 46248 e384d1bbebfd11d515c82e24c1e9ffb8 ""
-  "coria-taln2026-example.aux" 1772281583 16528 cf8dcc0d179da0abf97241682d8dd3e4 "pdflatex"
+  "c:/Users/KEBDI Lounès/Documents/Projets/NLI_Finetuning/CORIA_TALN_2026___Finetuning_NLI/coria-taln2026-example.tex" 1772375167 45642 ff552423176ebc83cb781fe976698e92 ""
+  "coria-taln2026-example.aux" 1772375184 16528 cf8dcc0d179da0abf97241682d8dd3e4 "pdflatex"
   "coria-taln2026-example.bbl" 1772281577 4051 1baa76e4833f4ddf349747f5e81ae7dc "bibtex coria-taln2026-example"
-  "coria-taln2026-example.out" 1772281583 3762 beae634ad7547996f474ef510d686706 "pdflatex"
-  "coria-taln2026-example.tex" 1772281569 46248 e384d1bbebfd11d515c82e24c1e9ffb8 ""
+  "coria-taln2026-example.out" 1772375184 3762 beae634ad7547996f474ef510d686706 "pdflatex"
+  "coria-taln2026-example.tex" 1772375167 45642 ff552423176ebc83cb781fe976698e92 ""
   "coria-taln2026.sty" 1772190470 8859 e4a326b6f50cde7b1d3b41c310a238a9 ""
   "fig_nli4ct_confusion.png" 1772190470 58109 1e65249170c1b5e121f0f6420611c4ec ""
   "fig_twoft_by_section.png" 1772190470 58435 bf0d7fd4bca76cc5cab21826b17954f1 ""
