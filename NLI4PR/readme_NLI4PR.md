@@ -43,7 +43,7 @@ NLI4PR/
     │
     ├── compare_all_baseline.ipynb    # Comparaison des 3 prompts baseline (scores + indices “tous wrong”)
     ├── compare_all_finetuning.ipynb  # Comparaison des 3 prompts finetune (scores + indices “tous wrong”)
-    ├── analyse_linguistique_candidats.ipynb  # Analyse linguistique automatique : métriques (Jaccard, numeric, négations, etc.) pour comparer candidats vs autres indices
+    ├── analyse_finetuning.ipynb  # Analyse linguistique automatique : métriques (Jaccard, numeric, négations, etc.) pour comparer candidats vs autres indices
     │
     ├── Fewshot_kate/
     │   ├── fewshot_test_pol.jsonl, fewshot_test_medical.jsonl  # JSONL few-shot KATE pour test
@@ -103,7 +103,7 @@ NLI4PR/
 |----------|------|
 | **compare_all_baseline.ipynb** | Charge les CSV d’évaluation **baseline** des 3 prompts (NLI, Clinical Matching, CoT). Calcule les scores (accuracy) Global / POL / MEDICAL, affiche les proportions Contradiction vs Entailment quand tous se trompent, sauvegarde les graphiques dans `graphes/` et exporte les listes d’indices : `indices_pol_all_baseline_wrong.csv`, `indices_medical_all_baseline_wrong.csv`. |
 | **compare_all_finetuning.ipynb** | Même logique pour les modèles **finetunés** : scores, graphiques, et export des indices où les 3 finetunes se trompent (`indices_pol_all_finetune_wrong.csv`, `indices_medical_all_finetune_wrong.csv`). |
-| **analyse_linguistique_candidats.ipynb** | Analyse linguistique automatique des indices problématiques. Définit les **candidats** = intersection des indices présents dans les deux listes “tous finetune wrong” (POL et MEDICAL). Calcule des métriques linguistiques (chevauchement lexical Jaccard/coverage, densité numérique, négations, longueur, mots-clés trial) pour tous les indices du test, puis compare les **moyennes des candidats** vs les **moyennes des autres indices** (séparément pour POL et MEDICAL). Génère des visualisations (barres, boxplots) sauvegardées dans `graphes/` à la racine et exporte les comparaisons en CSV (`comparison_linguistic_pol.csv`, `comparison_linguistic_medical.csv`). Permet aussi l’inspection manuelle cas par cas (choix d’un `idx`, affichage prompts + eval finetune/baseline). |
+| **analyse_finetuning.ipynb** | Analyse linguistique automatique des indices problématiques. Définit les **candidats** = intersection des indices présents dans les deux listes “tous finetune wrong” (POL et MEDICAL). Calcule des métriques linguistiques (chevauchement lexical Jaccard/coverage, densité numérique, négations, longueur, mots-clés trial) pour tous les indices du test, puis compare les **moyennes des candidats** vs les **moyennes des autres indices** (séparément pour POL et MEDICAL). Génère des visualisations (barres, boxplots) sauvegardées dans `graphes/` à la racine et exporte les comparaisons en CSV (`comparison_linguistic_pol.csv`, `comparison_linguistic_medical.csv`). Permet aussi l’inspection manuelle cas par cas (choix d’un `idx`, affichage prompts + eval finetune/baseline). |
 
 ### Par type de prompt (Prompt_NLI, Prompt_clinical_matching, Prompt_cot)
 
