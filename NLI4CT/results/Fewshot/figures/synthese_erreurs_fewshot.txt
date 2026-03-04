@@ -7,7 +7,7 @@
 - Longueur moyenne pour les corrects : 1017
 
 ## Dans quels cas le modèle est très bon
-- Sections avec la meilleure accuracy : {'Results': 0.7641509433962265, 'Adverse Events': 0.7416666666666667, 'Eligibility': 0.696969696969697}
-- Types avec la meilleure accuracy : {'Comparison': 0.6974169741697417, 'Single': 0.7467248908296943}
-- Bins de longueur : {'Court': 0.7784431137724551, 'Moyen': 0.6626506024096386, 'Long': 0.718562874251497}
+- Sections avec le meilleur macro F1 : {'Results': 0.7631179047108251, 'Adverse Events': 0.7412173913043478, 'Intervention': 0.687099358974359}
+- Types avec le meilleur macro F1 : {'Comparison': 0.6916694416694417, 'Single': 0.7459060299969391}
+- Bins de longueur (macro F1) : {'Court': 0.7768750225688802, 'Moyen': 0.6618652698966971, 'Long': 0.7104224312857406}
 - Nombre de prédictions correctes : 360

@@ -24,79 +24,92 @@
 \@writefile{toc}{\contentsline {section}{\numberline {4}Résultats}{4}{section.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Résultats NLI4CT}{4}{subsection.4.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Deux configurations de fine-tuning.}{4}{section*.3}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Précision (accuracy) sur le Gold test NLI4CT (500 exemples).}}{5}{table.1}\protected@file@percent }
-\newlabel{tab:nli4ct-accuracy}{{1}{5}{Précision (accuracy) sur le Gold test NLI4CT (500 exemples)}{table.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Précision (accuracy) et macro F1 — NLI4CT.}}{5}{table.1}\protected@file@percent }
+\newlabel{tab:nli4ct-accuracy}{{1}{5}{Précision (accuracy) et macro F1 — NLI4CT}{table.1}{}}
 \newlabel{tab:nli4ct-accuracy@cref}{{[table][1][]1}{[1][4][]5}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Accuracy par type de tâche (Single / Comparison) pour les baselines et modèles fine-tunés (Prompt 1 et Prompt 2).}}{5}{figure.1}\protected@file@percent }
-\newlabel{fig:nli4ct-accuracy-type}{{1}{5}{Accuracy par type de tâche (Single / Comparison) pour les baselines et modèles fine-tunés (Prompt 1 et Prompt 2)}{figure.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Macro F1 par type de tâche (Single / Comparison) pour les modèles sans affinage et modèles fine-tunés (Prompt 1 et Prompt 2).}}{5}{figure.1}\protected@file@percent }
+\newlabel{fig:nli4ct-accuracy-type}{{1}{5}{Macro F1 par type de tâche (Single / Comparison) pour les modèles sans affinage et modèles fine-tunés (Prompt 1 et Prompt 2)}{figure.1}{}}
 \newlabel{fig:nli4ct-accuracy-type@cref}{{[figure][1][]1}{[1][5][]5}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Accuracy par section de protocole pour les baselines et modèles fine-tunés (Prompt 1 et Prompt 2).}}{6}{figure.2}\protected@file@percent }
-\newlabel{fig:nli4ct-accuracy-section}{{2}{6}{Accuracy par section de protocole pour les baselines et modèles fine-tunés (Prompt 1 et Prompt 2)}{figure.2}{}}
-\newlabel{fig:nli4ct-accuracy-section@cref}{{[figure][2][]2}{[1][5][]6}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Matrices de confusion pour P1 Baseline, P1 Fine-tuné, P2 Baseline et P2 Fine-tuné (calculées à partir des fichiers \texttt  {resultats\_*}\, des dossiers Prompt\,1 et Prompt\,2). Les baselines tendent à prédire majoritairement Contradiction~; le fine-tuning rééquilibre les prédictions, ce qui peut expliquer une partie des régressions (exemples où la baseline correcte en contradiction devient erronée après affinage).}}{7}{figure.3}\protected@file@percent }
-\newlabel{fig:nli4ct-confusion}{{3}{7}{Matrices de confusion pour P1 Baseline, P1 Fine-tuné, P2 Baseline et P2 Fine-tuné (calculées à partir des fichiers \texttt {resultats\_*}\, des dossiers Prompt\,1 et Prompt\,2). Les baselines tendent à prédire majoritairement Contradiction~; le fine-tuning rééquilibre les prédictions, ce qui peut expliquer une partie des régressions (exemples où la baseline correcte en contradiction devient erronée après affinage)}{figure.3}{}}
-\newlabel{fig:nli4ct-confusion@cref}{{[figure][3][]3}{[1][6][]7}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Accuracy par bin de longueur (terciles~: Court / Moyen / Long) pour les baselines et modèles fine-tunés.}}{8}{figure.4}\protected@file@percent }
-\newlabel{fig:nli4ct-longueur}{{4}{8}{Accuracy par bin de longueur (terciles~: Court / Moyen / Long) pour les baselines et modèles fine-tunés}{figure.4}{}}
-\newlabel{fig:nli4ct-longueur@cref}{{[figure][4][]4}{[1][7][]8}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Évolution de l'accuracy en fonction de la longueur du prompt (15 bins par rang centile, courbe lissée) pour les deux fine-tunings.}}{8}{figure.5}\protected@file@percent }
-\newlabel{fig:nli4ct-longueur-courbe}{{5}{8}{Évolution de l'accuracy en fonction de la longueur du prompt (15 bins par rang centile, courbe lissée) pour les deux fine-tunings}{figure.5}{}}
-\newlabel{fig:nli4ct-longueur-courbe@cref}{{[figure][5][]5}{[1][8][]8}{}{}{}}
-\@writefile{toc}{\contentsline {paragraph}{Trois stratégies few-shot.}{8}{section*.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Performance des trois stratégies few-shot (type+section, KATE, cosine) par type de tâche et par section de protocole. Les trois stratégies montrent des profils très proches, justifiant un comportement similaire.}}{9}{figure.6}\protected@file@percent }
-\newlabel{fig:nli4ct-fewshot-type-section}{{6}{9}{Performance des trois stratégies few-shot (type+section, KATE, cosine) par type de tâche et par section de protocole. Les trois stratégies montrent des profils très proches, justifiant un comportement similaire}{figure.6}{}}
-\newlabel{fig:nli4ct-fewshot-type-section@cref}{{[figure][6][]6}{[1][8][]9}{}{}{}}
-\@writefile{toc}{\contentsline {paragraph}{Synthèse comparative des cinq approches.}{9}{section*.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Résultats NLI4PR}{9}{subsection.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Macro F1 par section de protocole pour les modèles sans affinage et modèles fine-tunés.}}{5}{figure.2}\protected@file@percent }
+\newlabel{fig:nli4ct-accuracy-section}{{2}{5}{Macro F1 par section de protocole pour les modèles sans affinage et modèles fine-tunés}{figure.2}{}}
+\newlabel{fig:nli4ct-accuracy-section@cref}{{[figure][2][]2}{[1][5][]5}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Matrices de confusion pour P1 Baseline, P1 Fine-tuné, P2 Baseline et P2 Fine-tuné. Les modèles sans affinage tendent à prédire majoritairement Contradiction~; le fine-tuning rééquilibre les prédictions, ce qui peut expliquer une partie des régressions (exemples où une prédiction correcte en contradiction du modèle sans affinage devient erronée après affinage).}}{6}{figure.3}\protected@file@percent }
+\newlabel{fig:nli4ct-confusion}{{3}{6}{Matrices de confusion pour P1 Baseline, P1 Fine-tuné, P2 Baseline et P2 Fine-tuné. Les modèles sans affinage tendent à prédire majoritairement Contradiction~; le fine-tuning rééquilibre les prédictions, ce qui peut expliquer une partie des régressions (exemples où une prédiction correcte en contradiction du modèle sans affinage devient erronée après affinage)}{figure.3}{}}
+\newlabel{fig:nli4ct-confusion@cref}{{[figure][3][]3}{[1][6][]6}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Macro F1 par bin de longueur (terciles~: Court / Moyen / Long) pour les modèles sans affinage et modèles fine-tunés.}}{7}{figure.4}\protected@file@percent }
+\newlabel{fig:nli4ct-longueur}{{4}{7}{Macro F1 par bin de longueur (terciles~: Court / Moyen / Long) pour les modèles sans affinage et modèles fine-tunés}{figure.4}{}}
+\newlabel{fig:nli4ct-longueur@cref}{{[figure][4][]4}{[1][6][]7}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Évolution du macro F1 en fonction de la longueur du prompt (15 bins par rang centile, courbe lissée) pour les deux fine-tunings.}}{7}{figure.5}\protected@file@percent }
+\newlabel{fig:nli4ct-longueur-courbe}{{5}{7}{Évolution du macro F1 en fonction de la longueur du prompt (15 bins par rang centile, courbe lissée) pour les deux fine-tunings}{figure.5}{}}
+\newlabel{fig:nli4ct-longueur-courbe@cref}{{[figure][5][]5}{[1][7][]7}{}{}{}}
+\@writefile{toc}{\contentsline {paragraph}{Trois stratégies few-shot.}{7}{section*.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Macro F1 par type de tâche (Single / Comparison) et par section de protocole pour les trois stratégies few-shot (type+section, KATE, cosine). Les trois stratégies montrent des profils très proches, justifiant un comportement similaire.}}{8}{figure.6}\protected@file@percent }
+\newlabel{fig:nli4ct-fewshot-type-section}{{6}{8}{Macro F1 par type de tâche (Single / Comparison) et par section de protocole pour les trois stratégies few-shot (type+section, KATE, cosine). Les trois stratégies montrent des profils très proches, justifiant un comportement similaire}{figure.6}{}}
+\newlabel{fig:nli4ct-fewshot-type-section@cref}{{[figure][6][]6}{[1][7][]8}{}{}{}}
+\@writefile{toc}{\contentsline {paragraph}{Synthèse comparative des cinq approches.}{8}{section*.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Résultats NLI4PR}{8}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Synthèse des performances.}{8}{section*.6}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Précision (accuracy, \,\%) sur NLI4PR — Global (3156 ex.), POL (1578 ex.) et MEDICAL (1578 ex.).}}{9}{table.2}\protected@file@percent }
 \newlabel{tab:nli4pr-accuracy}{{2}{9}{Précision (accuracy, \,\%) sur NLI4PR — Global (3156 ex.), POL (1578 ex.) et MEDICAL (1578 ex.)}{table.2}{}}
-\newlabel{tab:nli4pr-accuracy@cref}{{[table][2][]2}{[1][9][]9}{}{}{}}
-\@writefile{toc}{\contentsline {paragraph}{Synthèse des performances.}{10}{section*.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Comparaison par type de langage (POL vs MEDICAL).}{10}{section*.7}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Accuracy des trois prompts (NLI, Clinical Matching, CoT) en \textbf  {baseline} — Global, POL et MEDICAL.}}{10}{figure.7}\protected@file@percent }
-\newlabel{fig:nli4pr-compare-baseline}{{7}{10}{Accuracy des trois prompts (NLI, Clinical Matching, CoT) en \textbf {baseline} — Global, POL et MEDICAL}{figure.7}{}}
-\newlabel{fig:nli4pr-compare-baseline@cref}{{[figure][7][]7}{[1][10][]10}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Accuracy des trois prompts (NLI, Clinical Matching, CoT) \textbf  {finetunés} — Global, POL et MEDICAL. Le CoT finetuné obtient les meilleurs scores.}}{11}{figure.8}\protected@file@percent }
-\newlabel{fig:nli4pr-compare-finetune}{{8}{11}{Accuracy des trois prompts (NLI, Clinical Matching, CoT) \textbf {finetunés} — Global, POL et MEDICAL. Le CoT finetuné obtient les meilleurs scores}{figure.8}{}}
-\newlabel{fig:nli4pr-compare-finetune@cref}{{[figure][8][]8}{[1][10][]11}{}{}{}}
-\@writefile{toc}{\contentsline {paragraph}{Baseline vs Finetuné par prompt.}{11}{section*.8}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Baseline vs Finetuné — prompt \textbf  {NLI}. Gain important du finetuning en Global, POL et MEDICAL.}}{11}{figure.9}\protected@file@percent }
-\newlabel{fig:nli4pr-nli-bf}{{9}{11}{Baseline vs Finetuné — prompt \textbf {NLI}. Gain important du finetuning en Global, POL et MEDICAL}{figure.9}{}}
-\newlabel{fig:nli4pr-nli-bf@cref}{{[figure][9][]9}{[1][11][]11}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Baseline vs Finetuné — prompt \textbf  {Clinical Matching}.}}{12}{figure.10}\protected@file@percent }
-\newlabel{fig:nli4pr-cm-bf}{{10}{12}{Baseline vs Finetuné — prompt \textbf {Clinical Matching}}{figure.10}{}}
-\newlabel{fig:nli4pr-cm-bf@cref}{{[figure][10][]10}{[1][11][]12}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Baseline vs Finetuné — prompt \textbf  {CoT}. La baseline CoT est déjà élevée~; le finetuning apporte un gain modéré mais consistant.}}{12}{figure.11}\protected@file@percent }
-\newlabel{fig:nli4pr-cot-bf}{{11}{12}{Baseline vs Finetuné — prompt \textbf {CoT}. La baseline CoT est déjà élevée~; le finetuning apporte un gain modéré mais consistant}{figure.11}{}}
-\newlabel{fig:nli4pr-cot-bf@cref}{{[figure][11][]11}{[1][12][]12}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Matrice de confusion — CoT finetuné, ensemble combined (POL + MEDICAL).}}{13}{figure.12}\protected@file@percent }
-\newlabel{fig:nli4pr-cot-confusion}{{12}{13}{Matrice de confusion — CoT finetuné, ensemble combined (POL + MEDICAL)}{figure.12}{}}
-\newlabel{fig:nli4pr-cot-confusion@cref}{{[figure][12][]12}{[1][12][]13}{}{}{}}
-\@writefile{toc}{\contentsline {paragraph}{Noyau dur d'erreurs.}{13}{section*.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5}Analyse d'erreurs}{13}{section.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Analyse d'erreurs NLI4CT}{13}{subsection.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Convergence des erreurs entre les deux fine-tunings.}{13}{section*.10}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Répartition par section de protocole des cas où les deux modèles fine-tunés (Prompt 1 et Prompt 2) se trompent (en haut) et des cas où les deux ont raison (en bas). Les deux modèles sont nettement plus susceptibles de se tromper sur les sections \textit  {Eligibility} et \textit  {Intervention} que sur \textit  {Results} ou \textit  {Adverse Events}.}}{14}{figure.13}\protected@file@percent }
-\newlabel{fig:nli4ct-twoft-section}{{13}{14}{Répartition par section de protocole des cas où les deux modèles fine-tunés (Prompt 1 et Prompt 2) se trompent (en haut) et des cas où les deux ont raison (en bas). Les deux modèles sont nettement plus susceptibles de se tromper sur les sections \textit {Eligibility} et \textit {Intervention} que sur \textit {Results} ou \textit {Adverse Events}}{figure.13}{}}
-\newlabel{fig:nli4ct-twoft-section@cref}{{[figure][13][]13}{[1][14][]14}{}{}{}}
-\@writefile{toc}{\contentsline {paragraph}{Convergence des erreurs entre les trois stratégies few-shot.}{15}{section*.11}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Complémentarité fine-tuning Prompt 1 et few-shot KATE.}{15}{section*.12}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Moyennes des indicateurs linguistiques par cas (fine-tuning Prompt 1 vs few-shot KATE).}}{15}{table.3}\protected@file@percent }
-\newlabel{tab:nli4ct-moyennes-4cas}{{3}{15}{Moyennes des indicateurs linguistiques par cas (fine-tuning Prompt 1 vs few-shot KATE)}{table.3}{}}
-\newlabel{tab:nli4ct-moyennes-4cas@cref}{{[table][3][]3}{[1][15][]15}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Analyse d'erreurs NLI4PR}{16}{subsection.5.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Moyennes des indicateurs linguistiques — candidats vs autres (POL).}}{16}{table.4}\protected@file@percent }
-\newlabel{tab:nli4pr-linguistic-pol}{{4}{16}{Moyennes des indicateurs linguistiques — candidats vs autres (POL)}{table.4}{}}
-\newlabel{tab:nli4pr-linguistic-pol@cref}{{[table][4][]4}{[1][16][]16}{}{}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Moyennes des indicateurs linguistiques — candidats vs autres (MEDICAL).}}{16}{table.5}\protected@file@percent }
-\newlabel{tab:nli4pr-linguistic-med}{{5}{16}{Moyennes des indicateurs linguistiques — candidats vs autres (MEDICAL)}{table.5}{}}
-\newlabel{tab:nli4pr-linguistic-med@cref}{{[table][5][]5}{[1][16][]16}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Comparaison des métriques linguistiques — candidats vs autres indices (POL).}}{17}{figure.14}\protected@file@percent }
-\newlabel{fig:nli4pr-comparison-pol}{{14}{17}{Comparaison des métriques linguistiques — candidats vs autres indices (POL)}{figure.14}{}}
-\newlabel{fig:nli4pr-comparison-pol@cref}{{[figure][14][]14}{[1][16][]17}{}{}{}}
+\newlabel{tab:nli4pr-accuracy@cref}{{[table][2][]2}{[1][8][]9}{}{}{}}
+\@writefile{toc}{\contentsline {paragraph}{Comparaison par type de langage (POL vs MEDICAL).}{9}{section*.7}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Accuracy des trois prompts (NLI, Clinical Matching, CoT) en \textbf  {baseline} — Global, POL et MEDICAL.}}{9}{figure.7}\protected@file@percent }
+\newlabel{fig:nli4pr-compare-baseline}{{7}{9}{Accuracy des trois prompts (NLI, Clinical Matching, CoT) en \textbf {baseline} — Global, POL et MEDICAL}{figure.7}{}}
+\newlabel{fig:nli4pr-compare-baseline@cref}{{[figure][7][]7}{[1][9][]9}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Accuracy des trois prompts (NLI, Clinical Matching, CoT) \textbf  {finetunés} — Global, POL et MEDICAL. Le CoT finetuné obtient les meilleurs scores.}}{10}{figure.8}\protected@file@percent }
+\newlabel{fig:nli4pr-compare-finetune}{{8}{10}{Accuracy des trois prompts (NLI, Clinical Matching, CoT) \textbf {finetunés} — Global, POL et MEDICAL. Le CoT finetuné obtient les meilleurs scores}{figure.8}{}}
+\newlabel{fig:nli4pr-compare-finetune@cref}{{[figure][8][]8}{[1][9][]10}{}{}{}}
+\@writefile{toc}{\contentsline {paragraph}{Modèle sans affinage vs affiné par prompt.}{10}{section*.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Baseline vs Finetuné — prompt \textbf  {NLI}. Gain important du finetuning en Global, POL et MEDICAL.}}{10}{figure.9}\protected@file@percent }
+\newlabel{fig:nli4pr-nli-bf}{{9}{10}{Baseline vs Finetuné — prompt \textbf {NLI}. Gain important du finetuning en Global, POL et MEDICAL}{figure.9}{}}
+\newlabel{fig:nli4pr-nli-bf@cref}{{[figure][9][]9}{[1][10][]10}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Baseline vs Finetuné — prompt \textbf  {Clinical Matching}.}}{11}{figure.10}\protected@file@percent }
+\newlabel{fig:nli4pr-cm-bf}{{10}{11}{Baseline vs Finetuné — prompt \textbf {Clinical Matching}}{figure.10}{}}
+\newlabel{fig:nli4pr-cm-bf@cref}{{[figure][10][]10}{[1][10][]11}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Baseline vs Finetuné — prompt \textbf  {CoT}. Le modèle sans affinage CoT est déjà élevé~; le finetuning apporte un gain modéré mais consistant.}}{11}{figure.11}\protected@file@percent }
+\newlabel{fig:nli4pr-cot-bf}{{11}{11}{Baseline vs Finetuné — prompt \textbf {CoT}. Le modèle sans affinage CoT est déjà élevé~; le finetuning apporte un gain modéré mais consistant}{figure.11}{}}
+\newlabel{fig:nli4pr-cot-bf@cref}{{[figure][11][]11}{[1][11][]11}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Matrice de confusion — CoT finetuné, ensemble combined (POL + MEDICAL).}}{12}{figure.12}\protected@file@percent }
+\newlabel{fig:nli4pr-cot-confusion}{{12}{12}{Matrice de confusion — CoT finetuné, ensemble combined (POL + MEDICAL)}{figure.12}{}}
+\newlabel{fig:nli4pr-cot-confusion@cref}{{[figure][12][]12}{[1][11][]12}{}{}{}}
+\@writefile{toc}{\contentsline {paragraph}{Noyau dur d'erreurs.}{12}{section*.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Analyse d'erreurs}{12}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Analyse d'erreurs NLI4CT}{12}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Convergence des erreurs entre les deux configurations affinées.}{12}{section*.10}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Répartition par section de protocole des cas où les deux modèles affinés (Prompt 1 et Prompt 2) se trompent (en haut) et des cas où les deux ont raison (en bas). Les deux modèles sont nettement plus susceptibles de se tromper sur les sections \textit  {Eligibility} et \textit  {Intervention} que sur \textit  {Results} ou \textit  {Adverse Events}.}}{13}{figure.13}\protected@file@percent }
+\newlabel{fig:nli4ct-twoft-section}{{13}{13}{Répartition par section de protocole des cas où les deux modèles affinés (Prompt 1 et Prompt 2) se trompent (en haut) et des cas où les deux ont raison (en bas). Les deux modèles sont nettement plus susceptibles de se tromper sur les sections \textit {Eligibility} et \textit {Intervention} que sur \textit {Results} ou \textit {Adverse Events}}{figure.13}{}}
+\newlabel{fig:nli4ct-twoft-section@cref}{{[figure][13][]13}{[1][13][]13}{}{}{}}
+\@writefile{toc}{\contentsline {paragraph}{Convergence des erreurs entre les trois stratégies few-shot.}{13}{section*.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Complémentarité modèle affiné Prompt 1 et few-shot KATE.}{14}{section*.12}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Moyennes des indicateurs linguistiques par cas (modèle affiné Prompt 1 vs few-shot KATE).}}{14}{table.3}\protected@file@percent }
+\newlabel{tab:nli4ct-moyennes-4cas}{{3}{14}{Moyennes des indicateurs linguistiques par cas (modèle affiné Prompt 1 vs few-shot KATE)}{table.3}{}}
+\newlabel{tab:nli4ct-moyennes-4cas@cref}{{[table][3][]3}{[1][14][]14}{}{}{}}
+\@writefile{toc}{\contentsline {paragraph}{Analyses univariées par approche (section Eligibility).}{14}{section*.13}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Moyennes des indicateurs linguistiques — Few-shot KATE a raison vs KATE se trompe (section Eligibility, 132 ex.).}}{15}{table.4}\protected@file@percent }
+\newlabel{tab:nli4ct-univarie-kate}{{4}{15}{Moyennes des indicateurs linguistiques — Few-shot KATE a raison vs KATE se trompe (section Eligibility, 132 ex.)}{table.4}{}}
+\newlabel{tab:nli4ct-univarie-kate@cref}{{[table][4][]4}{[1][15][]15}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Moyennes des indicateurs linguistiques — Modèle affiné P1 a raison vs P1 se trompe (section Eligibility, 132 ex.).}}{15}{table.5}\protected@file@percent }
+\newlabel{tab:nli4ct-univarie-p1}{{5}{15}{Moyennes des indicateurs linguistiques — Modèle affiné P1 a raison vs P1 se trompe (section Eligibility, 132 ex.)}{table.5}{}}
+\newlabel{tab:nli4ct-univarie-p1@cref}{{[table][5][]5}{[1][15][]15}{}{}{}}
+\@writefile{toc}{\contentsline {paragraph}{Synthèse.}{15}{section*.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Analyse d'erreurs NLI4PR}{15}{subsection.5.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Moyennes des indicateurs linguistiques — candidats vs autres (POL).}}{16}{table.6}\protected@file@percent }
+\newlabel{tab:nli4pr-linguistic-pol}{{6}{16}{Moyennes des indicateurs linguistiques — candidats vs autres (POL)}{table.6}{}}
+\newlabel{tab:nli4pr-linguistic-pol@cref}{{[table][6][]6}{[1][16][]16}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Moyennes des indicateurs linguistiques — candidats vs autres (MEDICAL).}}{16}{table.7}\protected@file@percent }
+\newlabel{tab:nli4pr-linguistic-med}{{7}{16}{Moyennes des indicateurs linguistiques — candidats vs autres (MEDICAL)}{table.7}{}}
+\newlabel{tab:nli4pr-linguistic-med@cref}{{[table][7][]7}{[1][16][]16}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Comparaison des métriques linguistiques — candidats vs autres indices (POL).}}{16}{figure.14}\protected@file@percent }
+\newlabel{fig:nli4pr-comparison-pol}{{14}{16}{Comparaison des métriques linguistiques — candidats vs autres indices (POL)}{figure.14}{}}
+\newlabel{fig:nli4pr-comparison-pol@cref}{{[figure][14][]14}{[1][16][]16}{}{}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Comparaison des métriques linguistiques — candidats vs autres indices (MEDICAL).}}{17}{figure.15}\protected@file@percent }
 \newlabel{fig:nli4pr-comparison-medical}{{15}{17}{Comparaison des métriques linguistiques — candidats vs autres indices (MEDICAL)}{figure.15}{}}
-\newlabel{fig:nli4pr-comparison-medical@cref}{{[figure][15][]15}{[1][17][]17}{}{}{}}
+\newlabel{fig:nli4pr-comparison-medical@cref}{{[figure][15][]15}{[1][16][]17}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion et perspectives}{17}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Limitations}{17}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {A}Définition des indicateurs linguistiques (section~5.1)}{17}{appendix.A}\protected@file@percent }
+\newlabel{sec:annexe-metriques}{{A}{17}{Définition des indicateurs linguistiques (section~5.1)}{appendix.A}{}}
+\newlabel{sec:annexe-metriques@cref}{{[section][1][]A}{[1][17][]17}{}{}{}}
 \citation{pereira-warren:1983,Bernhard07,tellier:2008}
 \bibstyle{coria-taln2026}
 \bibdata{biblio}
@@ -104,11 +117,12 @@
 \bibcite{Bernhard07}{{2}{2007}{{Bernhard}}{{}}}
 \citation{TALN2007}
 \bibcite{chomsky-schutzenberger:1963}{{3}{1963}{{Chomsky \& Sch\"utzenberger}}{{}}}
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Moyen de calcul des indicateurs linguistiques.}}{18}{table.8}\protected@file@percent }
+\newlabel{tab:annexe-metriques}{{8}{18}{Moyen de calcul des indicateurs linguistiques}{table.8}{}}
+\newlabel{tab:annexe-metriques@cref}{{[table][8][]8}{[1][17][]18}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1}Rappels importants}{18}{subsection.A.1}\protected@file@percent }
 \bibcite{TALN2015}{{4}{2015}{{Dias}}{{}}}
 \bibcite{hinzen-machery-wrning:2012}{{5}{2012}{{Hinzen {\em  et~al.}}}{{}}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion et perspectives}{18}{section.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7}Limitations}{18}{section.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Rappels importants}{18}{subsection.7.1}\protected@file@percent }
 \bibcite{joshi:19885}{{6}{1985}{{Joshi}}{{}}}
 \bibcite{LaigneletRioult09}{{7}{2009}{{Laignelet \& Rioult}}{{}}}
 \bibcite{LanglaisPatry07}{{8}{2007}{{Langlais \& Patry}}{{}}}
@@ -122,8 +136,8 @@
 \citation{LaigneletRioult09}
 \citation{LanglaisPatry07}
 \citation{SeretanWehrli07}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Titre de la première sous-partie}{19}{subsection.7.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Un tableau}}{19}{table.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2}Titre de la première sous-partie}{19}{subsection.A.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Un tableau}}{19}{table.9}\protected@file@percent }
 \citation{Bernhard07}
 \citation{TALN2015,LanglaisPatry07}
 \citation{tellier:2008}

@@ -2,32 +2,25 @@
 
 \bibitem[\protect\citename{Benamara {\em et~al.}, }2007]{TALN2007}
 {\sc Benamara F., Hatout N., Muller P. \& Ozdowska S.}, \'Eds. (2007).
-\newblock {\em Actes de TALN 2007 (Traitement automatique des langues
-  naturelles)}, Toulouse. ATALA, IRIT.
+\newblock {\em Actes de TALN 2007 (Traitement automatique des langues naturelles)}, Toulouse. ATALA, IRIT.
 
 \bibitem[\protect\citename{Bernhard, }2007]{Bernhard07}
 {\sc Bernhard D.} (2007).
-\newblock Apprentissage non supervis\'e de familles morphologiques par
-  classification ascendante hi\'erarchique.
+\newblock Apprentissage non supervis\'e de familles morphologiques par classification ascendante hi\'erarchique.
 \newblock In \cite{TALN2007}, p.\ 367--376.
-\newblock \textsc{hal}~:
-  \href{http://hal.archives-ouvertes.fr/hal-00800342}{hal-00800342}.
+\newblock \textsc{hal}~: \href{http://hal.archives-ouvertes.fr/hal-00800342}{hal-00800342}.
 
-\bibitem[\protect\citename{Chomsky \& Sch\"utzenberger,
-  }1963]{chomsky-schutzenberger:1963}
+\bibitem[\protect\citename{Chomsky \& Sch\"utzenberger, }1963]{chomsky-schutzenberger:1963}
 {\sc Chomsky N. \& Sch\"utzenberger M.-P.} (1963).
 \newblock The algebraic theory of context-free languages.
-\newblock {\em Studies in Logic and the Foundations of Mathematics}, {\bf 35},
-  118--161.
+\newblock {\em Studies in Logic and the Foundations of Mathematics}, {\bf 35}, 118--161.
 \newblock \doi{10.1016/S0049-237X(08)72023-8}.
 
 \bibitem[\protect\citename{Dias, }2015]{TALN2015}
 {\sc Dias G.}, \'Ed. (2015).
-\newblock {\em Actes de TALN 2015 (Traitement automatique des langues
-  naturelles)}, Caen. ATALA, HULTECH.
+\newblock {\em Actes de TALN 2015 (Traitement automatique des langues naturelles)}, Caen. ATALA, HULTECH.
 
-\bibitem[\protect\citename{Hinzen {\em et~al.},
-  }2012]{hinzen-machery-wrning:2012}
+\bibitem[\protect\citename{Hinzen {\em et~al.}, }2012]{hinzen-machery-wrning:2012}
 {\sc Hinzen W., Machery E. \& Werning M.}, \'Eds. (2012).
 \newblock {\em The Oxford Handbook of Compositionality}.
 \newblock Oxford.
@@ -35,21 +28,14 @@
 
 \bibitem[\protect\citename{Joshi, }1985]{joshi:19885}
 {\sc Joshi A.~K.} (1985).
-\newblock Tree-adjoining grammars: How much context sensitivity is required to
-  provide reasonable structural descriptions?
-\newblock In {\sc D.~R. Dowty, L. Karttunen \& A.~M. Zwicky}, \'Eds., {\em
-  Natural Language Parsing: Psychological, Computational, and Theoretical
-  Perspectives}, Studies in Natural Language Processing, chapitre~6, p.\
-  206--250. Cambridge University Press.
+\newblock Tree-adjoining grammars: How much context sensitivity is required to provide reasonable structural descriptions?
+\newblock In {\sc D.~R. Dowty, L. Karttunen \& A.~M. Zwicky}, \'Eds., {\em Natural Language Parsing: Psychological, Computational, and Theoretical Perspectives}, Studies in Natural Language Processing, chapitre~6, p.\ 206--250. Cambridge University Press.
 \newblock \doi{10.1017/CBO9780511597855.007}.
 
 \bibitem[\protect\citename{Laignelet \& Rioult, }2009]{LaigneletRioult09}
 {\sc Laignelet M. \& Rioult F.} (2009).
-\newblock Rep{\'e}rer automatiquement les segments obsolescents {\`a}
-  l{\textquoteright}aide d{\textquoteright}indices s{\'e}mantiques et
-  discursifs.
-\newblock In {\sc A. Nazarenko \& T. Poibeau}, \'Eds., {\em Actes de TALN 2009
-  (Traitement automatique des langues naturelles)}, Senlis: ATALA  LIPN.
+\newblock Rep{\'e}rer automatiquement les segments obsolescents {\`a} l{\textquoteright}aide d{\textquoteright}indices s{\'e}mantiques et discursifs.
+\newblock In {\sc A. Nazarenko \& T. Poibeau}, \'Eds., {\em Actes de TALN 2009 (Traitement automatique des langues naturelles)}, Senlis: ATALA  LIPN.
 
 \bibitem[\protect\citename{Langlais \& Patry, }2007]{LanglaisPatry07}
 {\sc Langlais P. \& Patry A.} (2007).
@@ -59,15 +45,12 @@
 \bibitem[\protect\citename{Pereira \& Warren, }1983]{pereira-warren:1983}
 {\sc Pereira F. C.~N. \& Warren D. H.~D.} (1983).
 \newblock Parsing as deduction.
-\newblock In {\em 21st Annual Meeting of the Association for Computational
-  Linguistics}, p.\ 137--144, Cambridge, Massachusetts, USA: Association for
-  Computational Linguistics.
+\newblock In {\em 21st Annual Meeting of the Association for Computational Linguistics}, p.\ 137--144, Cambridge, Massachusetts, USA: Association for Computational Linguistics.
 \newblock \doi{10.3115/981311.981338}.
 
 \bibitem[\protect\citename{Pollard, }1984]{pollard:1984}
 {\sc Pollard C.} (1984).
-\newblock {\em Generalized Phrase Structure Grammars, Head Grammars, and
-  Natural Language}.
+\newblock {\em Generalized Phrase Structure Grammars, Head Grammars, and Natural Language}.
 \newblock Th\`ese de doctorat, Stanford University, CA.
 
 \bibitem[\protect\citename{Seretan \& Wehrli, }2007]{SeretanWehrli07}
@@ -78,11 +61,7 @@
 \bibitem[\protect\citename{Tellier, }2008]{tellier:2008}
 {\sc Tellier I.} (2008).
 \newblock {How to Split Recursive Automata}.
-\newblock In {\sc A. Clark, F. Coste \& L. Miclet}, \'Eds., {\em {Grammatical
-  Inference: Algorithms and Applications. 9th International Colloquium, ICGI
-  2008 Saint-Malo, France, September 22-24, 2008 Proceedings}}, volume 5278 de
-  {\em LNAI}, p.\ 200--212: Springer.
-\newblock \doi{10.1007/978-3-540-88009-7_16}, \textsc{hal}~:
-  \href{http://hal.archives-ouvertes.fr/inria-00341770}{inria-00341770}.
+\newblock In {\sc A. Clark, F. Coste \& L. Miclet}, \'Eds., {\em {Grammatical Inference: Algorithms and Applications. 9th International Colloquium, ICGI 2008 Saint-Malo, France, September 22-24, 2008 Proceedings}}, volume 5278 de {\em LNAI}, p.\ 200--212: Springer.
+\newblock \doi{10.1007/978-3-540-88009-7_16}, \textsc{hal}~: \href{http://hal.archives-ouvertes.fr/inria-00341770}{inria-00341770}.
 
 \end{thebibliography}

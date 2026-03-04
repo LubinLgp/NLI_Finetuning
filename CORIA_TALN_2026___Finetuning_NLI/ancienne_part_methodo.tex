@@ -1,0 +1,51 @@
+%%================================================================
+========================================================
+
+\subsection{Préparation des données NLI4PR} (MAR oki) 
+Afin d'optimiser les temps de calcul et de s'adapter aux contraintes de ressources matérielles, la phase d'affinage n'a pas été réalisée sur l'intégralité des données. Pour exposer le modèle aux deux registres de vocabulaire lors de son apprentissage (médical et profane), nous avons opté pour un échantillonnage aléatoire consistant à extraire 50\,\% du jeu d'entraînement rédigé en langage médical et 50\,\% de celui en langage patient. Ces deux sous-ensembles ont ensuite été fusionnés et mélangés aléatoirement (seed fixée à 42 pour la reproductibilité). La phase d'évaluation finale a, quant à elle, été menée de manière exhaustive sur les deux ensembles de test séparément, permettant ainsi une analyse comparative détaillée des performances selon le type de langage.
+
+\subsection{Structure et stratégies de Prompting NLI4PR} (MAR oki)
+Pour interroger le modèle, trois stratégies de formatage des requêtes (\textit{prompts}) ont été mises en œuvre et comparées :
+\begin{itemize}
+    \item \textbf{Standard NLI Prompt :} Cette approche classique de \textit{Natural Language Inference} (NLI) sépare le texte en deux blocs distincts : une \texttt{Premise} (contenant les critères d'inclusion et d'exclusion de l'essai) et une \texttt{Hypothesis} (contenant la description du patient). Le modèle reçoit pour instruction système stricte de classer la relation en répondant uniquement par « Entailment » (Éligible) ou « Contradiction » (Non-éligible).
+    \item \textbf{Clinical Matching :} Cette stratégie reformule la tâche NLI sous la forme d'une question clinique directe et naturelle. Le prompt est structuré ainsi : \textit{« Does the patient with the statement [Description du patient] satisfy the following clinical trial admission criteria? [Critères] »}. L'instruction impose toujours une réponse en un seul mot.
+    \item \textbf{Chain of Thought (CoT) Prompt :} Reposant sur la même structure que le Clinical Matching, cette approche intègre une consigne poussant le modèle à expliciter son raisonnement avant de conclure. L'instruction ajoutée est la suivante : \textit{« First, explain your reasoning step-by-step by comparing the patient's characteristics to the inclusion and exclusion criteria. Then, conclude on a new line with only one word: 'Entailment' or 'Contradiction' »}.
+\end{itemize}
+
+\subsection{Configuration du modèle et Fine-tuning (NLI4PR et NLI4CT)} (MAR oki)
+Le modèle de base sélectionné pour nos expériences est \textbf{Qwen 2.5 7B Instruct} (\texttt{Qwen2.5-7B-Instruct}), reconnu pour ses excellentes capacités de raisonnement et de suivi d'instructions. Cette même configuration est utilisée pour les deux jeux de données (NLI4PR et NLI4CT).
+
+Pour rendre l'entraînement réalisable efficacement, nous avons appliqué une méthode d'optimisation paramétrique efficace (PEFT) basée sur \textbf{LoRA} (Low-Rank Adaptation). Les hyperparamètres LoRA ont été configurés avec un rang $r=16$, un \textit{alpha} de 32, et un \textit{dropout} de 0.05. L'adaptation a été ciblée sur l'ensemble des modules de projection de l'architecture \textit{Transformer} (\texttt{q\_proj}, \texttt{k\_proj}, \texttt{v\_proj}, \texttt{o\_proj}, \texttt{gate\_proj}, \texttt{up\_proj}, \texttt{down\_proj}). De plus, le modèle de base a été quantifié en 4-bit via \texttt{bitsandbytes} (format \textit{nf4} avec double quantification) pour réduire l'empreinte mémoire, en utilisant la précision \texttt{bfloat16} pour les calculs.
+
+L'entraînement a été réalisé à l'aide de la bibliothèque \texttt{trl} (\textit{SFTTrainer}). Pour NLI4PR, le nombre d'époques a été fixé à 4 afin de limiter le temps de calcul~; pour NLI4CT, l'affinage a été conduit sur 5 époques. La taille de lot (\textit{batch size}) a été fixée à 2 par dispositif avec 4 étapes d'accumulation de gradient (\textit{gradient accumulation steps}). Le taux d'apprentissage (\textit{learning rate}) était de $2 \times 10^{-4}$. La longueur maximale de séquence a été fixée à 4096 \textit{tokens} afin d'éviter toute troncature des descriptions cliniques les plus longues, et le \textit{gradient checkpointing} a été activé pour optimiser l'usage de la mémoire.
+
+\subsection{Stratégies d'Évaluation et Inférence NLI4PR} (MAR oki)
+Pour garantir la robustesse des métriques d'évaluation (\textit{Accuracy}, \textit{F1-score}), des stratégies de traitement des réponses (\textit{parsing}) spécifiques ont été développées selon la stratégie de \textit{prompting} utilisée. Lors de toutes les inférences, la température a été fixée à 0.7 avec un \textit{top-p} de 1.0.
+
+\paragraph{Évaluation des prompts NLI et Clinical Matching NLI4PR}
+Dans ces configurations, le modèle est instruit pour répondre par un mot unique. Par conséquent, la génération a été bridée à un maximum de 10 \textit{tokens} (\texttt{max\_new\_tokens=10}). Bien que la consigne soit stricte, les LLMs peuvent occasionnellement générer des espaces initiaux ou des signes de ponctuation. Notre algorithme d'évaluation convertit la réponse en minuscules et recherche la présence des racines \texttt{entail} ou \texttt{contradict} dans les 50 premiers caractères générés. Si les mots-clés sont identifiés, la prédiction est catégorisée en conséquence ; sinon, le texte brut est retourné pour vérification manuelle.
+
+\paragraph{Évaluation du prompt Chain of Thought (CoT) NLI4PR}
+Contrairement aux approches précédentes, le modèle génère ici un texte explicatif complet. La limite de génération a donc été étendue à 1024 \textit{tokens} (\texttt{max\_new\_tokens=1024}). Le mot-clé déterminant la prédiction se trouvant à la fin du raisonnement, la méthode d'extraction employée découpe la réponse générée par sauts de ligne, isole la dernière ligne non vide, et y recherche les mots-clés de classification. En cas d'absence de saut de ligne (non-respect occasionnel de la consigne), une méthode de secours inspecte l'intégralité du texte. Cette approche garantit une classification automatisée fiable tout en conservant le texte du raisonnement pour une analyse ultérieure.
+
+\subsection{Préparation des données NLI4CT} (MAR oki)
+Pour nos expériences sur NLI4CT, nous avons exploité les fichiers de base fournis par le benchmark. L'entraînement et la validation ont été réalisés à l'aide des fichiers \texttt{train.json} et \texttt{dev.json}. L'évaluation finale a été menée sur un ensemble \texttt{Gold\_test.json} comprenant 500 exemples. Pour formater nos amorces (prompts), les textes des prémisses ont été extraits dynamiquement depuis les fichiers JSON par essai (\texttt{CT\_json}) en fonction des indices de preuve (\textit{evidence indices}) associés à chaque entrée, garantissant ainsi que le modèle ne reçoive que le contexte textuel strictement défini par la tâche.
+
+\subsection{Structure et stratégies de Prompting NLI4CT} (MAR oki)
+Pour NLI4CT, deux formats de prompt ont été comparés, en cohérence avec une formulation NLI classique prémisse/hypothèse :
+\begin{itemize}
+    \item \textbf{Prompt 1 (NLI standard) :} Le message système demande de classer la relation entre la prémisse et l'hypothèse en répondant par un seul mot (\texttt{Entailment} ou \texttt{Contradiction}). Le contenu utilisateur est structuré en deux blocs : \texttt{PREMISE:} (contenant les critères ou extraits de protocole) et \texttt{HYPOTHESIS:} (l'énoncé à évaluer).
+    \item \textbf{Prompt 2 (question explicite) :} La même structure prémisse/hypothèse est conservée, avec une formulation interrogative explicite : \textit{«~Is this premise in agreement with the following hypothesis?~»} suivie de l'hypothèse, et une consigne de réponse en un mot.
+\end{itemize}
+Pour chaque prompt, un modèle \textbf{baseline} (sans affinage) et un modèle \textbf{affiné} (fine-tuné sur les données d'entraînement NLI4CT au format correspondant) sont évalués sur le Gold test.
+
+\subsection{Few-shot et évaluation NLI4CT} (MAR oki)
+En complément du fine-tuning, trois stratégies \textbf{few-shot} ont été appliquées sur NLI4CT avec le format Prompt 1. Dans les trois cas, chaque requête de test est précédée de deux exemples (un \texttt{Entailment} et un \texttt{Contradiction})~; seule la méthode de sélection des exemples diffère~:
+\begin{itemize}
+    \item \textbf{Sélection par type et section~:} les exemples sont choisis dans le jeu d'entraînement en croisant le \textit{type} de tâche (Single ou Comparison) et l'identifiant de \textit{section} (Eligibility, Intervention, etc.) de l'instance de test. Pour chaque couple (type, section), on retient un exemple de chaque label, ce qui assure une cohérence métier avec la requête.
+    \item \textbf{KATE} (kNN-Augmented in-context Example selection)~: pour chaque instance de test, on calcule des représentations sémantiques (embeddings RoBERTa) des paires prémisse/hypothèse du jeu d'entraînement, puis on retient les exemples les plus proches en similarité cosine pour chaque label. La sélection est donc purement sémantique, indépendante du type ou de la section.
+    \item \textbf{Similarité cosine (sentence-transformers)~:} une variante sémantique utilisant un modèle \textit{sentence-transformers} pour encoder les paires~; on retient à nouveau, pour chaque label, les exemples d'entraînement les plus proches en similarité cosine de l'instance de test.
+\end{itemize}
+Le message système few-shot précise que le modèle doit s'inspirer des exemples puis classer la dernière paire en un mot. L'évaluation repose sur le même principe de \textit{parsing} que pour NLI4PR~: recherche des racines \texttt{entail} ou \texttt{contradict} dans la sortie générée (limite de 10 \textit{tokens}), avec température 0,7 et \textit{top-p} 1,0. Les résultats des trois stratégies few-shot sont comparés aux modèles baseline et fine-tunés (Prompt 1 et Prompt 2) pour analyser la complémentarité des approches.
+
+===============================================================
