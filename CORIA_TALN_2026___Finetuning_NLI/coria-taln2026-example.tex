@@ -209,39 +209,39 @@ Les trois stratégies few-shot (sélection par type et section, KATE, similarit�
 Le fine-tuning Prompt 1 est le plus performant en macro F1 (75,3\,\%), suivi du fine-tuning Prompt 2 (72,8\,\%) et des trois stratégies few-shot (70,9--71,7\,\%). Pour ce jeu de données, les résultats sont très similaires entre few-shot et fine-tuning~: le few-shot se débrouille déjà très bien sans nécessiter de forte puissance de calcul, si bien que dans ce cas le coût d'un fine-tuning ne semble pas justifié. Par ailleurs, les tableaux par type et par section (figures~\ref{fig:nli4ct-accuracy-type} et~\ref{fig:nli4ct-fewshot-type-section}) montrent que la tâche Eligibility semble être la plus difficile~; il peut donc être intéressant de se concentrer sur cette tâche, ce que permet le jeu NLI4PR. Pour la suite de l'analyse (section suivante), on se concentre sur la stratégie KATE~: la stratégie few-shot la plus efficace sur NLI4CT est la sélection par type et section, mais celle-ci n'est pas directement réutilisable sur NLI4PR (où il n'y a pas de type ni de section de protocole), alors que KATE l'est. La section suivante (analyse d'erreurs) détaille où les modèles se trompent, où ils sont d'accord, et dans quelle mesure le fine-tuning Prompt 1 et KATE se complètent.
 
 \subsection{Résultats NLI4PR}
-L'évaluation NLI4PR porte sur 3156 exemples de test (1578 en langage patient POL et 1578 en langage médical), avec quatre familles de configurations~: les trois prompts (\textbf{NLI}, \textbf{Clinical Matching}, \textbf{CoT}) en \textbf{baseline} (sans affinage) et en \textbf{finetuné}, ainsi que la stratégie \textbf{few-shot KATE} (sans entraînement). Le tableau~\ref{tab:nli4pr-accuracy} synthétise l'accuracy (\,\%) en Global, POL et MEDICAL pour toutes ces configurations.
+L'évaluation NLI4PR porte sur 3156 exemples de test (1578 en langage patient POL et 1578 en langage médical), avec quatre familles de configurations~: les trois premiers prompts (\textbf{Prompt 1}, \textbf{Prompt 2}, \textbf{Prompt 3}, correspondant respectivement à NLI, Clinical Matching et CoT) en \textbf{baseline} (sans affinage) et en \textbf{finetuné}, ainsi que le \textbf{Prompt 4} (few-shot KATE, sans entraînement). Le tableau~\ref{tab:nli4pr-accuracy} synthétise le \textbf{macro F1} (\,\%) en Global, POL et MEDICAL pour toutes ces configurations.
 
 \begin{table}[htbp]
 \centering
-\caption{Précision (accuracy, \,\%) sur NLI4PR — Global (3156 ex.), POL (1578 ex.) et MEDICAL (1578 ex.).}
+\caption{Macro F1 (\,\%) sur NLI4PR — Global (3156 ex.), POL (1578 ex.) et MEDICAL (1578 ex.).}
 \label{tab:nli4pr-accuracy}
 \begin{tabular}{lccc}
 \toprule
 Configuration & Global & POL & MEDICAL \\
 \midrule
-NLI Baseline & 55,7 & 53,8 & 57,6 \\
-NLI Finetuné & \textbf{68,9} & 68,3 & 69,6 \\
-Clinical Matching Baseline & 66,2 & 65,0 & 67,4 \\
-Clinical Matching Finetuné & 72,8 & 73,3 & 72,4 \\
-CoT Baseline & 72,2 & 70,5 & 74,0 \\
-CoT Finetuné & \textbf{73,8} & 73,4 & \textbf{74,2} \\
-Few-shot KATE & 66,2 & 65,6 & 66,7 \\
+Prompt 1 Baseline & 52,5 & 49,7 & 55,1 \\
+Prompt 1 Finetuné & 66,2 & 66,0 & 66,4 \\
+Prompt 2 Baseline & 66,1 & 64,7 & 67,3 \\
+Prompt 2 Finetuné & 71,8 & 72,2 & 71,3 \\
+Prompt 3 Baseline & 72,2 & 70,5 & 73,9 \\
+Prompt 3 Finetuné & 72,8 & 72,3 & 73,3 \\
+Prompt 4 (few-shot KATE) & 66,0 & 65,3 & 66,7 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \paragraph{Synthèse des performances.}
-Le \textbf{finetuning améliore nettement} les trois prompts par rapport à leurs baselines. Le gain est le plus marqué pour le prompt \textbf{NLI}~: +13,2 points en global (55,7\,\% $\rightarrow$ 68,9\,\%), avec des améliorations similaires en POL et MEDICAL. Les prompts Clinical Matching et CoT partent de baselines déjà plus élevées (66,2\,\% et 72,2\,\%) et gagnent encore respectivement +6,6 et +1,6 points en global après affinage. Au final, le \textbf{CoT finetuné} obtient la meilleure accuracy globale (73,8\,\%) et en MEDICAL (74,2\,\%)~; le Clinical Matching finetuné reste très proche (72,8\,\% global, 73,3\,\% en POL). La stratégie \textbf{few-shot KATE} a également été évaluée sur NLI4PR (66,2\,\% en global, 65,6\,\% en POL, 66,7\,\% en MEDICAL). Les résultats restent nettement inférieurs à toutes les configurations par prompt (finetuné) sur ce jeu de données~; nous ne nous sommes donc pas concentrés sur cette approche pour NLI4PR.
+Le \textbf{finetuning améliore nettement} les trois premiers prompts par rapport à leurs baselines en macro F1. Le gain est le plus marqué pour le \textbf{Prompt 1}~: +13,7 points en global (52,5\,\% $\rightarrow$ 66,2\,\%), avec des améliorations similaires en POL et MEDICAL. Les \textbf{Prompts 2 et 3} partent de baselines déjà plus élevées (66,1\,\% et 72,2\,\%) et gagnent encore respectivement +5,7 et +0,6 point en global après affinage. Au final, le Prompt 3 finetuné obtient le meilleur macro F1 global (72,8\,\%) et en MEDICAL (73,3\,\%)~; le Prompt 2 finetuné reste très proche (71,8\,\% global, 72,2\,\% en POL). Le \textbf{Prompt 4} (few-shot KATE) a également été évalué sur NLI4PR (66,0\,\% en global, 65,3\,\% en POL, 66,7\,\% en MEDICAL). Les résultats restent nettement inférieurs à toutes les configurations par prompt finetuné sur ce jeu de données~; nous ne nous sommes donc pas concentrés sur cette approche pour NLI4PR.
 
 \paragraph{Comparaison par type de langage (POL vs MEDICAL).}
-En baseline, les trois prompts performent légèrement mieux sur le sous-ensemble \textbf{MEDICAL} que sur \textbf{POL}, avec des écarts de l'ordre de 2 à 4 points. Après finetuning, les écarts entre POL et MEDICAL se réduisent~: le CoT finetuné atteint 73,4\,\% en POL et 74,2\,\% en MEDICAL. Les figures~\ref{fig:nli4pr-compare-baseline} et~\ref{fig:nli4pr-compare-finetune} illustrent la comparaison des trois prompts en baseline et en finetuné (Global, POL, MEDICAL).
+En baseline, les trois premiers prompts performent légèrement mieux sur le sous-ensemble \textbf{MEDICAL} que sur \textbf{POL}, avec des écarts de l'ordre de 2 à 4 points en macro F1. Après finetuning, les écarts entre POL et MEDICAL se réduisent~: le Prompt 3 finetuné atteint 72,3\,\% en POL et 73,3\,\% en MEDICAL. Les figures~\ref{fig:nli4pr-compare-baseline} et~\ref{fig:nli4pr-compare-finetune} illustrent la comparaison des quatre prompts (Prompts 1 à 4) en baseline et en finetuné (Global, POL, MEDICAL).
 
 \begin{figure}[H]
 \centering
 \IfFileExists{figures_nli4pr/compare_all_baseline_accuracy.png}{%
   \includegraphics[width=0.72\linewidth]{figures_nli4pr/compare_all_baseline_accuracy.png}%
 }{\fbox{\parbox{0.72\linewidth}{\centering\small [Exécuter les notebooks NLI4PR puis \texttt{copy\_figures\_nli4pr.bat} pour générer la figure.]}}}
-\caption{Accuracy des trois prompts (NLI, Clinical Matching, CoT) en \textbf{baseline} — Global, POL et MEDICAL.}
+\caption{Macro F1 des quatre prompts (Prompts 1 à 4) en \textbf{baseline} — Global, POL et MEDICAL.}
 \label{fig:nli4pr-compare-baseline}
 \end{figure}
 
@@ -250,48 +250,40 @@ En baseline, les trois prompts performent légèrement mieux sur le sous-ensembl
 \IfFileExists{figures_nli4pr/compare_all_finetuning_accuracy.png}{%
   \includegraphics[width=0.72\linewidth]{figures_nli4pr/compare_all_finetuning_accuracy.png}%
 }{\fbox{\parbox{0.72\linewidth}{\centering\small [Figure~: \texttt{compare\_all\_finetuning\_accuracy.png}]}}}
-\caption{Accuracy des trois prompts (NLI, Clinical Matching, CoT) \textbf{finetunés} — Global, POL et MEDICAL. Le CoT finetuné obtient les meilleurs scores.}
+\caption{Macro F1 des quatre prompts (Prompts 1 à 4) \textbf{finetunés} — Global, POL et MEDICAL. Le Prompt 3 finetuné obtient les meilleurs scores.}
 \label{fig:nli4pr-compare-finetune}
 \end{figure}
 
 \paragraph{Modèle sans affinage vs affiné par prompt.}
-Pour chaque prompt, le finetuning apporte plus d'améliorations que de régressions. Par exemple, pour le NLI~: 1108 exemples passent de faux (modèle sans affinage) à corrects (finetuné) contre 691 régressions (correct avec le modèle sans affinage, faux après affinage), soit un bilan net de +417 exemples corrects. Les figures~\ref{fig:nli4pr-nli-bf},~\ref{fig:nli4pr-cm-bf} et~\ref{fig:nli4pr-cot-bf} montrent les courbes baseline vs finetuné pour les trois prompts (accuracy Global, POL, MEDICAL). Une matrice de confusion typique (CoT finetuné, combined) est donnée en figure~\ref{fig:nli4pr-cot-confusion} pour illustrer la répartition des prédictions Entailment / Contradiction.
+Pour chaque prompt, le finetuning apporte plus d'améliorations que de régressions. Par exemple, pour le Prompt 1~: 1108 exemples passent de faux (modèle sans affinage) à corrects (finetuné) contre 691 régressions (correct avec le modèle sans affinage, faux après affinage), soit un bilan net de +417 exemples corrects. Les figures~\ref{fig:nli4pr-nli-bf},~\ref{fig:nli4pr-cm-bf} et~\ref{fig:nli4pr-cot-bf} montrent les courbes baseline vs finetuné pour les trois premiers prompts (Prompts 1 à 3, macro F1 Global, POL, MEDICAL). Une matrice de confusion typique (Prompt 3 finetuné, combined) est donnée en figure~\ref{fig:nli4pr-cot-confusion} pour illustrer la répartition des prédictions Entailment / Contradiction.
 
 \begin{figure}[H]
 \centering
-\IfFileExists{figures_nli4pr/nli_compare_baseline_finetune_accuracy.png}{%
-  \includegraphics[width=0.68\linewidth]{figures_nli4pr/nli_compare_baseline_finetune_accuracy.png}%
-}{\fbox{\parbox{0.68\linewidth}{\centering\small [\texttt{nli\_compare\_baseline\_finetune\_accuracy.png}]}}}
-\caption{Baseline vs Finetuné — prompt \textbf{NLI}. Gain important du finetuning en Global, POL et MEDICAL.}
+\IfFileExists{figures_nli4pr/prompt1_compare_baseline_finetune_macro_f1.png}{%
+  \includegraphics[width=0.68\linewidth]{figures_nli4pr/prompt1_compare_baseline_finetune_macro_f1.png}%
+}{\fbox{\parbox{0.68\linewidth}{\centering\small [\texttt{prompt1\_compare\_baseline\_finetune\_macro\_f1.png}]}}}
+\caption{Baseline vs Finetuné — \textbf{Prompt 1} (macro F1 Global, POL, MEDICAL).}
 \label{fig:nli4pr-nli-bf}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\IfFileExists{figures_nli4pr/clinical_matching_compare_baseline_finetune_accuracy.png}{%
-  \includegraphics[width=0.68\linewidth]{figures_nli4pr/clinical_matching_compare_baseline_finetune_accuracy.png}%
-}{\fbox{\parbox{0.68\linewidth}{\centering\small [\texttt{clinical\_matching\_compare\_baseline\_finetune\_accuracy.png}]}}}
-\caption{Baseline vs Finetuné — prompt \textbf{Clinical Matching}.}
+\IfFileExists{figures_nli4pr/prompt2_compare_baseline_finetune_macro_f1.png}{%
+  \includegraphics[width=0.68\linewidth]{figures_nli4pr/prompt2_compare_baseline_finetune_macro_f1.png}%
+}{\fbox{\parbox{0.68\linewidth}{\centering\small [\texttt{prompt2\_compare\_baseline\_finetune\_macro\_f1.png}]}}}
+\caption{Baseline vs Finetuné — \textbf{Prompt 2} (macro F1 Global, POL, MEDICAL).}
 \label{fig:nli4pr-cm-bf}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\IfFileExists{figures_nli4pr/cot_compare_baseline_finetune_accuracy.png}{%
-  \includegraphics[width=0.68\linewidth]{figures_nli4pr/cot_compare_baseline_finetune_accuracy.png}%
-}{\fbox{\parbox{0.68\linewidth}{\centering\small [\texttt{cot\_compare\_baseline\_finetune\_accuracy.png}]}}}
-\caption{Baseline vs Finetuné — prompt \textbf{CoT}. Le modèle sans affinage CoT est déjà élevé~; le finetuning apporte un gain modéré mais consistant.}
+\IfFileExists{figures_nli4pr/prompt3_compare_baseline_finetune_macro_f1.png}{%
+  \includegraphics[width=0.68\linewidth]{figures_nli4pr/prompt3_compare_baseline_finetune_macro_f1.png}%
+}{\fbox{\parbox{0.68\linewidth}{\centering\small [\texttt{prompt3\_compare\_baseline\_finetune\_macro\_f1.png}]}}}
+\caption{Baseline vs Finetuné — \textbf{Prompt 3} (macro F1 Global, POL, MEDICAL). Le modèle sans affinage Prompt 3 est déjà élevé~; le finetuning apporte un gain modéré mais consistant.}
 \label{fig:nli4pr-cot-bf}
 \end{figure}
 
-\begin{figure}[H]
-\centering
-\IfFileExists{figures_nli4pr/cot_finetune_confusion_combined.png}{%
-  \includegraphics[width=0.58\linewidth]{figures_nli4pr/cot_finetune_confusion_combined.png}%
-}{\fbox{\parbox{0.58\linewidth}{\centering\small [\texttt{cot\_finetune\_confusion\_combined.png}]}}}
-\caption{Matrice de confusion — CoT finetuné, ensemble combined (POL + MEDICAL).}
-\label{fig:nli4pr-cot-confusion}
-\end{figure}
 
 \paragraph{Noyau dur d'erreurs.}
 Lorsque \emph{les trois} modèles \textbf{baseline} se trompent ensemble (237 exemples en POL, 174 en MEDICAL), ils prédisent à tort \textbf{Contradiction} dans la grande majorité des cas~: le vrai label est Entailment dans environ \textbf{92\,\%} des cas en POL et \textbf{88\,\%} en MEDICAL. Les baselines ont donc une tendance à sous-déclarer l'éligibilité. À l'inverse, lorsque les trois modèles \textbf{finetunés} se trompent ensemble (196 en POL, 174 en MEDICAL), le vrai label est majoritairement \textbf{Contradiction} (environ 75\,\% en POL et 80\,\% en MEDICAL)~: les modèles finetunés tendent alors à prédire à tort Entailment. Nous choisissons \textbf{123 candidats} pour l'analyse d'erreurs NLI4PR (section suivante) provenant de l'intersection de ces indices en POL et en MEDICAL pour les modèles \textbf{finetunés} (même patient en erreur dans les deux formulations). Nous ciblons les erreurs du finetuning car c'est là que les meilleurs résultats sont obtenus~; l'analyse d'erreurs NLI4PR (section suivante) porte sur ce noyau dur.
@@ -378,59 +370,67 @@ L'analyse d'erreurs sur NLI4CT confirme que les cinq approches (deux modèles af
 
 \subsection{Analyse d'erreurs NLI4PR}
 
-Une \textbf{analyse linguistique} a été menée sur notre selection de 123 candidats, en les comparant au reste des indices du jeu de test (comme pour NLI4CT). Les métriques utilisées sont~: chevauchement lexical (Jaccard), couverture lexicale, densité numérique (chiffres, pourcentages, unités), nombre de négations, longueur de la prémisse et du statement, et présence de mots-clés d'essai. Les tableaux~\ref{tab:nli4pr-linguistic-pol} et~\ref{tab:nli4pr-linguistic-med} résument les moyennes candidats vs autres (POL et MEDICAL). Les candidats se distinguent par des \textbf{prémisses plus courtes} (environ 198 mots vs 252 pour les autres), une \textbf{densité numérique plus faible} (environ 31--33 vs 37--40), et une \textbf{couverture lexicale légèrement plus basse}. En MEDICAL, les candidats ont en moyenne \textbf{plus de négations dans le statement} (1,72 vs 1,42). Ces profils suggèrent que le noyau dur d'erreurs correspond à des cas où les critères sont moins longs et moins chargés en données numériques, avec des formulations potentiellement plus ambiguës (négations). Les figures~\ref{fig:nli4pr-comparison-pol} et~\ref{fig:nli4pr-comparison-medical} illustrent la comparaison détaillée des métriques entre candidats et autres indices.
+Une \textbf{analyse linguistique} a été menée sur notre selection de 123 candidats (erreurs communes du finetuning en POL et MEDICAL), en les comparant au reste des indices du jeu de test, puis sur les 363 candidats définis pour le few-shot (overlap des erreurs POL/MEDICAL). Les métriques utilisées sont~: chevauchement lexical (Jaccard), couverture lexicale, densité numérique (chiffres, pourcentages, unités), nombre de négations, longueur de la prémisse et du statement, et présence de mots-clés d'essai. Les tableaux~\ref{tab:nli4pr-linguistic-pol-ft} et~\ref{tab:nli4pr-linguistic-med-ft} résument les moyennes pour le finetuning (POL et MEDICAL) entre erreurs et autres indices, et les tableaux~\ref{tab:nli4pr-linguistic-pol-fs} et~\ref{tab:nli4pr-linguistic-med-fs} donnent les mêmes moyennes pour le few-shot. Dans le cas du finetuning, les candidats se distinguent par des \textbf{prémisses plus courtes} (environ 198 mots vs 252 pour les autres), une \textbf{densité numérique plus faible} (environ 32--34 vs 39--41), et une \textbf{couverture lexicale légèrement plus basse}. En MEDICAL finetuné, les candidats ont en moyenne \textbf{plus de négations dans le statement} (1,71 vs 1,39). Ces profils suggèrent que le noyau dur d'erreurs correspond à des cas où les critères sont moins longs et moins chargés en données numériques, avec des formulations potentiellement plus ambiguës (négations). Les figures~\ref{fig:nli4pr-comparison-pol} et~\ref{fig:nli4pr-comparison-medical} illustrent la comparaison détaillée des métriques entre candidats et autres indices.
 
 \begin{table}[H]
 \centering
-\caption{Moyennes des indicateurs linguistiques — candidats vs autres (POL).}
-\label{tab:nli4pr-linguistic-pol}
+\caption{Moyennes des indicateurs linguistiques — erreurs finetuning vs autres indices (POL).}
+\label{tab:nli4pr-linguistic-pol-ft}
 \scriptsize
-\begin{tabular}{lrrr}
+\begin{tabular}{lrrrrrr}
 \toprule
-Indicateur & Candidats & Autres & $\Delta$ \\
+ & Jaccard lex. & Couverture & Densité num. & Négations totales & Mots prémisse & Mots statement \\
 \midrule
-Longueur prémisse (mots) & 198 & 252 & $-53$ \\
-Densité numérique totale & 30,9 & 37,3 & $-6{,}4$ \\
-Couverture lexicale & 0,183 & 0,196 & $-0{,}012$ \\
-Négations (statement) & 1,02 & 0,91 & $+0{,}10$ \\
+Erreurs finetuning (123) & 0,079 & 0,183 & 32,0 & 4,65 & 198 & 120,9 \\
+Autres indices (1455)    & 0,076 & 0,196 & 38,7 & 4,60 & 252 & 117,4 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \begin{table}[H]
 \centering
-\caption{Moyennes des indicateurs linguistiques — candidats vs autres (MEDICAL).}
-\label{tab:nli4pr-linguistic-med}
+\caption{Moyennes des indicateurs linguistiques — erreurs finetuning vs autres indices (MEDICAL).}
+\label{tab:nli4pr-linguistic-med-ft}
 \scriptsize
-\begin{tabular}{lrrr}
+\begin{tabular}{lrrrrrr}
 \toprule
-Indicateur & Candidats & Autres & $\Delta$ \\
+ & Jaccard lex. & Couverture & Densité num. & Négations totales & Mots prémisse & Mots statement \\
 \midrule
-Longueur prémisse (mots) & 198 & 252 & $-54$ \\
-Densité numérique totale & 32,8 & 40,1 & $-7{,}3$ \\
-Couverture lexicale & 0,213 & 0,233 & $-0{,}020$ \\
-Négations (statement) & 1,72 & 1,42 & $+0{,}30$ \\
+Erreurs finetuning (123) & 0,095 & 0,213 & 33,7 & 4,41 & 198 & 103,7 \\
+Autres indices (1455)    & 0,091 & 0,233 & 41,4 & 4,36 & 252 & 101,5 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\begin{figure}[H]
+\begin{table}[H]
 \centering
-\IfFileExists{figures_nli4pr/comparison_detailed_pol.png}{%
-  \includegraphics[width=0.72\linewidth]{figures_nli4pr/comparison_detailed_pol.png}%
-}{\fbox{\parbox{0.72\linewidth}{\centering\small [\texttt{comparison\_detailed\_pol.png}]}}}
-\caption{Comparaison des métriques linguistiques — candidats vs autres indices (POL).}
-\label{fig:nli4pr-comparison-pol}
-\end{figure}
+\caption{Moyennes des indicateurs linguistiques — erreurs few-shot vs autres indices (POL).}
+\label{tab:nli4pr-linguistic-pol-fs}
+\scriptsize
+\begin{tabular}{lrrrrrr}
+\toprule
+ & Jaccard lex. & Couverture & Densité num. & Négations totales & Mots prémisse & Mots statement \\
+\midrule
+Erreurs few-shot (363) & 0,076 & 0,198 & 40,1 & 4,72 & 262,5 & 121,8 \\
+Autres indices (1215)  & 0,076 & 0,194 & 37,5 & 4,57 & 243,4 & 116,5 \\
+\bottomrule
+\end{tabular}
+\end{table}
 
-\begin{figure}[H]
+\begin{table}[H]
 \centering
-\IfFileExists{figures_nli4pr/comparison_detailed_medical.png}{%
-  \includegraphics[width=0.72\linewidth]{figures_nli4pr/comparison_detailed_medical.png}%
-}{\fbox{\parbox{0.72\linewidth}{\centering\small [\texttt{comparison\_detailed\_medical.png}]}}}
-\caption{Comparaison des métriques linguistiques — candidats vs autres indices (MEDICAL).}
-\label{fig:nli4pr-comparison-medical}
-\end{figure}
+\caption{Moyennes des indicateurs linguistiques — erreurs few-shot vs autres indices (MEDICAL).}
+\label{tab:nli4pr-linguistic-med-fs}
+\scriptsize
+\begin{tabular}{lrrrrrr}
+\toprule
+ & Jaccard lex. & Couverture & Densité num. & Négations totales & Mots prémisse & Mots statement \\
+\midrule
+Erreurs few-shot (363) & 0,090 & 0,234 & 41,3 & 4,52 & 262,5 & 102,0 \\
+Autres indices (1215)  & 0,091 & 0,230 & 40,6 & 4,32 & 243,4 & 101,6 \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 En résumé, le finetuning réduit le nombre de cas «~tous faux~» (237 $\rightarrow$ 196 en POL) et rééquilibre les prédictions~; le résidu d'erreurs communes (123 candidats) correspond à un profil linguistique distinct (prémisses plus courtes, moins de densité numérique, davantage de négations en MEDICAL), ce qui peut orienter des améliorations ciblées (ex.~données d'entraînement complémentaires ou prompts adaptés à ces cas).
 
