@@ -132,81 +132,81 @@ Le message système few-shot précise que le modèle doit s'inspirer des exemple
 \section{Résultats}
 
 \subsection{Résultats NLI4CT}
-L'évaluation porte sur le Gold test NLI4CT (500 exemples). Les métriques (accuracy) des cinq approches sont synthétisées dans le tableau~\ref{tab:nli4ct-accuracy}.
+L'évaluation porte sur le Gold test NLI4CT. Les métriques (exactitude et macro F1) des cinq approches sont synthétisées dans le tableau~\ref{tab:nli4ct-accuracy}, mais nous analysons principalement le macro F1, plus informatif en cas de déséquilibre entre classes.
 
 \begin{table}[htbp]
 \centering
-\caption{Précision (accuracy) sur le Gold test NLI4CT (500 exemples).}
+\caption{Précision (accuracy) et macro F1 — NLI4CT.}
 \label{tab:nli4ct-accuracy}
 \begin{tabular}{lcc}
 \toprule
-Approche & Accuracy (\,\%) & Remarque \\
+Approche & Exactitude (\,\%) & Macro F1 (\,\%) \\
 \midrule
-P1 Baseline & 65,8 & sans affinage \\
-P1 Fine-tuné & \textbf{74,2} & meilleur résultat \\
-P2 Baseline & 65,2 & sans affinage \\
-P2 Fine-tuné & 71,8 & \\
-Few-shot (type+section) & 72,0 & \\
-Few-shot KATE & 71,4 & \\
-Few-shot Cosine & 71,0 & \\
+P1 Baseline & 65,8 & 64,8 \\
+P1 Fine-tuné & \textbf{74,2} & \textbf{75,3} \\
+P2 Baseline & 65,2 & 64,2 \\
+P2 Fine-tuné & 71,8 & 72,8 \\
+Few-shot (type+section) & 72,0 & 71,7 \\
+Few-shot KATE & 71,4 & 71,2 \\
+Few-shot Cosine & 71,0 & 70,9 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \paragraph{Deux configurations de fine-tuning.}
-Le fine-tuning améliore nettement les baselines pour les deux formats de prompt. Le \textbf{Prompt 1} affiné atteint \textbf{74,2}\,\% (gain d'environ 8,4 points par rapport à sa baseline à 65,8\,\%), le \textbf{Prompt 2} affiné atteint \textbf{71,8}\,\% (gain d'environ 6,6 points par rapport à 65,2\,\%). Le Prompt 1 reste donc le plus performant après affinage. Les figures~\ref{fig:nli4ct-accuracy-type} et~\ref{fig:nli4ct-accuracy-section} donnent les performances des deux modèles fine-tunés en fonction du \textbf{type de tâche} (Single vs Comparison) et de la \textbf{section de protocole} (Eligibility, Intervention, Adverse Events, Results, etc.)~: les deux modèles affinés performent mieux que leurs baselines dans la plupart des sous-groupes, avec des écarts selon la section. On observe en particulier que la tâche est \textbf{nettement plus simple sur la section Adverse Events} (accuracy plus élevée) que sur la section Eligibility, qui reste la plus difficile. Ce contraste de difficulté entre sections (Eligibility vs Adverse Events, Intervention, Results) motive l'étude complémentaire du jeu de données \textbf{NLI4PR}, centré précisément sur des tâches d'Eligibility au niveau patient.
+Le fine-tuning améliore nettement les modèles sans affinage pour les deux formats de prompt en termes de macro F1. Le Prompt 1 affiné atteint un macro F1 de 75,3\,\% (contre 64,8\,\% pour le modèle sans affinage correspondant), le Prompt 2 affiné atteint 72,8\,\% (contre 64,2\,\% pour le modèle sans affinage correspondant). Le Prompt 1 reste donc le plus performant après affinage. Les figures~\ref{fig:nli4ct-accuracy-type} et~\ref{fig:nli4ct-accuracy-section} donnent les macro F1 des deux modèles fine-tunés en fonction du type de tâche (Single vs Comparison) et de la section de protocole~: les deux modèles affinés ont de meilleurs résultats que les modèles sans affinage dans la plupart des sous-groupes, avec des écarts selon la section. On observe en particulier que la tâche est un peu plus simple sur la section Adverse Events (macro F1 plus élevé) que sur la section Eligibility~; il y a une différence visible entre la tâche la plus simple (Adverse Events) et la plus difficile (Eligibility).
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\linewidth]{02_accuracy_par_type.png}
-\caption{Accuracy par type de tâche (Single / Comparison) pour les baselines et modèles fine-tunés (Prompt 1 et Prompt 2).}
+\caption{Macro F1 par type de tâche (Single / Comparison) pour les modèles sans affinage et modèles fine-tunés (Prompt 1 et Prompt 2).}
 \label{fig:nli4ct-accuracy-type}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\linewidth]{03_accuracy_par_section.png}
-\caption{Accuracy par section de protocole pour les baselines et modèles fine-tunés (Prompt 1 et Prompt 2).}
+\caption{Macro F1 par section de protocole pour les modèles sans affinage et modèles fine-tunés.}
 \label{fig:nli4ct-accuracy-section}
 \end{figure}
 
-Par ailleurs, le fine-tuning introduit des \textbf{régressions} (exemples corrects en baseline, erronés après affinage) et des \textbf{améliorations} (erronés en baseline, corrects après affinage)~: pour le Prompt 1 on observe 60 régressions et 102 améliorations~; pour le Prompt 2, 60 régressions et 93 améliorations. Le bilan net reste positif pour les deux prompts. Une explication probable des régressions est que les \textbf{baselines prédissent en majorité la classe Contradiction}~: lorsqu'une prédiction baseline correcte était «~contradiction~», l'affinage peut parfois faire basculer le modèle vers «~entailment~» et ainsi créer une régression. Les quatre matrices de confusion (P1 Baseline, P1 Fine-tuné, P2 Baseline, P2 Fine-tuné) reportées en figure~\ref{fig:nli4ct-confusion} illustrent ce déséquilibre des baselines vers la contradiction et le rééquilibrage apporté par le fine-tuning.
+Par ailleurs, le fine-tuning introduit des régressions (exemples corrects avec le modèle sans affinage, erronés après affinage) et des améliorations (erronés avec le modèle sans affinage, corrects après affinage)~: pour le Prompt 1 on observe 60 régressions et 102 améliorations~; pour le Prompt 2, 60 régressions et 93 améliorations. Le bilan net reste positif pour les deux prompts. Une explication probable des régressions est que les modèles sans affinage prédissent en majorité la classe Contradiction~: lorsqu'une prédiction correcte du modèle sans affinage était «~contradiction~», l'affinage peut parfois faire basculer le modèle vers «~entailment~» et ainsi créer une régression. Les quatre matrices de confusion (P1 Baseline, P1 Fine-tuné, P2 Baseline, P2 Fine-tuné) reportées en figure~\ref{fig:nli4ct-confusion} illustrent ce déséquilibre des modèles sans affinage vers la contradiction et le rééquilibrage apporté par le fine-tuning.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\linewidth]{fig_nli4ct_confusion.png}
-\caption{Matrices de confusion pour P1 Baseline, P1 Fine-tuné, P2 Baseline et P2 Fine-tuné (calculées à partir des fichiers \texttt{resultats\_*}\, des dossiers Prompt\,1 et Prompt\,2). Les baselines tendent à prédire majoritairement Contradiction~; le fine-tuning rééquilibre les prédictions, ce qui peut expliquer une partie des régressions (exemples où la baseline correcte en contradiction devient erronée après affinage).}
+\caption{Matrices de confusion pour P1 Baseline, P1 Fine-tuné, P2 Baseline et P2 Fine-tuné. Les modèles sans affinage tendent à prédire majoritairement Contradiction~; le fine-tuning rééquilibre les prédictions, ce qui peut expliquer une partie des régressions (exemples où une prédiction correcte en contradiction du modèle sans affinage devient erronée après affinage).}
 \label{fig:nli4ct-confusion}
 \end{figure}
 
-L'analyse par \textbf{longueur de prompt} est donnée en figures~\ref{fig:nli4ct-longueur} et~\ref{fig:nli4ct-longueur-courbe}. Les données ont été découpées en sous-ensembles (\emph{bins}) de la façon suivante~: pour la figure~\ref{fig:nli4ct-longueur}, la longueur du prompt (en tokens) est partagée en \textbf{terciles} (quantiles à 1/3 et 2/3), ce qui définit trois bins «~Court~», «~Moyen~» et «~Long~»~; pour la figure~\ref{fig:nli4ct-longueur-courbe}, les exemples sont répartis en \textbf{15 bins} selon le rang centile de leur longueur (\emph{rank percentile}), puis l'accuracy est calculée dans chaque bin et reportée en fonction de la longueur moyenne du bin. Les performances restent stables ou s'améliorent avec la longueur pour les modèles affinés, sans dégradation systématique sur les prompts les plus longs.
+L'analyse par longueur de prompt est donnée en figures~\ref{fig:nli4ct-longueur} et~\ref{fig:nli4ct-longueur-courbe}. Les données ont été découpées en sous-ensembles (\emph{bins}) de la façon suivante~: pour la figure~\ref{fig:nli4ct-longueur}, la longueur du prompt (en tokens) est partagée en terciles (quantiles à 1/3 et 2/3), ce qui définit trois bins «~Court~», «~Moyen~» et «~Long~»~; pour la figure~\ref{fig:nli4ct-longueur-courbe}, les exemples sont répartis en 15 bins selon le rang centile de leur longueur (\emph{rank percentile}), puis le macro F1 est calculé dans chaque bin et reporté en fonction de la longueur moyenne du bin. Les modèles sans affinage diminuent entre Court et Moyen puis s'améliorent entre Moyen et Long~; les modèles fine-tunés régressent au fur et à mesure de la longueur.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\linewidth]{04_accuracy_par_longueur.png}
-\caption{Accuracy par bin de longueur (terciles~: Court / Moyen / Long) pour les baselines et modèles fine-tunés.}
+\caption{Macro F1 par bin de longueur (terciles~: Court / Moyen / Long) pour les modèles sans affinage et modèles fine-tunés.}
 \label{fig:nli4ct-longueur}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\linewidth]{04b_accuracy_vs_longueur_courbe.png}
-\caption{Évolution de l'accuracy en fonction de la longueur du prompt (15 bins par rang centile, courbe lissée) pour les deux fine-tunings.}
+\caption{Évolution du macro F1 en fonction de la longueur du prompt (15 bins par rang centile, courbe lissée) pour les deux fine-tunings.}
 \label{fig:nli4ct-longueur-courbe}
 \end{figure}
 
 \paragraph{Trois stratégies few-shot.}
-Les trois stratégies few-shot (sélection par type et section, KATE, similarité cosine) atteignent des précisions du même ordre~: \textbf{72,0}\,\% pour la sélection par type et section, \textbf{71,4}\,\% pour KATE, \textbf{71,0}\,\% pour Cosine. Aucune ne dépasse le fine-tuning Prompt 1 (74,2\,\%), mais elles se situent au niveau du fine-tuning Prompt 2 ou légèrement en dessous, sans aucun ré-entraînement. La stratégie par type et section est légèrement en tête des trois. La figure~\ref{fig:nli4ct-fewshot-type-section} (partie 5b de l'analyse few-shot) présente la performance des trois stratégies par \textbf{type de tâche} et par \textbf{section de protocole} dans un même graphique~: les trois courbes ou barres sont très proches pour chaque sous-groupe, ce qui \textbf{justifie que les trois stratégies few-shot se comportent de manière très similaire} selon le type et la section, avec des variations limitées entre type+section, KATE et Cosine.
+Les trois stratégies few-shot (sélection par type et section, KATE, similarité cosine) atteignent des macro F1 du même ordre~: 71,7\,\% pour la sélection par type et section, 71,2\,\% pour KATE, 70,9\,\% pour Cosine. Aucune ne dépasse le fine-tuning Prompt 1 (75,3\,\% de macro F1), mais elles se situent toujours légèrement en dessous du fine-tuning Prompt 2, sans aucun ré-entraînement. La stratégie par type et section est légèrement en tête des trois. La figure~\ref{fig:nli4ct-fewshot-type-section} présente la performance des trois stratégies par type de tâche et par section de protocole dans un même graphique~: les trois courbes ou barres sont très proches pour chaque sous-groupe, ce qui justifie que les trois stratégies few-shot se comportent de manière très similaire selon le type et la section, avec des variations limitées entre type+section, KATE et Cosine.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.9\linewidth]{02b_accuracy_type_et_section.png}
-\caption{Performance des trois stratégies few-shot (type+section, KATE, cosine) par type de tâche et par section de protocole. Les trois stratégies montrent des profils très proches, justifiant un comportement similaire.}
+\includegraphics[width=0.9\linewidth]{02b_macro_f1_type_et_section.png}
+\caption{Macro F1 par type de tâche (Single / Comparison) et par section de protocole pour les trois stratégies few-shot (type+section, KATE, cosine). Les trois stratégies montrent des profils très proches, justifiant un comportement similaire.}
 \label{fig:nli4ct-fewshot-type-section}
 \end{figure}
 
 \paragraph{Synthèse comparative des cinq approches.}
-Le fine-tuning Prompt 1 est le plus performant (74,2\,\%), suivi du fine-tuning Prompt 2 (71,8\,\%) et des trois stratégies few-shot (71,0--72,0\,\%). Les approches few-shot offrent un compromis intéressant~: précision proche du second fine-tuning, sans coût d'affinage. Pour la suite de l'analyse (section suivante), on se concentre sur la stratégie \textbf{KATE}~: les trois stratégies few-shot étant de performance très similaire, le choix de KATE se justifie par le fait que c'est une \textbf{méthode générale}, réutilisable sur d'autres tâches (y compris NLI4PR), et dont le principe — sélection d'exemples par similarité sémantique — a une interprétation claire. La section suivante (analyse d'erreurs) détaille où les modèles se trompent, où ils sont d'accord, et dans quelle mesure le fine-tuning Prompt 1 et KATE se complètent.
+Le fine-tuning Prompt 1 est le plus performant en macro F1 (75,3\,\%), suivi du fine-tuning Prompt 2 (72,8\,\%) et des trois stratégies few-shot (70,9--71,7\,\%). Pour ce jeu de données, les résultats sont très similaires entre few-shot et fine-tuning~: le few-shot se débrouille déjà très bien sans nécessiter de forte puissance de calcul, si bien que dans ce cas le coût d'un fine-tuning ne semble pas justifié. Par ailleurs, les tableaux par type et par section (figures~\ref{fig:nli4ct-accuracy-type} et~\ref{fig:nli4ct-fewshot-type-section}) montrent que la tâche Eligibility semble être la plus difficile~; il peut donc être intéressant de se concentrer sur cette tâche, ce que permet le jeu NLI4PR. Pour la suite de l'analyse (section suivante), on se concentre sur la stratégie KATE~: la stratégie few-shot la plus efficace sur NLI4CT est la sélection par type et section, mais celle-ci n'est pas directement réutilisable sur NLI4PR (où il n'y a pas de type ni de section de protocole), alors que KATE l'est. La section suivante (analyse d'erreurs) détaille où les modèles se trompent, où ils sont d'accord, et dans quelle mesure le fine-tuning Prompt 1 et KATE se complètent.
 
 \subsection{Résultats NLI4PR}
 L'évaluation NLI4PR porte sur 3156 exemples de test (1578 en langage patient POL et 1578 en langage médical), avec quatre familles de configurations~: les trois prompts (\textbf{NLI}, \textbf{Clinical Matching}, \textbf{CoT}) en \textbf{baseline} (sans affinage) et en \textbf{finetuné}, ainsi que la stratégie \textbf{few-shot KATE} (sans entraînement). Le tableau~\ref{tab:nli4pr-accuracy} synthétise l'accuracy (\,\%) en Global, POL et MEDICAL pour toutes ces configurations.
@@ -254,8 +254,8 @@ En baseline, les trois prompts performent légèrement mieux sur le sous-ensembl
 \label{fig:nli4pr-compare-finetune}
 \end{figure}
 
-\paragraph{Baseline vs Finetuné par prompt.}
-Pour chaque prompt, le finetuning apporte plus d'améliorations que de régressions. Par exemple, pour le NLI~: 1108 exemples passent de faux (baseline) à corrects (finetuné) contre 691 régressions (correct en baseline, faux après affinage), soit un bilan net de +417 exemples corrects. Les figures~\ref{fig:nli4pr-nli-bf},~\ref{fig:nli4pr-cm-bf} et~\ref{fig:nli4pr-cot-bf} montrent les courbes baseline vs finetuné pour les trois prompts (accuracy Global, POL, MEDICAL). Une matrice de confusion typique (CoT finetuné, combined) est donnée en figure~\ref{fig:nli4pr-cot-confusion} pour illustrer la répartition des prédictions Entailment / Contradiction.
+\paragraph{Modèle sans affinage vs affiné par prompt.}
+Pour chaque prompt, le finetuning apporte plus d'améliorations que de régressions. Par exemple, pour le NLI~: 1108 exemples passent de faux (modèle sans affinage) à corrects (finetuné) contre 691 régressions (correct avec le modèle sans affinage, faux après affinage), soit un bilan net de +417 exemples corrects. Les figures~\ref{fig:nli4pr-nli-bf},~\ref{fig:nli4pr-cm-bf} et~\ref{fig:nli4pr-cot-bf} montrent les courbes baseline vs finetuné pour les trois prompts (accuracy Global, POL, MEDICAL). Une matrice de confusion typique (CoT finetuné, combined) est donnée en figure~\ref{fig:nli4pr-cot-confusion} pour illustrer la répartition des prédictions Entailment / Contradiction.
 
 \begin{figure}[H]
 \centering
@@ -280,7 +280,7 @@ Pour chaque prompt, le finetuning apporte plus d'améliorations que de régressi
 \IfFileExists{figures_nli4pr/cot_compare_baseline_finetune_accuracy.png}{%
   \includegraphics[width=0.68\linewidth]{figures_nli4pr/cot_compare_baseline_finetune_accuracy.png}%
 }{\fbox{\parbox{0.68\linewidth}{\centering\small [\texttt{cot\_compare\_baseline\_finetune\_accuracy.png}]}}}
-\caption{Baseline vs Finetuné — prompt \textbf{CoT}. La baseline CoT est déjà élevée~; le finetuning apporte un gain modéré mais consistant.}
+\caption{Baseline vs Finetuné — prompt \textbf{CoT}. Le modèle sans affinage CoT est déjà élevé~; le finetuning apporte un gain modéré mais consistant.}
 \label{fig:nli4pr-cot-bf}
 \end{figure}
 
@@ -299,29 +299,29 @@ Lorsque \emph{les trois} modèles \textbf{baseline} se trompent ensemble (237 ex
 \section{Analyse d'erreurs}
 
 \subsection{Analyse d'erreurs NLI4CT}
-L'analyse d'erreurs porte sur trois axes~: la convergence des erreurs entre les deux fine-tunings (Prompt 1 et Prompt 2), entre les trois stratégies few-shot, puis la complémentarité entre le meilleur fine-tuning (Prompt 1) et le meilleur few-shot (KATE). Les effectifs et répartitions ci-dessous proviennent des comparaisons systématiques réalisées sur le Gold test (500 exemples).
+L'analyse d'erreurs porte sur trois axes~: la convergence des erreurs entre les deux configurations affinées (Prompt 1 et Prompt 2), entre les trois stratégies few-shot, puis la complémentarité entre le meilleur modèle affiné (Prompt 1) et le meilleur few-shot (KATE). Les effectifs et répartitions ci-dessous proviennent des comparaisons systématiques réalisées sur le Gold test (500 exemples).
 
-\paragraph{Convergence des erreurs entre les deux fine-tunings.}
-On compare les prédictions du \textbf{Prompt 1 fine-tuné} et du \textbf{Prompt 2 fine-tuné} sur les 500 exemples. La répartition des quatre cas d'accord/désaccord est la suivante~: \textbf{333 exemples où les deux ont raison}, \textbf{103 où les deux se trompent}, \textbf{38 où seul le Prompt 1 a raison} (P2 en erreur) et \textbf{26 où seul le Prompt 2 a raison} (P1 en erreur). Les deux modèles sont donc d'accord sur une large majorité des cas (333 + 103 = 436, soit 87,2\,\%). Les désaccords (64 exemples au total) sont légèrement en faveur du Prompt 1 (38 contre 26), cohérent avec sa meilleure accuracy globale. Les \textbf{103 cas où les deux se trompent} constituent un noyau dur commun aux deux formulations de prompt~; leur répartition par \textbf{section de protocole} montre une surreprésentation dans certaines sections (par ex. Eligibility, Intervention, Adverse Events, Results), ce qui indique des zones où l'affinage reste insuffisant pour les deux configurations. La répartition par \textbf{type de tâche} (Single vs Comparison) dans ces 103 cas permet d'identifier si les erreurs communes concernent davantage les inférences sur un seul critère ou les comparaisons entre critères. Par ailleurs, comme indiqué en résultats, le fine-tuning introduit 60 régressions et 102 améliorations pour le Prompt 1, 60 régressions et 93 améliorations pour le Prompt 2~: les améliorations l'emportent nettement, mais les régressions ciblent des exemples que les baselines géraient correctement et méritent une analyse qualitative (par ex. confusion Entailment / Contradiction). La figure~\ref{fig:nli4ct-twoft-section} synthétise la répartition des cas «~les deux finetunings se trompent~» et «~les deux finetunings ont raison~» par section de protocole.
+\paragraph{Convergence des erreurs entre les deux configurations affinées.}
+On compare les prédictions du Prompt 1 affiné et du Prompt 2 affiné sur les 500 exemples. La répartition des quatre cas d'accord/désaccord est la suivante~: 333 exemples où les deux ont raison, 103 où les deux se trompent, 38 où seul le Prompt 1 a raison (P2 en erreur) et 26 où seul le Prompt 2 a raison (P1 en erreur). Les deux modèles sont donc d'accord sur une large majorité des cas (333 + 103 = 436, soit 87,2\,\%). Les désaccords (64 exemples au total) sont légèrement en faveur du Prompt 1 (38 contre 26), cohérent avec sa meilleure accuracy globale. Les 103 cas où les deux se trompent sont communs aux deux formulations de prompt. La figure~\ref{fig:nli4ct-twoft-section} synthétise la répartition des cas «~les deux modèles affinés se trompent~» et «~les deux ont raison~» par section de protocole.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\linewidth]{fig_twoft_by_section.png}
-\caption{Répartition par section de protocole des cas où les deux modèles fine-tunés (Prompt 1 et Prompt 2) se trompent (en haut) et des cas où les deux ont raison (en bas). Les deux modèles sont nettement plus susceptibles de se tromper sur les sections \textit{Eligibility} et \textit{Intervention} que sur \textit{Results} ou \textit{Adverse Events}.}
+\caption{Répartition par section de protocole des cas où les deux modèles affinés (Prompt 1 et Prompt 2) se trompent (en haut) et des cas où les deux ont raison (en bas). Les deux modèles sont nettement plus susceptibles de se tromper sur les sections \textit{Eligibility} et \textit{Intervention} que sur \textit{Results} ou \textit{Adverse Events}.}
 \label{fig:nli4ct-twoft-section}
 \end{figure}
 
-On observe que, parmi les 103 cas où les deux modèles se trompent, les sections \textit{Eligibility} et \textit{Intervention} concentrent une part plus importante des erreurs communes que les sections \textit{Results} et \textit{Adverse Events}, alors que ces dernières regroupent davantage de cas correctement traités. Autrement dit, même après affinage, les deux modèles restent \textbf{plus fragiles sur les tâches d'éligibilité et d'intervention} que sur les tâches liées aux résultats ou aux événements indésirables, ce qui renforce l'intérêt d'analyses spécifiques sur ces sections et d'une étude complémentaire focalisée sur l'éligibilité (NLI4PR).
+On observe que, parmi les 103 cas où les deux modèles se trompent, les sections \textit{Eligibility} et \textit{Intervention} concentrent une part plus importante des erreurs communes que les sections \textit{Results} et \textit{Adverse Events}, alors que ces dernières regroupent davantage de cas correctement traités. Même après affinage, les deux modèles restent plus fragiles sur les tâches d'éligibilité et d'intervention que sur les tâches liées aux résultats ou aux événements indésirables, ce qui renforce l'intérêt d'analyses spécifiques sur ces sections et d'une étude complémentaire focalisée sur l'éligibilité (NLI4PR).
 
 \paragraph{Convergence des erreurs entre les trois stratégies few-shot.}
-Une analyse similaire porte sur les \textbf{trois stratégies few-shot} (sélection par type et section, KATE, similarité cosine). En termes d'accord global~: \textbf{264 exemples où les trois ont raison}, \textbf{117 où les trois se trompent}, et \textbf{119 en désaccord} (une ou deux stratégies correctes, les autres en erreur). Les effectifs d'erreurs par stratégie sont~: 140 pour la sélection par type et section, 143 pour KATE, 145 pour Cosine. Les chevauchements d'erreurs deux à deux sont importants~: 97 erreurs communes entre la stratégie par type/section et KATE, 100 entre type/section et Cosine, 112 entre KATE et Cosine. KATE et Cosine, toutes deux basées sur la similarité sémantique, partagent donc le plus d'erreurs (112), ce qui suggère qu'ils échouent sur des profils d'exemples proches. La stratégie par type et section partage un peu moins d'erreurs avec chacune d'elles (97 et 100), tout en ayant légèrement moins d'erreurs au total (140). Les 117 cas où \emph{les trois} se trompent forment un sous-ensemble difficile pour l'ensemble des configurations few-shot~; leur répartition par type de tâche et par section de protocole (comme dans les notebooks) permet d'identifier les zones où les trois stratégies sont limitées. En synthèse, les trois approches few-shot convergent sur une grande partie des réponses correctes et des erreurs, avec des désaccords (119) qui restent limités~; la stratégie par type et section reste la plus précise (72\,\%) avec un nombre d'erreurs légèrement inférieur.
+Nous ne détaillons pas ici l'analyse des désaccords entre les trois stratégies few-shot (sélection par type et section, KATE, similarité cosine). Comme annoncé dans la partie résultats, les trois stratégies se comportent de façon similaire et font des erreurs proches. On observe les mêmes tendances que pour les deux modèles affinés~: les sections Eligibility et Intervention sont surreprésentées dans les erreurs.
 
-\paragraph{Complémentarité fine-tuning Prompt 1 et few-shot KATE.}
-On restreint l'analyse aux prédictions du \textbf{fine-tuning Prompt 1} (74,2\,\%) et du \textbf{few-shot KATE} (71,4\,\%), les deux approches les plus performantes dans chaque famille. Sur le Gold test~: \textbf{299 exemples où les deux ont raison}, \textbf{71 où les deux se trompent}, \textbf{72 où seul le fine-tuning a raison} et \textbf{58 où seul KATE a raison}. L'accord domine (299 + 71 = 370, 74\,\%), mais la complémentarité est nette~: 130 exemples (72 + 58) où un seul des deux a raison, chaque approche compensant partiellement l'autre. Pour interpréter ces écarts, une \textbf{analyse linguistique} a été menée sur les quatre sous-ensembles, avec les indicateurs suivants~: chevauchement lexical (Jaccard, coverage), densité numérique (chiffres, pourcentages, unités), présence de négations, longueur de la prémisse. Le tableau~\ref{tab:nli4ct-moyennes-4cas} résume les moyennes de ces indicateurs pour chacun des quatre cas.
+\paragraph{Complémentarité modèle affiné Prompt 1 et few-shot KATE.}
+On restreint l'analyse aux prédictions du modèle affiné Prompt 1 (74,2\,\%) et du few-shot KATE (71,4\,\%), les deux approches les plus performantes dans chaque famille. Sur le Gold test~: 299 exemples où les deux ont raison, 71 où les deux se trompent, 72 où seul l'affinage Prompt 1 a raison et 58 où seul KATE a raison. L'accord domine (299 + 71 = 370, 74\,\%), mais la complémentarité est nette~: 130 exemples (72 + 58) où un seul des deux a raison, chaque approche compensant partiellement l'autre. Pour interpréter ces écarts, une analyse linguistique a été menée sur les quatre sous-ensembles. Les indicateurs utilisés sont~: (1)~chevauchement lexical entre prémisse et hypothèse (Jaccard~: taille de l'intersection sur l'union des mots~; couverture~: part des mots de l'hypothèse présents dans la prémisse)~; (2)~densité numérique (somme du nombre de chiffres, de pourcentages \texttt{nombre\%}, d'expressions avec unités \textit{mg}, \textit{years}, etc., et de nombres en toutes lettres dans prémisse et hypothèse)~; (3)~négations (nombre d'occurrences de mots de négation, \textit{not}, \textit{no}, \textit{never}, etc., et formes en \textit{n't}, dans prémisse et hypothèse)~; (4)~longueur en mots (nombre de tokens alphanumériques). Le détail du calcul de chaque indicateur est donné en annexe (tableau~\ref{tab:annexe-metriques}). Le tableau~\ref{tab:nli4ct-moyennes-4cas} résume les moyennes pour chacun des quatre cas.
 
 \begin{table}[htbp]
 \centering
-\caption{Moyennes des indicateurs linguistiques par cas (fine-tuning Prompt 1 vs few-shot KATE).}
+\caption{Moyennes des indicateurs linguistiques par cas (modèle affiné Prompt 1 vs few-shot KATE).}
 \label{tab:nli4ct-moyennes-4cas}
 \scriptsize
 \resizebox{\linewidth}{!}{%
@@ -329,16 +329,52 @@ On restreint l'analyse aux prédictions du \textbf{fine-tuning Prompt 1} (74,2\,
 \toprule
 Cas & Jaccard lex. & Couverture & Densité num. & Négations & Mots prémisse & Mots hypothèse \\
 \midrule
-Les 2 corrects & 0,1045 & 0,3354 & 41,08 & 0,82 & 113,43 & 21,50 \\
-Les 2 en erreur & 0,1050 & 0,3799 & 39,59 & 2,31 & 169,06 & 21,51 \\
-P1\textsuperscript{$\checkmark$} KATE\textsuperscript{$\times$} & 0,1073 & 0,3553 & 42,89 & 1,03 & 124,26 & 22,54 \\
-P1\textsuperscript{$\times$} KATE\textsuperscript{$\checkmark$} & 0,1004 & 0,3958 & 61,24 & 1,81 & 220,84 & 24,47 \\
+Les 2 corrects & 0,1045 & 0,3354 & 41,79 & 0,68 & 113,43 & 21,50 \\
+Les 2 en erreur & 0,1050 & 0,3799 & 40,66 & 1,99 & 169,06 & 21,51 \\
+P1\textsuperscript{$\checkmark$} KATE\textsuperscript{$\times$} & 0,1073 & 0,3553 & 43,72 & 0,88 & 124,26 & 22,54 \\
+P1\textsuperscript{$\times$} KATE\textsuperscript{$\checkmark$} & 0,1004 & 0,3958 & 62,74 & 1,41 & 220,84 & 24,47 \\
 \bottomrule
 \end{tabular}%
 }
 \end{table}
 
-Les tests de \textbf{Kruskal-Wallis} indiquent que les quatre groupes se distinguent significativement par la \textbf{densité numérique} (\texttt{numeric\_total}) et la \textbf{longueur de la prémisse} (\texttt{words\_premise}). Les cas où \textbf{les deux se trompent} (71) contiennent en moyenne \textbf{plus de négations} que les cas où les deux ont raison (test de Mann-Whitney, $p < 0{,}05$)~: les deux approches échouent plus souvent sur des contradictions à base de négations explicites. À l'inverse, dans le sous-ensemble \textbf{P1 en erreur et KATE correct} (58 exemples), les exemples ont une \textbf{densité numérique plus élevée} et des \textbf{prémisses plus longues} ($p < 0{,}05$)~: le few-shot KATE, avec des exemples sémantiquement proches, semble mieux exploiter le contexte numérique et les critères longs. Dans le sous-ensemble \textbf{P1 correct et KATE en erreur} (72 exemples), le profil (moins numérique, prémisses plus courtes en moyenne) correspond au domaine où le fine-tuning tire mieux parti de l'affinage. En pratique, ces résultats suggèrent qu'un \textbf{système hybride} ou un \textbf{choix ciblé} (par ex. préférer KATE sur les cas très numériques ou à longue prémisse, le fine-tuning Prompt 1 ailleurs) pourrait tirer parti de cette complémentarité et potentiellement dépasser la précision de chaque approche seule.
+Les tests de Kruskal-Wallis indiquent que les quatre groupes se distinguent significativement par la densité numérique (\texttt{numeric\_total}) et la longueur de la prémisse (\texttt{words\_premise}). Les cas où les deux se trompent (71) contiennent en moyenne plus de négations que les cas où les deux ont raison (test de Mann-Whitney, $p < 0{,}05$)~: les deux approches échouent plus souvent sur des contradictions à base de négations explicites. À l'inverse, dans le sous-ensemble P1 en erreur et KATE correct (58 exemples), les exemples ont une densité numérique plus élevée et des prémisses plus longues ($p < 0{,}05$)~: le few-shot KATE, avec des exemples sémantiquement proches, semble mieux exploiter le contexte numérique et les critères longs. Dans le sous-ensemble P1 correct et KATE en erreur (72 exemples), le profil (moins numérique, prémisses plus courtes en moyenne) correspond au domaine où le modèle affiné tire mieux parti de l'affinage. En pratique, ces résultats suggèrent qu'un système hybride ou un choix ciblé (par ex. préférer KATE sur les cas très numériques ou à longue prémisse, le modèle affiné Prompt 1 ailleurs) pourrait tirer parti de cette complémentarité et potentiellement dépasser la précision de chaque approche seule.
+
+\paragraph{Analyses univariées par approche (section Eligibility).}
+Pour voir si l'on peut tirer des conclusions en regardant chaque approche indépendamment, on restreint l'analyse à la section Eligibility (la tâche la plus difficile sur NLI4CT) et on compare les indicateurs linguistiques selon que KATE a raison ou se trompe, puis selon que le modèle affiné P1 a raison ou se trompe. Les deux tableaux ci-dessous (KATE~: tableau~\ref{tab:nli4ct-univarie-kate}, P1~: tableau~\ref{tab:nli4ct-univarie-p1}) résument les moyennes pour chaque sous-ensemble. En regardant le tableau KATE seul~: quand KATE se trompe (47 exemples), les exemples ont en moyenne plus de négations (3,23 vs 1,79), une prémisse plus longue (195 vs 159 mots) et une densité numérique légèrement plus élevée~; quand KATE a raison, le profil est plus léger (moins de négations, prémisses plus courtes). En regardant le tableau P1 seul~: quand le modèle affiné P1 se trompe (41 exemples), les exemples ont une longueur de prémisse très élevée (320 mots en moyenne vs 105 quand P1 a raison), une densité numérique plus forte (25,9 vs 11,8) et beaucoup plus de négations (4,44 vs 1,34)~; quand P1 a raison, les exemples sont plus courts et moins chargés. Les deux tableaux, pris indépendamment, pointent donc vers des profils d'échec distincts~: KATE échoue davantage sur des cas avec plus de négations et des prémisses longues~; le modèle affiné P1 échoue surtout sur des cas très longs, très numériques et à forte présence de négations. Ces conclusions sur la section Eligibility (NLI4CT) motivent la section suivante~: on regarde si le jeu NLI4PR, centré sur l'éligibilité, exhibe les mêmes phénomènes (prémisses courtes, densité numérique, négations) sur les exemples où les modèles se trompent.
+
+\begin{table}[htbp]
+\centering
+\caption{Moyennes des indicateurs linguistiques — Few-shot KATE a raison vs KATE se trompe (section Eligibility, 132 ex.).}
+\label{tab:nli4ct-univarie-kate}
+\scriptsize
+\begin{tabular}{lrrrrrr}
+\toprule
+ & Jaccard lex. & Couverture & Densité num. & Négations & Mots prémisse & Mots hypothèse \\
+\midrule
+KATE se trompe (47) & 0,10 & 0,40 & 17,8 & 3,23 & 195,6 & 23,9 \\
+KATE a raison (85) & 0,12 & 0,39 & 15,3 & 1,79 & 159,0 & 23,8 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Moyennes des indicateurs linguistiques — Modèle affiné P1 a raison vs P1 se trompe (section Eligibility, 132 ex.).}
+\label{tab:nli4ct-univarie-p1}
+\scriptsize
+\begin{tabular}{lrrrrrr}
+\toprule
+ & Jaccard lex. & Couverture & Densité num. & Négations & Mots prémisse & Mots hypothèse \\
+\midrule
+P1 se trompe (41) & 0,10 & 0,48 & 25,9 & 4,44 & 320,4 & 25,3 \\
+P1 a raison (91) & 0,11 & 0,35 & 11,8 & 1,34 & 105,2 & 23,2 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Synthèse.}
+L'analyse d'erreurs sur NLI4CT confirme que les cinq approches (deux modèles affinés, trois stratégies few-shot) ont davantage de difficultés sur la section Eligibility (et, pour les modèles affinés, sur Intervention), ce qui renforce la légitimité d'étudier un jeu centré sur l'éligibilité comme NLI4PR. La complémentarité entre le modèle affiné Prompt 1 et le few-shot KATE suggère qu'un système hybride pourrait être plus performant~: les deux approches se complètent selon le profil du prompt (longueur, densité numérique, négations). Enfin, l'analyse univariée par approche (section Eligibility) motive l'étude d'erreurs sur NLI4PR~: il s'agit de vérifier si l'on y observe les mêmes phénomènes linguistiques associés aux succès et aux échecs de chaque méthode.
 
 \subsection{Analyse d'erreurs NLI4PR}
 
@@ -401,6 +437,31 @@ En résumé, le finetuning réduit le nombre de cas «~tous faux~» (237 $\right
 \section{Conclusion et perspectives}
 
 \section{Limitations}
+
+\appendix
+\section{Définition des indicateurs linguistiques (section~5.1)}
+\label{sec:annexe-metriques}
+
+Le tableau~\ref{tab:annexe-metriques} précise le calcul de chaque indicateur utilisé dans l'analyse linguistique (complémentarité P1 / KATE et analyses univariées).
+
+\begin{table}[H]
+\centering
+\caption{Moyen de calcul des indicateurs linguistiques.}
+\label{tab:annexe-metriques}
+\scriptsize
+\begin{tabular}{llp{6.5cm}}
+\toprule
+Indicateur & Nom interne & Calcul \\
+\midrule
+Jaccard lexical & \texttt{lexical\_jaccard} & Mots = tokens alphanumériques (minuscules). Jaccard = $|P \cap H| / |P \cup H|$ sur les ensembles de mots de la prémisse $P$ et de l'hypothèse $H$. \\
+Couverture & \texttt{lexical\_coverage} & $|P \cap H| / |H|$ si $H \neq \emptyset$~: part des mots de l'hypothèse présents dans la prémisse. \\
+Densité numérique & \texttt{numeric\_total} & Somme (prémisse + hypothèse) de~: nombre de chiffres (\texttt{\textbackslash d}), d'occurrences \texttt{nombre\%}, d'expressions \texttt{nombre + unité} (mg, g, ml, years, months, etc.), et de nombres en toutes lettres (one, two, \ldots, hundred, thousand, etc.). \\
+Négations & \texttt{neg\_total} & Somme prémisse + hypothèse du nombre d'occurrences de mots de négation (\textit{not}, \textit{no}, \textit{never}, \textit{none}, \textit{cannot}, etc.) et de formes en \textit{n't} (tokenisé). \\
+Mots prémisse & \texttt{words\_premise} & Nombre de tokens alphanumériques dans la prémisse. \\
+Mots hypothèse & \texttt{words\_hypothesis} & Nombre de tokens alphanumériques dans l'hypothèse. \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 %%================================================================
 \subsection{Rappels importants}

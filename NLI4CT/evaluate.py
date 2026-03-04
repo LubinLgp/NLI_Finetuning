@@ -6,7 +6,7 @@ from pathlib import Path
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from peft import PeftModel 
-from sklearn.metrics import accuracy_score, precision_recall_fscore_support, confusion_matrix
+from sklearn.metrics import accuracy_score, f1_score, precision_recall_fscore_support, confusion_matrix
 
 def load_jsonl(path: Path):
     samples = []
@@ -174,13 +174,15 @@ def main():
         print("    -> Cause probable : prompt tronqué (--max_context_tokens trop petit pour le few-shot)")
         print("    -> Essayer : --max_context_tokens 8192 ou 16384")
 
-    # Métriques (accuracy/F1 sur toutes les prédictions ; UNKNOWN compte comme faux)
+    # Métriques (macro F1 pour l'article ; UNKNOWN compte comme faux)
     acc = accuracy_score(true_labels, predictions)
-    precision, recall, f1, _ = precision_recall_fscore_support(true_labels, predictions, average="weighted", zero_division=0)
+    f1_macro = f1_score(true_labels, predictions, average="macro", zero_division=0)
+    precision, recall, f1_weighted, _ = precision_recall_fscore_support(true_labels, predictions, average="weighted", zero_division=0)
     
     print("\n" + "="*30)
-    print(f"ACCURACY : {acc:.4f} ({acc*100:.2f}%)")
-    print(f"F1-SCORE : {f1:.4f}")
+    print(f"ACCURACY      : {acc:.4f} ({acc*100:.2f}%)")
+    print(f"MACRO F1      : {f1_macro:.4f} ({f1_macro*100:.2f}%)")
+    print(f"F1 (weighted) : {f1_weighted:.4f}")
     print("="*30)
 
     print("\n--- Matrice de Confusion ---")
