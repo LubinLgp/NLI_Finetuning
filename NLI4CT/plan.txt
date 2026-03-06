@@ -1,8 +1,0 @@
-Partie resultats
-Présenter les resultats des deux methodes de finetunig
-Présenter les resultats des 3 methodes de few shot
-Eventuellement comparer rapidement les resultats des 5 methodes
-Partie analyse d'erreur
-Analyser les erreurs des deux finetuning pour voir s'ils se trompent souvent aux memes endroits
-Analyser les erreurs des trois fewshot pour voir s'ils se trompent aux mêmes endroits
-Comparer les erreurs du meilleure finetuning et du meilleur few shot (prompt 1 pour le finetuning et KATE pour le fewshot), en montrant à quel point ils sont d'accord, a quel point ils se completent avec des exemples de quand ils sont tous les deux d'accord d'accord et de quand ils se trompent tous les deux, en essayant d'interpreter pour voir si on peut tirer une conclusion, en te servant de @analyse_linguistique_4_cas.ipynb

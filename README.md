@@ -23,23 +23,34 @@ Ce document décrit le projet **NLI_Finetuning** : objectifs, structure des doss
 ```
 NLI_Finetuning/
 ├── README.md                 ← Ce fichier
-├── literature/               ← Littérature (PDFs, revue)
+├── literature/                      ← Littérature (PDFs, revue)
 │   ├── README.md
-│   ├── datasets/             ← Articles sur les jeux de données NLI4CT / NLI4PR
-│   ├── finetuning/           ← Articles sur le fine-tuning
-│   ├── fewshot/              ← Articles few-shot
+│   ├── datasets/                    ← Articles sur les jeux de données NLI4CT / NLI4PR
+│   ├── finetuning/                  ← Articles sur le fine-tuning
+│   ├── fewshot/                     ← Articles few-shot
 │   └── lit_review.pdf
-└── NLI4CT/                   ← Code et données du projet NLI4CT
-    ├── finetuning.py         ← Script de fine-tuning (LoRA, Optuna optionnel)
-    ├── evaluate.py           ← Script d’évaluation (baseline ou finetuné)
-    ├── finetuning.sh         ← Lancement SLURM du fine-tuning (cluster)
-    ├── evaluate.sh           ← Lancement SLURM de l’évaluation
-    ├── error_analysis.ipynb  ← Analyse des erreurs (CSV prédictions + Gold test)
-    ├── CT_json/              ← JSON des essais cliniques (NCT*.json)
-    ├── *.json/              ← JSON du dataset NLI4CT qui lie des hypothèses avec des extraits de CT
-    └── results/              ← Données formatées et résultats par prompt
-        ├── Prompt 1/         ← Ancien prompt (system + PREMISE / HYPOTHESIS)
-        └── Prompt 2/         ← Nouveau prompt (user seul, formulation explicite)
+└── NLI4CT/                          ← Code et données du projet NLI4CT
+    ├── finetuning.py                ← Script de fine-tuning (LoRA)
+    ├── evaluate.py                  ← Script d’évaluation (baseline ou finetuné)
+    ├── finetuning.sh                ← Lancement SLURM du fine-tuning (cluster)
+    ├── evaluate.sh                  ← Lancement SLURM de l’évaluation
+    ├── analyse_linguistique_4_cas.ipynb          ← Analyse linguistique détaillée de 4 cas (P1✗ / KATE✓ etc.)
+    ├── compare_error.ipynb                      ← Comparaison baseline vs finetuning (Prompt 1 / Prompt 2)
+    ├── compare_error_finetuning_vs_kate.ipynb   ← Comparaison finetuning (Prompt 1) vs few-shot KATE
+    ├── error_analysis_fewshot_prompt1.ipynb     ← Comparaison des stratégies few-shot (Prompt 1)
+    ├── create_dataset.ipynb                     ← Brouillon pour la création / inspection du dataset
+    ├── CT_json/                     ← JSON des essais cliniques (NCT*.json)
+    ├── train.json                   ← JSON du train NLI4CT
+    ├── dev.json                     ← JSON du dev NLI4CT
+    ├── Gold_test.json               ← JSON du test NLI4CT
+    └── results/                     ← Données formatées et résultats
+        ├── Prompt 1/                ← Données + résultats pour l’ancien prompt (system + PREMISE / HYPOTHESIS)
+        ├── Prompt 2/                ← Données + résultats pour le nouveau prompt (user seul, formulation explicite)
+        ├── Fewshot_type_section/    ← Résultats few-shot « type+section »
+        ├── Fewshot_Kate/            ← Résultats few-shot KATE
+        ├── Fewshot_Cosine/          ← Résultats few-shot similarité cosine
+        ├── compare_figures/         ← Figures de comparaison baseline vs finetuning
+        └── compare_figures_ft_vs_kate/ ← Figures de comparaison finetuning vs KATE
 ```
 
 ---
@@ -70,11 +81,12 @@ Note : dans le projet actuel on ne se sert pas de optuna
 - **finetuning.sh** : variables `FINETUNING_MODE` (normal / job1 / job2), `BEST_HP_FILE`, chemins vers le modèle Qwen, `train_formatted.jsonl`, `dev_formatted.jsonl`, `outputs/...`.
 - **evaluate.sh** : configuration de `BASE_MODEL`, `MODEL_TO_EVAL`, `TEST_FILE` (ex. `Gold_test_formatted.jsonl`). À adapter selon que l’on évalue la baseline ou le modèle finetuné.
 
-### 3.4 `NLI4CT/error_analysis.ipynb`
+### 3.4 Notebooks d’analyse dans `NLI4CT/`
 
-- **Rôle** : Analyse poussée des erreurs : quand et pourquoi le modèle se trompe, quand il réussit le mieux. Comparaison baseline vs finetuné, par **type** (Single/Comparison), **section**, et **longueur du prompt** (court/moyen/long). Régressions, améliorations, synthèse pour rapport.
-- **Configuration** : en tête du notebook, choisir `PROMPT_ID = 1` ou `2` pour analyser les résultats de Prompt 1 ou Prompt 2. Les chemins (CSV, JSONL, `Gold_test.json`) sont déduits automatiquement depuis `NLI4CT/results/Prompt {ID}/`.
-- **Figures** : toutes les figures sont enregistrées dans `NLI4CT/results/Prompt {ID}/figures/` (nommées `01_accuracy_globale.png`, `02_accuracy_par_type.png`, etc.) pour réutilisation dans un rapport. Une synthèse texte est aussi sauvegardée (`synthese_erreurs.txt`) dans ce dossier.
+- **`compare_error.ipynb`** : comparaison détaillée baseline vs finetuning (Prompt 1 et Prompt 2), calcul des métriques (accuracy, macro F1), figures et tableaux pour l’article.
+- **`compare_error_finetuning_vs_kate.ipynb`** : comparaison du meilleur finetuning (Prompt 1) avec le few-shot KATE, accord/désaccord, complémentarité et cas illustratifs.
+- **`error_analysis_fewshot_prompt1.ipynb`** : comparaison des différentes stratégies few-shot (type+section, KATE, cosine) sur Prompt 1.
+- **`analyse_linguistique_4_cas.ipynb`** : analyse linguistique fine de 4 groupes de cas (P1✓/KATE✓, P1✗/KATE✓, etc.) pour dériver des critères de routage hybride (longueur, négation, densité numérique, coverage lexicale).
 
 ### 3.5 `NLI4CT/CT_json/`
 

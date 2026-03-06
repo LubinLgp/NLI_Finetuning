@@ -2,9 +2,9 @@
 
 ## Macro F1 globale
 P1 Baseline: 64.82% | P1 Finetuné: 75.25%
-P2 Baseline: 64.21% | P2 Finetuné: 72.81%
+P2 Baseline: 66.11% | P2 Finetuné: 75.22%
 
 ## Régressions / Améliorations
 P1 Régressions: 60 | P1 Améliorations: 102
-P2 Régressions: 60 | P2 Améliorations: 93
-Les 2 finetunings en erreur: 103 | Les 2 corrects: 333
+P2 Régressions: 64 | P2 Améliorations: 103
+Les 2 finetunings en erreur: 91 | Les 2 corrects: 333

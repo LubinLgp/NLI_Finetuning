@@ -1,0 +1,253 @@
+index,premise,hypothesis,pattern,type,section_id,pattern_label,lexical_jaccard,lexical_coverage,digits_premise,digits_hypothesis,pct_premise,pct_hypothesis,units_premise,units_hypothesis,numeric_total,neg_premise,neg_hypothesis,neg_total,words_premise,words_hypothesis,trial_primary,trial_secondary,KATE_correct,P1_ft_correct
+1,"Inclusion Criteria:
+  Women 18 years
+  Histologically or cytologically confirmed diagnosis of metastatic breast cancer
+  Measurable or nonmeasurable disease defined by Response Evaluation Criteria In Solid Tumors (RECIST)
+Exclusion Criteria:
+  Number of prior chemotherapy lines of treatment in the metastatic setting 2","There are no conditions on mental mental health, bodyweight, size of tumours, Karnofsky/ECOG score or Estimated life expectancy that need to be met in order to be eligible for the primary trial",00,Single,Eligibility,Les 2 en erreur,0.06666666666666667,0.13333333333333333,3.0,0.0,0.0,0.0,1.0,0.0,4.0,0.0,1.0,1.0,41.0,33.0,1.0,0.0,False,False
+28,No evidence of dementia - Mini Mental State Examination (MMSE) >=23 but some evidence of cognitive impairment,patients with Fronto-temporal dementia or Mixed dementia are eligible for the primary trial,11,Single,Eligibility,Les 2 corrects,0.038461538461538464,0.07692307692307693,2.0,0.0,0.0,0.0,0.0,0.0,2.0,1.0,0.0,1.0,16.0,14.0,1.0,0.0,True,True
+35,No meningeal carcinomatosis,A patient diagnosed with a leptomeningeal carcinoma would not be eligible for the primary trial,11,Single,Eligibility,Les 2 corrects,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,2.0,3.0,15.0,1.0,0.0,True,True
+55,"Inclusion Criteria
+  Patients with histologically proven DCIS or stage I-III invasive carcinoma of the breast that is estrogen and/or progesterone receptor positive by immunohistochemical staining who are considering aromatase inhibitor therapy; women may receive the AI on this study as initial adjuvant hormonal treatment or following tamoxifen; patients must have completed any adjuvant chemotherapy; patients may have received preoperative chemotherapy",Patients diagnosed with Ductal carcinoma in situ who are considering AI therapy are eligible for the primary trial.,11,Single,Eligibility,Les 2 corrects,0.14754098360655737,0.5294117647058824,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,62.0,18.0,1.0,0.0,True,True
+86,"No history of abdominal fistula, gastrointestinal perforation or intrabdominal abscess in the past 6 months
+  No history of myocardial infarction (MI), stroke or transient ischemic attacks in the last 6 months
+  No history of significant psychiatric disorders
+  Postmenopausal breast cancer (adenocarcinoma) estrogen (ER)and/or progesterone (PR) receptor positive that is locally advanced or locally recurrent and not able to be surgically removed OR with measurable and/or disease that is able to be assessed including isolated bone metastasis","Patients can not have a history of abdominal fistula, gastrointestinal perforation,Postmenopausal adenocarcinoma, stroke, transient ischemic attacks, intrabdominal abscess or significant psychiatric disorders within the last 6 months if they want to participate in the primary trial",00,Single,Eligibility,Les 2 en erreur,0.373134328358209,0.6944444444444444,2.0,1.0,0.0,0.0,2.0,1.0,6.0,4.0,1.0,5.0,79.0,37.0,1.0,0.0,False,False
+112,"Inclusion Criteria for dose escalation and expansion phase:
+  Signed written informed consent
+  Male or female participants aged greater than or equal to 18 years
+  Participants must have histologically or cytologically proven metastatic or locally advanced solid tumors, for which no standard therapy exists or standard therapy has failed. Availability of tumor archival material or fresh biopsies is optional for participants in dose escalation
+  Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1 at trial entry and an estimated life expectancy of at least 3 months
+  Disease must be measurable with at least 1 uni-dimensional measurable lesion by RECIST 1.1, except for participants with metastatic castrate-resistant prostate cancer (mCRPC) or metastatic breast cancer (MBC) who may be enrolled with objective evidence of disease without a measureable lesion
+  Adequate hematological, hepatic and renal function as defined in the protocol
+  Effective contraception for both male and female participants if the risk of conception exists
+  Other protocol defined inclusion criteria could apply
+  Inclusion Criteria for expansion phase:
+  Participants must have relapsed, refractory, or progressive disease following last line of treatment (with the exception of the gastric and gastroesophageal junction (GEJ) cancer cohort, which does not require progression). Availability of tumor archival material or fresh biopsies (excluding bone biopsies) is mandatory for eligibility in the expansion cohorts. For participants in the MBC cohort, the biopsy or surgical specimen must have been collected within 90 days prior to the first investigational medicinal product (IMP) administration. Specifically, the following will be required:
+  NSCLC post platinum doublet: Histologically or cytologically confirmed stage IIIB or stage IV NSCLC that has progressed after 1 line of platinum-containing doublet chemotherapy. Participants should have received only 1 line of platinum-containing treatment for metastatic disease (i.e., adjuvant treatment with a platinum-containing regimen is not sufficient for eligibility because not received in the context of a metastatic disease). Participants in the NSCLC cohort will only be enrolled in USA
+  NSCLC first line: Stage IV (per 7th International Association for the Study of Lung Cancer [IASLC] classification) or recurrent NSCLC that is histologically proven. Participants must not have received treatment for their metastatic or recurrent disease. No activating epidermal growth factor receptor (EGFR) mutation nor ALK translocation/re-arrangement
+  Gastric and GEJ cancer: Histologically confirmed, unresectable locally advanced or metastatic adenocarcinoma of the gastric and gastro-esophageal junction, treated with first-line chemotherapy combination with or without disease progression. Participants should have received no more than 1 line of treatment for metastatic disease. Participants should not have been treated with trastuzumab (but can be Human Epidermal growth factor Receptor 2 [HER2] positive). Participants who received any platinum containing doublet or triplet as a neoadjuvant chemotherapy strategy, but are not ultimately candidates for surgery will also be eligible, as long as they did not have progressive disease after completion of the neoadjuvant chemotherapy. In addition, participants with gastric cancer can enter in the study if their white blood cell (WBC) and lymphocyte count is as defined in the protocol
+  MBC: Participants must have histologically confirmed locally advanced or MBC and have tumor that is refractory to or progressive after standard of care therapy. Participants must have received no more than 3 prior lines of cytotoxic therapy for metastatic disease. Participants must have received a taxane and an anthracycline, unless contra-indicated
+  Secondary expansion cohorts: Metastatic colorectal cancer (mCRC), Metastatic castrate-resistant prostate cancer (mCRPC), melanoma, ovarian cancer, ACC, mesothelioma, urothelial carcinoma and renal cell carcinoma as defined in the protocol
+  Efficacy expansion cohorts: Gastric and GEJ cancer (third line), ovarian cancer (platinum Refractory + liposomal doxorubicin), urothelial carcinoma, and HNSCC as defined in the protocol
+  Other protocol defined inclusion criteria for expansion phase could apply
+  Exclusion Criteria for dose escalation and expansion phase:
+  Concurrent treatment with a non-permitted drug
+  Prior therapy with specific antibody/drug targeting T cell co-regulatory proteins (immune checkpoints)
+  Concurrent anticancer treatment, major surgery, or use of any investigational drug within 28 days before the start of trial treatment; or concurrent systemic therapy with immunosuppressive agents, use of hormonal agents within 7 days before the start of trial treatment as defined in the protocol. Note: Participants receiving bisphosphonate or denosumab are eligible provided treatment was initiated at least 14 days before the first dose of avelumab.
+  Previous malignant disease other than the target malignancy to be investigated in this trial within the last 5 years with the exception of basal or squamous cell carcinoma of the skin or cervical carcinoma in situ
+  Rapidly progressive disease (for example, tumor lysis syndrome)
+  Active or history of central nervous system metastases
+  Receipt of any organ transplantation including allogeneic stem-cell transplantation
+  Significant acute or chronic infections as defined in the protocol
+  Active or history of any autoimmune disease (Participants with diabetes Type 1, vitiligo, psoriasis, hypo- or hyperthyroid disease not requiring immunosuppressive treatment are eligible) or immunodeficiencies
+  Known severe hypersensitivity reactions to monoclonal antibodies, any history of anaphylaxis, or uncontrolled asthma
+  Persisting toxicity related to prior therapy greater than Grade 1 NCI-CTCAE v4.0, however sensory neuropathy less than or equal to Grade 2 is acceptable
+  Pregnancy or lactation period
+  Known alcohol or drug abuse
+  Clinically significant (that is, active) cardiovascular disease
+  All other significant diseases (for example, inflammatory bowel disease), which, in the opinion of the investigator, might impair the Participant's tolerance of trial treatment
+  Any psychiatric condition that would prohibit the understanding or rendering of informed consent
+  Legal incapacity or limited legal capacity
+  Non-oncology vaccine therapies for prevention of infection disease (for example, seasonal flu vaccine, human papilloma virus vaccine) within 4 weeks of study drug administration. Vaccination while on study is also prohibited except for administration of the inactivated influenza vaccine",African-american patients can participate in the primary trial.,00,Single,Eligibility,Les 2 en erreur,0.00997506234413965,0.4444444444444444,29.0,0.0,0.0,0.0,8.0,0.0,42.0,13.0,0.0,13.0,951.0,9.0,1.0,1.0,False,False
+113,No meningeal carcinomatosis,A patient diagnosed with a neoplastic meningitis could be eligible for the primary trial,11,Single,Eligibility,Les 2 corrects,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0,3.0,14.0,1.0,0.0,True,True
+126,"Inclusion Criteria:
+  Histologically or cytologically confirmed breast carcinoma.
+  Early stage breast cancer (stage 1, 2, 3).
+  No evidence of disease outside the breast or chest wall, except ipsilateral axillary lymph nodes.
+  18 years of age or older.
+  Final eligibility for a clinical trial is determined by the health professionals conducting the trial.
+Exclusion Criteria:
+  Prior chemotherapy, hormonal therapy, biologic therapy or radiation therapy for breast cancer.
+  Major surgery within 28 days of study entry.
+  Evidence of central nervous system (CNS) metastases.
+  Final eligibility for a clinical trial is determined by the health professionals conducting the trial.","Even if a patient satisfies all of the exclusion and inclusion criteria for the primary trial, the final decision for inclusion will be made by the patients first of kin.",11,Single,Eligibility,Les 2 corrects,0.13157894736842105,0.4166666666666667,7.0,0.0,0.0,0.0,2.0,0.0,10.0,1.0,0.0,1.0,96.0,30.0,1.0,0.0,True,True
+148,HER2 positive tumor (either IHC 3+ or FISH+),"All the primary trial candidates must have a HER2 positive tumor confirmed by IHC 3+, aswell as Requiring considerable assistance and frequent medical care",11,Single,Eligibility,Les 2 corrects,0.18518518518518517,0.20833333333333334,2.0,2.0,0.0,0.0,0.0,0.0,4.0,0.0,0.0,0.0,8.0,24.0,1.0,0.0,True,True
+165,"Inclusion Criteria:
+  Histologically or cytologically confirmed breast carcinoma.
+  Early stage breast cancer (stage 1, 2, 3).
+  No evidence of disease outside the breast or chest wall, except ipsilateral axillary lymph nodes.
+  18 years of age or older.
+  Final eligibility for a clinical trial is determined by the health professionals conducting the trial.
+Exclusion Criteria:
+  Prior chemotherapy, hormonal therapy, biologic therapy or radiation therapy for breast cancer.
+  Major surgery within 28 days of study entry.
+  Evidence of central nervous system (CNS) metastases.
+  Final eligibility for a clinical trial is determined by the health professionals conducting the trial.","Even if a patient satisfies all of the exclusion and inclusion criteria for the primary trial, the final decision for inclusion will be made by the health professionals conducting the trial.",11,Single,Eligibility,Les 2 corrects,0.1780821917808219,0.5416666666666666,7.0,0.0,0.0,0.0,2.0,0.0,9.0,1.0,0.0,1.0,96.0,31.0,1.0,0.0,True,True
+171,No evidence of dementia - Mini Mental State Examination (MMSE) >=23 but some evidence of cognitive impairment,Alzheimer's patients are not eligible for the primary trial,10,Single,Eligibility,P1✓ KATE✗,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,2.0,1.0,1.0,2.0,16.0,10.0,1.0,0.0,False,True
+180,Have a BMI of 25 kg/m^2 or greater and weight <=400 lbs.,anorexic patients are eligible for the primary trial.,11,Single,Eligibility,Les 2 corrects,0.0,0.0,6.0,0.0,0.0,0.0,1.0,0.0,7.0,0.0,0.0,0.0,14.0,8.0,1.0,0.0,True,True
+183,"Exclusion Criteria:
+  History of interstitial lung disease or pneumonitis",an adult patient diagnosed with diffuse parenchymal lung disease within the last 3 years would be excluded from the primary trial,11,Single,Eligibility,Les 2 corrects,0.07407407407407407,0.1,0.0,1.0,0.0,0.0,0.0,1.0,2.0,0.0,0.0,0.0,9.0,21.0,1.0,0.0,True,True
+200,Have a BMI of 25 kg/m^2 or greater and weight <=400 lbs.,Morbidly obese patients are eligible for the primary trial.,00,Single,Eligibility,Les 2 en erreur,0.0,0.0,6.0,0.0,0.0,0.0,1.0,0.0,7.0,0.0,0.0,0.0,14.0,9.0,1.0,0.0,False,False
+207,unilateral breast cancer with ipsilateral lumpectomy or mastectomy and lymph node dissection (sentinel biopsy or axillary dissection),Patients with measurable tumors in both breasts are excluded from the primary trial,10,Single,Eligibility,P1✓ KATE✗,0.037037037037037035,0.07692307692307693,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,17.0,13.0,1.0,0.0,False,True
+213,"No history of abdominal fistula, gastrointestinal perforation or intrabdominal abscess in the past 6 months
+  No history of myocardial infarction (MI), stroke or transient ischemic attacks in the last 6 months
+  No history of significant psychiatric disorders","Patients can not have a history of abdominal fistula, gastrointestinal perforation,myocardial infarction (MI), stroke , transient ischemic attacks, intrabdominal abscess or significant psychiatric disorders within the last 6 months if they want to participate in the primary trial",11,Single,Eligibility,Les 2 corrects,0.6153846153846154,0.6486486486486487,2.0,1.0,0.0,0.0,2.0,1.0,6.0,3.0,1.0,4.0,37.0,38.0,1.0,0.0,True,True
+216,"Female participants with reproductive potential agree to use 2 forms of highly effective contraception during the study and for the following 3 months
+  Male participants must use a barrier method of contraception during the study and for the following 3 months
+  Phase 1
+  Have evidence of a solid tumor that is locally advanced and/or metastatic (excluding primary brain tumor)
+  Phase 2
+  Have disease measurable by Response Evaluation Criteria in Solid Tumors (RECIST) v.1.1
+  Small Cell Lung Cancer (SCLC), must have failed platinum-containing therapy
+  Breast Cancer, be Estrogen Receptor positive and/or Progesterone Receptor positive, but Human Epidermal Growth Factor Receptor 2 (HER2) negative, and must have failed a hormone therapy and a Cyclin-dependent kinase 4/6 (CDK4/6) inhibitor",patients of any gender can be eligible for both phases of the primary trial if they have evidence of a ER negative breast cancer.,11,Single,Eligibility,Les 2 corrects,0.11827956989247312,0.5,13.0,0.0,0.0,0.0,2.0,0.0,15.0,0.0,0.0,0.0,124.0,24.0,2.0,0.0,True,True
+219,"Inclusion Criteria:
+  Voluntarily signed and dated written informed consent
+  Age between 18 and 75 years old (both inclusive)
+  Eastern Cooperative Oncology Group (ECOG) performance status (PS) of  1
+  Life expectancy  3 months.
+  Patients with a histologically/cytologically confirmed diagnosis of advanced and/or unresectable disease of any of the following tumors:
+  Breast cancer
+  Epithelial ovarian cancer or gynecological cancer
+  Head and neck squamous cell carcinoma
+  Non-small cell lung cancer
+  Small cell lung cancer
+  Platinum-refractory germ-cell tumors.
+  Adenocarcinoma or carcinoma of unknown primary site
+  Adequate bone marrow, renal, hepatic, and metabolic function
+  Recovery to grade  1 or to baseline from any Adverse Event (AE) derived from previous treatment (excluding alopecia of any grade).
+  Pre-menopausal women must have a negative pregnancy test before study entry and agree to use a medically acceptable method of contraception throughout the treatment period and for at least six weeks after treatment discontinuation
+Exclusion Criteria:
+  Prior treatment with PM01183 or weekly paclitaxel or nanoalbumin-paclitaxel
+  Patients who have previously discontinued paclitaxel-based regimes due to drug related toxicity.
+  Known hypersensitivity to bevacizumab or any component of its formulation
+  Patients who have previously discontinued bevacizumab-containing regimes due to drug-related toxicity.
+  More than three prior lines of chemotherapy
+  Less than three months since last taxane-containing therapy.
+  Wash-out period:
+  Less than three weeks since the last chemotherapy-containing regimen
+  Less than three weeks since the last radiotherapy dose
+  Less than four weeks since last monoclonal antibody-containing therapy
+  Concomitant diseases/conditions:
+  Unstable angina, myocardial infarction, valvular heart disease, encephalopathy, ischemic attacks, hemorrhagic or ischemic cerebrovascular accident (CVA) or ongoing pulmonary embolism within last year, arrhythmia, hepatopathy, uncontrolled infection, hemoptysis or oxygen requiring dyspnea, known HIV infection, bleeding risk, muscular problems, peripheral neuropathy, Symptomatic or progressive brain metastases or leptomeningeal disease.
+  Men or pre-menopausal women who are not using an effective method of contraception as previously described; actively breast feeding women.
+  Patients who have pelvic irradiation with doses  45 Grays (Gy).
+  History of previous bone marrow and/or stem cell transplantation.
+  Confirmed bone marrow involvement",Patients with a histologically/cytologically confirmed diagnosis of a resectable Non-small cell lung breast cancer or Small cell lung cancer are eligible for the primary trial,11,Single,Eligibility,Les 2 corrects,0.08796296296296297,0.8636363636363636,14.0,0.0,0.0,0.0,3.0,0.0,23.0,1.0,0.0,1.0,343.0,27.0,2.0,0.0,True,True
+221,"Women of child-bearing potential (WOCBP) unwilling or unable to use an acceptable method of birth control to avoid pregnancy for the entire study period and up to 6 months after treatment with bevacizumab.
+  Women who were pregnant or breastfeeding.
+  Women with a positive pregnancy test on enrollment or prior to study drug administration.
+  Sexually active fertile men, whose partners were WOCBP, not using an adequate method of birth control.","Women of child-bearing potential and Sexually active fertile men are eligible for the primary trial, but they will need to commit to abstinence for the entire study period",11,Single,Eligibility,Les 2 corrects,0.25806451612903225,0.6153846153846154,1.0,0.0,0.0,0.0,1.0,0.0,2.0,1.0,0.0,1.0,70.0,29.0,1.0,0.0,True,True
+224,"Inclusion Criteria:
+  Women 18 years
+  Histologically or cytologically confirmed diagnosis of metastatic breast cancer
+  Measurable or nonmeasurable disease defined by Response Evaluation Criteria In Solid Tumors (RECIST)
+Exclusion Criteria:
+  Number of prior chemotherapy lines of treatment in the metastatic setting 2","There are no conditions on mental mental health, bodyweight, age, Karnofsky/ECOG score or previous treatments that need to be met in order to be eligible for the primary trial",11,Single,Eligibility,Les 2 corrects,0.05172413793103448,0.1111111111111111,3.0,0.0,0.0,0.0,1.0,0.0,4.0,0.0,1.0,1.0,41.0,30.0,1.0,0.0,True,True
+228,"Inclusion Criteria:
+  Female patients with histologically/cytologically proven metastatic breast carcinoma (stage IV, or recurrent with local or regional spread or distant metastatic disease)
+  Adequate bone marrow, liver, and renal function
+Exclusion Criteria:
+  Adjuvant chemotherapy given in the past 12 months
+  Uncontrolled brain metastases",There are no conditions on hepatic function for participants of the primary trial,11,Single,Eligibility,Les 2 corrects,0.04,0.15384615384615385,2.0,0.0,0.0,0.0,1.0,0.0,3.0,0.0,1.0,1.0,44.0,13.0,1.0,0.0,True,True
+250,"Metastatic disease (M1)
+  Multiple sites of new disease that is clinically obvious metastatic disease (e.g., multiple sites of new osseous disease)
+  Measurable or nonmeasurable disease","Patients who's Metastasis cannot be measured, or who's Cancer has not spread to other parts of the body are not eligible for the primary trial",00,Single,Eligibility,Les 2 en erreur,0.05263157894736842,0.08695652173913043,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,3.0,3.0,26.0,27.0,1.0,0.0,False,False
+255,History of grade 3 or 4 allergic reactions attributed to trastuzumab.,Patients with a history of severe anaphylactic reactions to trastuzumab cannot take part in the primary trial.,11,Single,Eligibility,Les 2 corrects,0.21739130434782608,0.29411764705882354,2.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,1.0,1.0,11.0,17.0,1.0,0.0,True,True
+274,unilateral breast cancer with ipsilateral lumpectomy or mastectomy and lymph node dissection (sentinel biopsy or axillary dissection),Patients with measurable bilateral breast cancer are eligible for the primary trial,11,Single,Eligibility,Les 2 corrects,0.125,0.25,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,17.0,12.0,1.0,0.0,True,True
+276,"Women of child-bearing potential (WOCBP) unwilling or unable to use an acceptable method of birth control to avoid pregnancy for the entire study period and up to 6 months after treatment with bevacizumab.
+  Women who were pregnant or breastfeeding.
+  Women with a positive pregnancy test on enrollment or prior to study drug administration.
+  Sexually active fertile men, whose partners were WOCBP, not using an adequate method of birth control.","Women of child-bearing potential and Sexually active fertile men are eligible for the primary trial, but they will have to meet some additional requirements.",00,Single,Eligibility,Les 2 en erreur,0.203125,0.52,1.0,0.0,0.0,0.0,1.0,0.0,2.0,1.0,0.0,1.0,70.0,25.0,1.0,0.0,False,False
+277,"Inclusion Criteria:
+  Female patients with histologically/cytologically proven metastatic breast carcinoma (stage IV, or recurrent with local or regional spread or distant metastatic disease)
+  Adequate bone marrow, liver, and renal function
+Exclusion Criteria:
+  Adjuvant chemotherapy given in the past 12 months
+  Uncontrolled brain metastases","There are no conditions on Life expectancy, pregnancy or age for participants of the primary trial",01,Single,Eligibility,P1✗ KATE✓,0.03773584905660377,0.125,2.0,0.0,0.0,0.0,1.0,0.0,3.0,0.0,1.0,1.0,44.0,16.0,1.0,0.0,True,False
+295,"A. Metastatic breast cancer (7 triple negative, 23 ER+ after the first 15 patients are enrolled on the non-CCND1cohort; in addition 10 HER2+ for combination trastuzumab and PD0332991 therapy) up to 55 total enrollment slots B. Metastatic colorectal cancer that harbors the Kras or BRAF mutation (15-30 enrollment slots) C. Advanced or metastatic esophageal and/or gastric cancer (15-30 enrollment slots) D. Cisplatin-refractory, unresectable germ cell tumors (15-30 enrollment slots) E. Any tumor type if tissue tests positive for CCND1 amplification, CDK4/6 mutation, CCND2 amplification OR any other functional alteration at the G1/S checkpoint. (15-30 enrollment slots)","patients diagnosed with tumors positive for CCND1 amplification, CDK4/6 mutation, CCND2 amplification are excluded from the primary trial.",11,Single,Eligibility,Les 2 corrects,0.14814814814814814,0.6666666666666666,39.0,4.0,0.0,0.0,0.0,0.0,45.0,0.0,0.0,0.0,105.0,19.0,1.0,0.0,True,True
+299,"Inclusion Criteria for dose escalation and expansion phase:
+  Signed written informed consent
+  Male or female participants aged greater than or equal to 18 years
+  Participants must have histologically or cytologically proven metastatic or locally advanced solid tumors, for which no standard therapy exists or standard therapy has failed. Availability of tumor archival material or fresh biopsies is optional for participants in dose escalation
+  Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1 at trial entry and an estimated life expectancy of at least 3 months
+  Disease must be measurable with at least 1 uni-dimensional measurable lesion by RECIST 1.1, except for participants with metastatic castrate-resistant prostate cancer (mCRPC) or metastatic breast cancer (MBC) who may be enrolled with objective evidence of disease without a measureable lesion
+  Adequate hematological, hepatic and renal function as defined in the protocol
+  Effective contraception for both male and female participants if the risk of conception exists
+  Other protocol defined inclusion criteria could apply
+  Inclusion Criteria for expansion phase:
+  Participants must have relapsed, refractory, or progressive disease following last line of treatment (with the exception of the gastric and gastroesophageal junction (GEJ) cancer cohort, which does not require progression). Availability of tumor archival material or fresh biopsies (excluding bone biopsies) is mandatory for eligibility in the expansion cohorts. For participants in the MBC cohort, the biopsy or surgical specimen must have been collected within 90 days prior to the first investigational medicinal product (IMP) administration. Specifically, the following will be required:
+  NSCLC post platinum doublet: Histologically or cytologically confirmed stage IIIB or stage IV NSCLC that has progressed after 1 line of platinum-containing doublet chemotherapy. Participants should have received only 1 line of platinum-containing treatment for metastatic disease (i.e., adjuvant treatment with a platinum-containing regimen is not sufficient for eligibility because not received in the context of a metastatic disease). Participants in the NSCLC cohort will only be enrolled in USA
+  NSCLC first line: Stage IV (per 7th International Association for the Study of Lung Cancer [IASLC] classification) or recurrent NSCLC that is histologically proven. Participants must not have received treatment for their metastatic or recurrent disease. No activating epidermal growth factor receptor (EGFR) mutation nor ALK translocation/re-arrangement
+  Gastric and GEJ cancer: Histologically confirmed, unresectable locally advanced or metastatic adenocarcinoma of the gastric and gastro-esophageal junction, treated with first-line chemotherapy combination with or without disease progression. Participants should have received no more than 1 line of treatment for metastatic disease. Participants should not have been treated with trastuzumab (but can be Human Epidermal growth factor Receptor 2 [HER2] positive). Participants who received any platinum containing doublet or triplet as a neoadjuvant chemotherapy strategy, but are not ultimately candidates for surgery will also be eligible, as long as they did not have progressive disease after completion of the neoadjuvant chemotherapy. In addition, participants with gastric cancer can enter in the study if their white blood cell (WBC) and lymphocyte count is as defined in the protocol
+  MBC: Participants must have histologically confirmed locally advanced or MBC and have tumor that is refractory to or progressive after standard of care therapy. Participants must have received no more than 3 prior lines of cytotoxic therapy for metastatic disease. Participants must have received a taxane and an anthracycline, unless contra-indicated
+  Secondary expansion cohorts: Metastatic colorectal cancer (mCRC), Metastatic castrate-resistant prostate cancer (mCRPC), melanoma, ovarian cancer, ACC, mesothelioma, urothelial carcinoma and renal cell carcinoma as defined in the protocol
+  Efficacy expansion cohorts: Gastric and GEJ cancer (third line), ovarian cancer (platinum Refractory + liposomal doxorubicin), urothelial carcinoma, and HNSCC as defined in the protocol
+  Other protocol defined inclusion criteria for expansion phase could apply
+  Exclusion Criteria for dose escalation and expansion phase:
+  Concurrent treatment with a non-permitted drug
+  Prior therapy with specific antibody/drug targeting T cell co-regulatory proteins (immune checkpoints)
+  Concurrent anticancer treatment, major surgery, or use of any investigational drug within 28 days before the start of trial treatment; or concurrent systemic therapy with immunosuppressive agents, use of hormonal agents within 7 days before the start of trial treatment as defined in the protocol. Note: Participants receiving bisphosphonate or denosumab are eligible provided treatment was initiated at least 14 days before the first dose of avelumab.
+  Previous malignant disease other than the target malignancy to be investigated in this trial within the last 5 years with the exception of basal or squamous cell carcinoma of the skin or cervical carcinoma in situ
+  Rapidly progressive disease (for example, tumor lysis syndrome)
+  Active or history of central nervous system metastases
+  Receipt of any organ transplantation including allogeneic stem-cell transplantation
+  Significant acute or chronic infections as defined in the protocol
+  Active or history of any autoimmune disease (Participants with diabetes Type 1, vitiligo, psoriasis, hypo- or hyperthyroid disease not requiring immunosuppressive treatment are eligible) or immunodeficiencies
+  Known severe hypersensitivity reactions to monoclonal antibodies, any history of anaphylaxis, or uncontrolled asthma
+  Persisting toxicity related to prior therapy greater than Grade 1 NCI-CTCAE v4.0, however sensory neuropathy less than or equal to Grade 2 is acceptable
+  Pregnancy or lactation period
+  Known alcohol or drug abuse
+  Clinically significant (that is, active) cardiovascular disease
+  All other significant diseases (for example, inflammatory bowel disease), which, in the opinion of the investigator, might impair the Participant's tolerance of trial treatment
+  Any psychiatric condition that would prohibit the understanding or rendering of informed consent
+  Legal incapacity or limited legal capacity
+  Non-oncology vaccine therapies for prevention of infection disease (for example, seasonal flu vaccine, human papilloma virus vaccine) within 4 weeks of study drug administration. Vaccination while on study is also prohibited except for administration of the inactivated influenza vaccine","African-american patients can participate in the primary trial, but they must reside in the state of texas for the duration of the study.",01,Single,Eligibility,P1✗ KATE✓,0.024691358024691357,0.5263157894736842,29.0,0.0,0.0,0.0,8.0,0.0,42.0,13.0,0.0,13.0,951.0,24.0,1.0,1.0,True,False
+307,"Inclusion Criteria
+  Patients with histologically proven DCIS or stage I-III invasive carcinoma of the breast that is estrogen and/or progesterone receptor positive by immunohistochemical staining who are considering aromatase inhibitor therapy; women may receive the AI on this study as initial adjuvant hormonal treatment or following tamoxifen; patients must have completed any adjuvant chemotherapy; patients may have received preoperative chemotherapy","Patients diagnosed stage 4 invasive carcinoma of the breast that is estrogen and/or progesterone receptor positive, and are considering AI therapy are eligible for the primary trial.",11,Single,Eligibility,Les 2 corrects,0.3220338983050847,0.76,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,62.0,28.0,1.0,0.0,True,True
+326,"A. Metastatic breast cancer (7 triple negative, 23 ER+ after the first 15 patients are enrolled on the non-CCND1cohort; in addition 10 HER2+ for combination trastuzumab and PD0332991 therapy) up to 55 total enrollment slots B. Metastatic colorectal cancer that harbors the Kras or BRAF mutation (15-30 enrollment slots) C. Advanced or metastatic esophageal and/or gastric cancer (15-30 enrollment slots) D. Cisplatin-refractory, unresectable germ cell tumors (15-30 enrollment slots) E. Any tumor type if tissue tests positive for CCND1 amplification, CDK4/6 mutation, CCND2 amplification OR any other functional alteration at the G1/S checkpoint. (15-30 enrollment slots)",There are a limited number of available places in the primary trial for patients diagnosed with Metastatic colorectal cancer that harbors the Kras or BRAF mutation .,11,Single,Eligibility,Les 2 corrects,0.17647058823529413,0.6,39.0,0.0,0.0,0.0,0.0,0.0,41.0,0.0,0.0,0.0,105.0,26.0,1.0,0.0,True,True
+348,"INCLUSION CRITERIA:
+  Patients must have histologically documented metastatic or unresectable non-small cell lung cancer, head and neck cancer, urothelial transitional cell carcinoma, or breast cancer whose disease has progressed after at least one line of standard therapy.",Patients with histologically documented metastatic SCBC are excluded from the primary trial.,00,Single,Eligibility,Les 2 en erreur,0.09523809523809523,0.3333333333333333,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,38.0,12.0,1.0,0.0,False,False
+350,"Exclusion Criteria:
+  History of interstitial lung disease or pneumonitis","an adult patient diagnosed with ILD/DPLD within the last 3 years, with a life expectancy of 6 months would be eligible for the primary trial",11,Single,Eligibility,Les 2 corrects,0.03125,0.041666666666666664,0.0,2.0,0.0,0.0,0.0,2.0,4.0,0.0,0.0,0.0,9.0,26.0,1.0,0.0,True,True
+403,"Inclusion Criteria:
+  Histological confirmation of ER positive, HER2 negative invasive breast cancer (Group 1) or invasive triple-negative breast cancer (Group 2)
+  Free of metastatic disease
+   18 years old
+  Female
+  Had no prior treatment for any cancer
+  Eligible for treatment with paclitaxel, doxorubicin and cyclophosphamide
+Exclusion Criteria:
+  Have a history of severe allergic reactions to paclitaxel or other drugs formulated in Cremaphor® EL
+  Are pregnant or breastfeeding","Breast cancer patients with estrogen negative, progesterone negative and HER2- tumors are eligible for all cohorts of the primary trial",11,Single,Eligibility,Les 2 corrects,0.16129032258064516,0.5263157894736842,5.0,1.0,0.0,0.0,1.0,0.0,8.0,1.0,0.0,1.0,67.0,20.0,1.0,0.0,True,True
+404,"Breast Cancer has continued to grow after having received treatment with an anti-estrogen hormonal treatment such as tamoxifen or an aromatase inhibitor.
+  Requiring hormonal treatment.",candidates for the primary trial must have breast cancer and require hormonal treatment.,11,Single,Eligibility,Les 2 corrects,0.12903225806451613,0.3076923076923077,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,26.0,13.0,1.0,0.0,True,True
+407,"Metastatic disease (M1)
+  Multiple sites of new disease that is clinically obvious metastatic disease (e.g., multiple sites of new osseous disease)
+  Measurable or nonmeasurable disease","Patients with TX NX MX, T0 NX M0 or T1 N1 M1 tumors are eligible for the primary trial",11,Single,Eligibility,Les 2 corrects,0.06060606060606061,0.1111111111111111,1.0,5.0,0.0,0.0,0.0,0.0,6.0,0.0,0.0,0.0,26.0,19.0,1.0,0.0,True,True
+408,"Breast Cancer has continued to grow after having received treatment with an anti-estrogen hormonal treatment such as tamoxifen or an aromatase inhibitor.
+  Requiring hormonal treatment.",candidates for the primary trial must have colon cancer and be unresponsive to previous hormonal treatments.,11,Single,Eligibility,Les 2 corrects,0.08571428571428572,0.1875,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,26.0,16.0,1.0,0.0,True,True
+416,"Exclusion Criteria:
+  Any of the following current (=< 4 weeks prior) or planned therapies:
+  Antineoplastic chemotherapy (anti-HER2 agents allowed)
+  Androgens
+  Estrogens (any delivery route)
+  Progestogens","Any patients that have undergone Antineoplastic chemotherapy, Androgens, Estrogens or Progestogens therapy in the month before study entry are excluded from the primary trial.",11,Single,Eligibility,Les 2 corrects,0.20512820512820512,0.34782608695652173,2.0,0.0,0.0,0.0,1.0,0.0,3.0,0.0,0.0,0.0,25.0,24.0,1.0,0.0,True,True
+438,"Exclusion Criteria:
+  Any of the following current (=< 4 weeks prior) or planned therapies:
+  Antineoplastic chemotherapy (anti-HER2 agents allowed)
+  Androgens
+  Estrogens (any delivery route)
+  Progestogens","Any patients that have undergone Antineoplastic chemotherapy, Androgens, Estrogens or Progestogens therapy in the last 2 years before study entry are excluded from the primary trial.",10,Single,Eligibility,P1✓ KATE✗,0.1951219512195122,0.32,2.0,1.0,0.0,0.0,1.0,1.0,5.0,0.0,0.0,0.0,25.0,26.0,1.0,0.0,False,True
+463,"INCLUSION CRITERIA:
+  Patients must have histologically documented metastatic or unresectable non-small cell lung cancer, head and neck cancer, urothelial transitional cell carcinoma, or breast cancer whose disease has progressed after at least one line of standard therapy.","Patients with histologically documented metastatic or unresectable SCBC are excluded from the primary trial, unless they are positive for either ER or PR or both.",11,Single,Eligibility,Les 2 corrects,0.12,0.2727272727272727,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,38.0,25.0,1.0,0.0,True,True
+466,HER2 positive tumor (either IHC 3+ or FISH+),All the primary trial candidates must have a HER2 positive tumor confirmed by either positive FISH or IHC 3+,11,Single,Eligibility,Les 2 corrects,0.4444444444444444,0.4444444444444444,2.0,2.0,0.0,0.0,0.0,0.0,4.0,0.0,0.0,0.0,8.0,19.0,1.0,0.0,True,True
+491,"Inclusion Criteria:
+  Histological confirmation of ER positive, HER2 negative invasive breast cancer (Group 1) or invasive triple-negative breast cancer (Group 2)
+  Free of metastatic disease
+   18 years old
+  Female
+  Had no prior treatment for any cancer
+  Eligible for treatment with paclitaxel, doxorubicin and cyclophosphamide
+Exclusion Criteria:
+  Have a history of severe allergic reactions to paclitaxel or other drugs formulated in Cremaphor® EL
+  Are pregnant or breastfeeding","Breast cancer patients with estrogen negative, progesterone negative and HER2- tumors are eligible for the primary trial",00,Single,Eligibility,Les 2 en erreur,0.15,0.5625,5.0,1.0,0.0,0.0,1.0,0.0,8.0,1.0,0.0,1.0,67.0,17.0,1.0,0.0,False,False
+493,"Female participants with reproductive potential agree to use 2 forms of highly effective contraception during the study and for the following 3 months
+  Male participants must use a barrier method of contraception during the study and for the following 3 months
+  Phase 1
+  Have evidence of a solid tumor that is locally advanced and/or metastatic (excluding primary brain tumor)
+  Phase 2
+  Have disease measurable by Response Evaluation Criteria in Solid Tumors (RECIST) v.1.1",patients of any gender can be eligible for both phases of the primary trial if they have evidence of a solid tumor that is locally advanced and/or metastatic.,00,Single,Eligibility,Les 2 en erreur,0.25396825396825395,0.5925925925925926,7.0,0.0,0.0,0.0,2.0,0.0,9.0,0.0,0.0,0.0,76.0,29.0,2.0,0.0,False,False
+496,"Non-small cell lung cancer
+  Small cell lung cancer",Patients with a histologically/cytologically confirmed diagnosis of a Non-small cell lung cancer or Small cell lung cancer are eligible for the primary trial,11,Single,Eligibility,Les 2 corrects,0.25,0.25,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,9.0,25.0,1.0,0.0,True,True
+499,History of grade 3 or 4 allergic reactions attributed to trastuzumab.,"Patients with a history of severe anaphylactic reactions to herceptin, or a history of non-response to herceptin treamtents are eligible for the primary trial.",11,Single,Eligibility,Les 2 corrects,0.19230769230769232,0.25,2.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,11.0,25.0,1.0,0.0,True,True
